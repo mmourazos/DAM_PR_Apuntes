@@ -1,5 +1,5 @@
 site_name: Apuntes 1º Programación DAM
-repo-url: https://github.com/mmourazos/DAM_PR_Apuntes
+repo_url: https://github.com/mmourazos/DAM_PR_Apuntes
 theme:
   name: material
   language: es
