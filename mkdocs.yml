@@ -10,7 +10,6 @@ extra:
       link: https://github.com/mmourazos/DAM_PR_Apuntes
 markdown_extensions:
   - pymdownx.highlight:
-      anchor_linenums: true
       use_pygments: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
