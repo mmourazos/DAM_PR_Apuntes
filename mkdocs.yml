@@ -8,6 +8,12 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mmourazos/DAM_PR_Apuntes
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
       
 
 
