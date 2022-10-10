@@ -40,5 +40,15 @@ public class Arrays {
                 System.out.println(i);
             }
         }
+
+        String str = "hola";
+
+
+        String strOut = str.substring(0, 1).toUpperCase() + str.substring(1);
+
+        System.out.println(strOut);
+
+
+
     }
 }
