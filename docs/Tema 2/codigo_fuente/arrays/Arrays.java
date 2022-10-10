@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Arrays {
     public static void main(String[] args) {
         // Defino un array de enteros de 10 posiciones:
@@ -47,6 +49,16 @@ public class Arrays {
         String strOut = str.substring(0, 1).toUpperCase() + str.substring(1);
 
         System.out.println(strOut);
+
+        ArrayList<String> strArrLst = new ArrayList<String>();
+
+        strArrLst.add("Hola");
+        strArrLst.add("Mundo");
+        strArrLst.add("Cruel");
+
+        strArrLst.sort(null);
+
+        System.out.println(strArrLst);
 
 
 

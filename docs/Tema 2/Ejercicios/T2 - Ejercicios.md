@@ -28,3 +28,28 @@ Haz que el programa ponga el mayúsculas la primera letra de cada palabra.
 ## Ejercicio 6
 
 Crea un método (estático) que reciba un array de palabras como entrada y devuelva una copia del array con las palabras ordenadas.
+
+### EXTRA
+
+Ejercicio opcional.
+
+Escribe en  programa que permita al usuario introducir una lista de palabras (sin límite predefinido).
+
+Una vez haya terminado (cuando inserte una palabra *vacía*.)
+
+Se le mostrará la lista de palabras y se le perdirá que la ordene.
+
+Para ello se le pedirán dos números que indicarán al programa las posiciones de dos palabras de la lista que ha de intercambiar.
+
+Esto se repetirá hasta que la lista esté ordenada.
+
+El programa ha de:
+
+* Comprobar que el usuario introduce palabras simples (sin espacios o mayúsculas).
+* Comprobar que los índices son válidos (el usuario no intenta acceder a índices fuera del array).
+* Verificar si el array ordenado por el usuario está correctamente ordeando.
+
+***Pistas:***
+
+* [`ArrayList`](https://www.w3schools.com/java/java_arraylist.asp).
+* [`ArrayList.sort(null)`](https://www.programiz.com/java-programming/library/arraylist/sort).
