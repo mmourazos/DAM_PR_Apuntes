@@ -35,7 +35,7 @@ Ejercicio opcional.
 
 Escribe en  programa que permita al usuario introducir una lista de palabras (sin límite predefinido).
 
-Una vez haya terminado (cuando inserte una palabra *vacía*.)
+Una vez haya terminado (cuando inserte una palabra *vacía*).
 
 Se le mostrará la lista de palabras y se le perdirá que la ordene.
 

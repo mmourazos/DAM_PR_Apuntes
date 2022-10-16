@@ -10,7 +10,7 @@ public class Selector {
 
             System.out.print("Instroduzca el número del ejericicio a ejecutar (0 para terminar): ");
 
-            String strIn = con.readLine();
+            String strIn = con.readLine().trim();
             if (strIn.isBlank()) {
                 continue;
             }
