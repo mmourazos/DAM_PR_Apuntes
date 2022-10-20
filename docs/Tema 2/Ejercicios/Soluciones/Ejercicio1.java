@@ -1,27 +1,26 @@
 import java.io.Console;
 
-public class Ejercicio1 extends Ejercicio {
+/**
+ * Ejercicio1
+ */
+public class Ejercicio1 {
 
-    @Override
-    public void ejecutar() {
-        // Declaramos una variable para acceder al objeto consola (i así leer deatos introducidos
-        // por el teclado).
+    public static void main(String[] args) {
+        // Para permitir que el usuario introduzca datos podemos usar Scanner o Console. En este
+        // caso usaremos Console pues es más simple.
         Console con = System.console();
 
-        // Escribimos un texto para indicar al usuario que introduzca una palabra.
-        System.out.print("Instroduzca una palabra: ");
-        // Declaramos una variable String para que "guarde" la palabra introducida por el usuario.
-        String str1 = con.readLine();
+        // Le pedimos al usuario la primera palabra:
+        System.out.print("Introduzca una palabra: ");
+        String palabra1 = con.readLine();
 
-        System.out.print("Instroduzca otra palabra: ");
-        String str2 = con.readLine();
+        System.out.print("Introduzca otra palabra: ");
+        String palabra2 = con.readLine();
 
-        // Comprobamos si son iguales con el método "equals" de String.
-        if (str1.equals(str2)) {
-            System.out.printf("Las palabras \"%s\" y \"%s\" son iguales.%n", str1, str2);
+        if (palabra1.equals(palabra2)) {
+            System.out.println("Las palabras son iguales.");
         } else {
-
-            System.out.printf("Las palabras \"%s\" y \"%s\" son distintas.%n", str1, str2);
+            System.out.printf("Las palabras %s y %s son distintas.%n", palabra1, palabra2);
         }
     }
 }

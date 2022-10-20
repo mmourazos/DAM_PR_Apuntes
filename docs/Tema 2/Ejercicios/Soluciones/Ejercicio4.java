@@ -1,53 +1,82 @@
 import java.io.Console;
 import java.util.Arrays;
 
-public class Ejercicio4 extends Ejercicio {
-    @Override
-    public void ejecutar() {
-        Console con = System.console();
-        // Declaro una constante MAX_SIZE como el tamaño máximo del array.
-        final int MAX_SIZE = 10;
-        String[] strArr = new String[MAX_SIZE];
+public class Ejercicio4 {
+    // Creamos un método estático para introducir un número definido de palabras:
+    public static String[] leePalabras(int numPalabras) {
+        String[] palabras = new String[numPalabras];
+        int palabrasLeidas = 0;
 
-        // Esta variable indicará si hemos de continuar repitiendo el bucle
-        boolean continuar = true;
-        // Esta variable indicará en qué posición del array (0 a 9) estamos.
-        int posicion = 0;
+        Console con = System.console();
 
         do {
-            System.out.print("Introduzca una palabra (sólo ENTER para terminar): ");
-            String str = con.readLine();
+            System.out.printf("Instroduzca la palabra %d de %d: ", palabrasLeidas + 1, numPalabras);
+            String palabra = con.readLine();
 
-            if (str.isEmpty()) {
-                continuar = false;
+            // Comprobamos que la palabra es válida (no es vacía ni blanco)
+            if (!palabra.isBlank()) {
+                palabras[palabrasLeidas] = palabra;
+                palabrasLeidas = palabrasLeidas + 1;
             } else {
-                strArr[posicion] = str;
-                ++posicion;
+                return palabras; // Si introduce una palabra en blanco (o vacía) terminamos.
             }
 
-            if (posicion == 10) {
-                continuar = false;
+
+        } while (palabrasLeidas < numPalabras);
+
+        return palabras;
+    }
+
+    // Creamos otro método estático que lista el contenido del un array de cadenas.
+    public static void muestraArray(String[] arr) {
+        // Comprobamos que el array tiene al menos un elemento.
+        if (arr != null && arr.length > 0) {
+            // Mostraremos las palabras usando un bucle for:
+            for (int idx = 0; idx < arr.length; ++idx) {
+                // Comprobaremos que el contenido de esta posición del array no es null:
+                if (arr[idx] != null) {
+                    System.out.printf("Palabra %d: \"%s\".%n", idx + 1, arr[idx]);
+                }
             }
-
-        } while (continuar);
-
-        /*
-         * Ordenar el array. Para usar "Arrays.sort()" necesito que todos los elementos del array
-         * sean String. Si he introducido menos de 10, los restantes elementos serán null y no
-         * valdría. Para evitar esto CREO un nuevo array tomando sólo las casillas de la 0 hasta
-         * posición. Posición indicará la posición SIGUIENTE a la última que hemos escrito en el
-         * array (pues sumamos 1 justo después de escribirla).
-         */
-        String[] subArr = Arrays.copyOfRange(strArr, 0, posicion);
-
-        // Ahora podremos ordenar el array sin problemas:
-        Arrays.sort(subArr);
-
-        // Para mostrarlo usarmos un bucle for-each:
-        posicion = 1;
-        for (String str : subArr) {
-            System.out.printf("La palabra en la posición %d es \"%s\"%n.", posicion, str);
-            ++posicion;
+        } else {
+            System.out.println("Array sin contenido.");
         }
     }
+
+    // Creamos un método para que cree una copia del array sin vacíos (pues los vacíos / null nos
+    // darán problemas para ordenar).
+    public static String[] quitaVacios(String[] arr) {
+        // Contamos las posiciones que no sean vacías
+        int numElementos = 0;
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] != null) {
+                ++numElementos;
+            }
+
+
+        }
+
+        // Creamos un array de longitud numElementos para guardar los no vacíos.
+        String[] arrResult = new String[numElementos];
+
+        int idxResult = 0;
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] != null) {
+                arrResult[idxResult] = arr[i];
+                idxResult += 1;
+            }
+        }
+
+        return arrResult;
+    }
+
+
+    public static void main(String[] args) {
+        String[] strArr = leePalabras(10);
+        strArr = quitaVacios(strArr);
+        Arrays.sort(strArr);
+        muestraArray(strArr);
+    }
+
+
 }
