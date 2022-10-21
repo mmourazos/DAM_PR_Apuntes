@@ -6,9 +6,13 @@ Los ejercicios de este tema se centrarán en la manipulación de arrays y cadena
 
 Escribe un programa que pida al usuario dos palabras por consola e indique si son iguales o disntintas.
 
+*[Solución ejercicio 1](Soluciones%20-%20extra/Ejercicio1.java).*
+
 ## Ejercicio 2
 
 Tomando como base el código del ejercicio anterior, haz que el programa nos indique que palabra está antes lexicográficamente.
+
+*[Solución ejercicio 2](Soluciones/Ejercicio2.java).*
 
 ## Ejercicio 3
 
@@ -16,14 +20,20 @@ Haz ahora que el programa permita introducir hasta 10 palabras y las almacene en
 
 Una vez terminada la introducción de cadenas muestra al usuario la lista de palabras introducidas.
 
+*[Solución ejercicio 3](Soluciones/Ejercicio3.java).*
+
 ## Ejercicio 4
 
 Modifica el programa anterior para que ordene las palabras introducidas previamente por el usuario.
 *(Pista: `java.util.Arrays.sort()`).*
 
+*[Solución ejercicio 4](Soluciones/Ejercicio4.java).*
+
 ## Ejercicio 5
 
 Haz que el programa ponga el mayúsculas la primera letra de cada palabra.
+
+*[Solución ejercicio 5](Soluciones/Ejercicio5.java).*
 
 ## Ejercicio 6
 
