@@ -1,3 +1,5 @@
+package paquete.visibilidad;
+
 public class ClaseBase {
     private String variable_privada = "privada";
     String variable_sin_modificador = "por defecto";
