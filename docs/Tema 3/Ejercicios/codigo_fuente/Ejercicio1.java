@@ -14,8 +14,6 @@ public class Ejercicio1 {
             int min = Integer.parseInt(args[0]);
             int max = Integer.parseInt(args[1]);
 
-            Random rdm = new Random();
-
             int num1 = getRandom(min, max);
             int num2 = getRandom(min, max);
 
