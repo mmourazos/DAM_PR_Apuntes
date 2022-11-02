@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Ejercicio1 {
 
-    private static int devuelveAleatorio(int min, int max) {
+    private static int getRandom(int min, int max) {
         Random aleatorio = new Random();
         return aleatorio.nextInt(max - min) + min;
     }
