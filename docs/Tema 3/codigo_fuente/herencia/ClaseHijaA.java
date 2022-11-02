@@ -1,3 +1,4 @@
+package herencia;
 public class ClaseHijaA extends ClasePadre {
     public int x = 100;
     private int y = 200;
@@ -28,6 +29,9 @@ public class ClaseHijaA extends ClasePadre {
     }
 
     public void metodoTest() {
-        super.metodoParaSobreescribir();
+        ClasePadre cp = new ClasePadre();
+        cp.j;
     }
+
+
 }
