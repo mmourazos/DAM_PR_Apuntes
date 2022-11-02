@@ -13,7 +13,8 @@ public class Recursion {
     }
 
     // Usando recursividad para crear un bucle.
-    // int indicará la iteración en la que estamos y limit cuantas repeticiones queremos.
+    // int indicará la iteración en la que estamos y limit cuantas repeticiones
+    // queremos.
     public static int recursividadCola(int i, int limit) {
         // Condición de fin de la recursión.
         if (i == limit)

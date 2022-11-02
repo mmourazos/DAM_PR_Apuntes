@@ -16,8 +16,8 @@ public class Ejercicio1 {
 
             Random rdm = new Random();
 
-            int num1 = devuelveAleatorio(min, max);
-            int num2 = devuelveAleatorio(min, max);
+            int num1 = getRandom(min, max);
+            int num2 = getRandom(min, max);
 
             System.out.printf("Los números generados fueron %d y %d.%n", num1, num2);
 
