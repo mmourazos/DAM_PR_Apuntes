@@ -12,6 +12,7 @@ public class SubclaseOtroPaquete extends ClaseBase {
      * default: no tendrá acceso.
      * private: no tendrá acceso.
      */
+
     public void acceso() {
         // Podemos acceder a la variable pública:
         System.out.printf("ClaseBase.variable_publica: %s.%n", this.variable_publica);

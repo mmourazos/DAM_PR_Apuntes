@@ -1,16 +1,18 @@
 package paquete.visibilidad;
 
 public class ClaseMismoPaquete {
+
+    /*
+     * Otra clase en el mismo paquete:
+     * -------------------------------
+     * public: tendrá acceso.
+     * protected: tendrá acceso.
+     * por defecto: tendrá acceso.
+     * private: no tendrá acceso.
+     */
+
     public void acceso() {
 
-        /*
-         * Otra clase en el mismo paquete:
-         * -------------------------------
-         * public: tendrá acceso.
-         * protected: tendrá acceso.
-         * por defecto: tendrá acceso.
-         * private: no tendrá acceso.
-         */
         // Si creamos un objeto de la clase ClaseBase.
         ClaseBase claseBase = new ClaseBase();
 
