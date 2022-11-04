@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Ejercicio1 {
 
-    private static int getRandom(int min, int max) {
-        Random rdm = new Random();
-        return rdm.nextInt(max - min) + min;
+    private static int devuelveAleatorio(int min, int max) {
+        Random aleatorio = new Random();
+        return aleatorio.nextInt(max - min) + min;
     }
 
     public static void main(String[] args) {
@@ -13,6 +13,8 @@ public class Ejercicio1 {
         } else {
             int min = Integer.parseInt(args[0]);
             int max = Integer.parseInt(args[1]);
+
+            Random rdm = new Random();
 
             int num1 = getRandom(min, max);
             int num2 = getRandom(min, max);

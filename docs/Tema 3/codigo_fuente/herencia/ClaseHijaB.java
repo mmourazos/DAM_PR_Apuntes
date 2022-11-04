@@ -1,3 +1,7 @@
+package herencia;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.HiddenAction;
+
 public class ClaseHijaB extends ClaseHijaA {
 
     public ClaseHijaB(int x, int y) {
@@ -9,8 +13,8 @@ public class ClaseHijaB extends ClaseHijaA {
         System.out.println("Metodo para sobreescribir (ClaseHijaB).");
     }
 
-
     public void accesoASuperclases() {
+
         ClaseHijaB chb = new ClaseHijaB(10, 20);
 
         System.out.println("Metodo de la clase padre:");
