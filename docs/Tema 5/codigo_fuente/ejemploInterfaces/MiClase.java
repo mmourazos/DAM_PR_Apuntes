@@ -6,8 +6,11 @@ public class MiClase implements Interfaz, Comparable<MiClase> {
     }
 
     @Override
+
     public void metodo1() {
+
         System.out.println("Hola");
+
     }
 
     @Override
@@ -20,6 +23,4 @@ public class MiClase implements Interfaz, Comparable<MiClase> {
         // TODO Auto-generated method stub
         return this.valor - o.valor;
     }
-
 }
-
