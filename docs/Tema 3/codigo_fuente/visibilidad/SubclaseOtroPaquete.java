@@ -17,12 +17,12 @@ public class SubclaseOtroPaquete extends ClaseBase {
         // Podemos acceder a la variable pública:
         System.out.printf("ClaseBase.variable_publica: %s.%n", this.variable_publica);
 
+        // Sí podremos acceder a la variable protegida:
+        System.out.printf("ClaseBase.variable_protegida", this.variable_protegida);
+        
         // No podremos acceder a la variable con acceso por defecto:
         // System.out.printf("ClaseBase.variable_sin_modificador: %s.%n",
         // this.variable_sin_modificador);
-
-        // Sí podremos acceder a la variable protegida:
-        System.out.printf("ClaseBase.variable_protegida", this.variable_protegida);
 
         // Y obviamente no podremos acceder a la variable privada:
         // System.out.printf("ClaseBase.variable_privada: %s.%n",

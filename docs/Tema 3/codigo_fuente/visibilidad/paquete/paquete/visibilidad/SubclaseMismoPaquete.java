@@ -15,11 +15,11 @@ public class SubclaseMismoPaquete extends ClaseBase {
         // Podemos acceder a la variable pública (modificador public):
         System.out.println(this.variable_publica);
 
-        // Podemos acceder a la variable con acceso por defecto (sin modificador):
-        System.out.println(this.variable_sin_modificador);
-
         // Podemos acceder también a la variable protegida (modificador protected):
         System.out.println(this.variable_protegida);
+        
+        // Podemos acceder a la variable con acceso por defecto (sin modificador):
+        System.out.println(this.variable_sin_modificador);
 
         // No podremos acceder a la variable privada (modificador private):
         // System.out.println(this.variable_privada);
