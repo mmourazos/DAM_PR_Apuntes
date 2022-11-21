@@ -25,9 +25,9 @@ Todas los objetos han de poder generar una cadena de caracteres que los represen
 * Un profesor tendrá nombre y apellidos además de un DNI (único).
 * Un profesor tendrá una fecha de nacimiento.
 * Un profesor tendrá información de contacto:
-  * Teléfono
-  * e-mail.
-  * Dirección.
+    * Teléfono
+    * e-mail.
+    * Dirección.
 
 ## Tutores
 
