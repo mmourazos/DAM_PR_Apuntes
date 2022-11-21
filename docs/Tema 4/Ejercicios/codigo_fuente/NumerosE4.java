@@ -4,7 +4,6 @@ public class NumerosE4 {
     public static final int INCREMENT_SIZE = 10;
     public static final int MAX_SIZE = 10;
 
-
     private int[] values;
     private int length;
     private int maxSize;
@@ -64,7 +63,8 @@ public class NumerosE4 {
     }
 
     /*
-     * Inserta un valor en nuestro contenedor en la posición indicada. La posición debe ser un valor
+     * Inserta un valor en nuestro contenedor en la posición indicada. La posición
+     * debe ser un valor
      * entre 0 y length-1.
      */
     public void insert(int value, int position) {
@@ -85,10 +85,12 @@ public class NumerosE4 {
         insert(value, length);
     }
 
-    public void delete(int position) {
-        for (int i = position; i < length - 1; ++i) {
-            values[i] = values[i + 1];
-        }
+    public int delete(int position) {
+        int aux = values[position];
+
+        shiftLeft(position);
+
+        return aux;
     }
 
     public void add(int value) {
@@ -100,18 +102,11 @@ public class NumerosE4 {
     }
 
     public int removeFirst() {
-        int first = values[0];
-        for (int i = 0; i < length - 1; --i) {
-            values[i] = values[i + 1];
-        }
-        this.length--;
-        return first;
+        return delete(0);
     }
 
     public int removeLast() {
-        int last = values[length - 1];
-        this.length--;
-        return last;
+        return delete(length - 1);
     }
 
     /*
