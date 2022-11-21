@@ -54,3 +54,11 @@ Todas los objetos han de poder generar una cadena de caracteres que los represen
 * Un aula tendrá una capcidad de alumnos.
 * Un aula tendrá material.
 * Un aula tendrá asignado uno o más módulos.
+
+## Relación aula-modulo
+
+Para reflejar la relación entre aulas y módulos podremos utilizar la clase `AulaModulo` que almacenará pares "Aula" / "Modulo".
+
+Un módulo solo se impartirá en un aula.
+
+Un aula podrá utilizarse en varios módulos.
