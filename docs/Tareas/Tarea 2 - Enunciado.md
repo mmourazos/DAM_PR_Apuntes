@@ -4,6 +4,12 @@ Necesitamos crear una jerarquía de clases que represente la situación de alumn
 
 Todas los objetos han de poder generar una cadena de caracteres que los represente (método `toString`).
 
+## Objetivos / requerimientos
+
+* Se ha de poder almacenar información de alumnos, ciclos y módulos.
+* Se ha de poder mostar el ciclo y los módulos en los que está matriculado un alumno.
+* Se ha de poder mostar los alumnos que están matriculados en un ciclo.
+
 ## Alumnos
 
 * Un alumno estará matriculado en un ciclo.
@@ -47,6 +53,7 @@ Todas los objetos han de poder generar una cadena de caracteres que los represen
 * Un módulo tiene un nombre.
 * Un módulo tiene un código único.
 * Un módulo tendrá un número de horas asignado.
+* Un móudlo ha de estar asignado a un curso (1º, 2º o 3º).
 
 ## Aulas
 
@@ -62,3 +69,4 @@ Para reflejar la relación entre aulas y módulos podremos utilizar la clase `Au
 Un módulo solo se impartirá en un aula.
 
 Un aula podrá utilizarse en varios módulos.
+
