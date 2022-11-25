@@ -1,6 +1,7 @@
 package docs.Tareas.codigo_fuente_T2;
 
 public class DNI {
+
     /**
      * Array constante en que la posición de la letra del DNI se corresponde con el
      * resto de la división del número por 22.

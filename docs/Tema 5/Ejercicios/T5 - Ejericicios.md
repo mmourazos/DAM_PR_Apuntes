@@ -2,11 +2,11 @@
 
 ## Ejercicio 1
 
-Codifica la jerarquía ser vivo, animal y vegetal, creando las estructuras que consideres necesario para almacenar de cada elemento, como mínimo, nombre científico y nombre común. Para los animales almacenaremos peso y altura. Paralos vegetales únicamente altura. Cada ser vivo se alimentará de una manera diferente, por 10 que deberá reflejar este aspecto de alguna forma.
+Codifica la jerarquía ser vivo, animal y vegetal, creando las estructuras que consideres necesario para almacenar de cada elemento, como mínimo, nombre científico y nombre común. Para los animales almacenaremos peso y altura. Paralos vegetales únicamente altura. Cada ser vivo se alimentará de una manera diferente, por que deberá reflejar este aspecto de alguna forma.
 
 ## Ejercicio 2
 
-Implementa el escenario propuesto en la figura y añade las declaraciones de los métodos get y set para cada uno de los campos, así como constructores parametrizados a cada una de las clases.
+Implementa el escenario propuesto en la figura y añade las declaraciones de los getters y setters para cada uno de los campos, así como constructores parametrizados a cada una de las clases.
 
 ![figura](../Imagenes/ejercicio2.png)
 
