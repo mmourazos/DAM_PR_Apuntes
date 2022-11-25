@@ -2,10 +2,14 @@ package mipaquete;
 
 /**
  * Esta clase es la clase principal del paquete paquete.
+ * 
+ * @author Manuel C. Piñeiro Mourazos.
+ * @version 0.1
  */
 public class Clase {
     /**
      * Ejemplo de un atributo de esta clase.
+     * 
      */
     private int propiedad;
 
@@ -19,7 +23,7 @@ public class Clase {
     /**
      * Constructor parametrizado de la clase.
      * 
-     * @param propiedad Valor del atributo de la clase.
+     * @param propiedad valor entero del atributo de la clase.
      */
     public Clase(int propiedad) {
         this.propiedad = propiedad;
@@ -28,9 +32,10 @@ public class Clase {
     /**
      * Método que devuelve el valor del atributo de la clase.
      * 
-     * @return Valor del atributo de la clase.
+     * @return valor del atributo de la clase.
      * @deprecated Este método está obsoleto. Utilice el método getPropiedad().
      */
+    @Deprecated
     public int dimePropiedad() {
         return propiedad;
     }

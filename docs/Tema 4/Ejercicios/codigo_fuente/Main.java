@@ -10,6 +10,7 @@ public class Main {
         nal.insertar(3, 2);
         nal.insertar(5, 4);
 
+        double d = Math.PI;
         System.out.println(nal);
     }
 }
