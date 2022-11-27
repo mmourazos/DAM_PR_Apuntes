@@ -6,7 +6,7 @@ Codifica la jerarquía ser vivo, animal y vegetal, creando las estructuras que c
 
 ## Ejercicio 2
 
-Implementa el escenario propuesto en la figura y añade las declaraciones de los métodos get y set para cada uno de los campos, así como constructores parametrizados a cada una de las clases.
+Implementa el escenario propuesto en la figura y añade las declaraciones de los getters y setters para cada uno de los campos, así como constructores parametrizados a cada una de las clases.
 
 ![figura](../Imagenes/ejercicio2.png)
 
