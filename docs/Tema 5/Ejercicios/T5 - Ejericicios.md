@@ -2,7 +2,7 @@
 
 ## Ejercicio 1
 
-Codifica la jerarquía ser vivo, animal y vegetal, creando las estructuras que consideres necesario para almacenar de cada elemento, como mínimo, nombre científico y nombre común. Para los animales almacenaremos peso y altura. Paralos vegetales únicamente altura. Cada ser vivo se alimentará de una manera diferente, por que deberá reflejar este aspecto de alguna forma.
+Codifica la jerarquía ser vivo, animal y vegetal, creando las estructuras que consideres necesario para almacenar de cada elemento, como mínimo, nombre científico y nombre común. Para los animales almacenaremos peso y altura. Paralos vegetales únicamente altura. Cada ser vivo se alimentará de una manera diferente, por lo que deberá reflejar este aspecto de alguna forma.
 
 ## Ejercicio 2
 
