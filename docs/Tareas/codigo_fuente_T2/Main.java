@@ -3,6 +3,7 @@ package docs.Tareas.codigo_fuente_T2;
 import java.io.Console;
 
 public class Main {
+
     public static void main(String[] args) {
         Console c = System.console();
 
