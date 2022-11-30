@@ -25,7 +25,7 @@ Sus atributos son:
 
 * nombre
 * edad
-* DNI 
+* DNI
 * sexo (H hombre, M mujer)
 * peso
 * altura
@@ -45,8 +45,8 @@ Los métodos que se implementaran son:
 * `calcularIMC()`: calculara si la persona esta en su peso ideal (peso en kg/(altura^2  en m)), si esta fórmula devuelve un valor menor que 20, la función devuelve un -1, si devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo de su peso ideal la función devuelve un 0  y si devuelve un valor mayor que 25 significa que tiene sobrepeso, la función devuelve un 1. Te recomiendo que uses constantes para devolver estos valores.
 * `esMayorDeEdad()`: indica si es mayor de edad, devuelve un booleano.
 * `comprobarSexo(char sexo)`: comprueba que el sexo introducido es correcto. Si no es correcto, sera H. No sera visible al exterior.
-* `toString()`: devuelve una cadena respresentado las propiedades del objeto.
 * `generaDNI()`: genera un número aleatorio de 8 cifras, genera a partir de este su número su letra correspondiente. Este método sera invocado cuando se construya el objeto. Puedes dividir el método para que te sea más fácil. No será visible al exterior.
+* `toString()`: devuelve una cadena respresentado las propiedades del objeto.
 * Métodos set de cada parámetro, excepto de DNI.
 
 Ahora, crea una clase ejecutable que haga lo siguiente:
