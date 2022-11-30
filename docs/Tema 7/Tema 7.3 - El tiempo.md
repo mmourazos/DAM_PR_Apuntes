@@ -98,6 +98,32 @@ String ahoraString = ahora.format(formatter);
 System.out.println("La fecha de hoy es: " + ahoraString);
 ```
 
+### Formatos predefinidos
+
+| Formatter | Description | Example |
+|-----------|-------------|---------|
+|ofLocalizedDate(dateStyle) | Formatter with date style from the locale | '2011-12-03'|
+|ofLocalizedTime(timeStyle) | Formatter with time style from the locale | '10:15:30'|
+|ofLocalizedDateTime(dateTimeStyle) | Formatter with a style for date and time from the locale | '3 Jun 2008 11:05:30'|
+|ofLocalizedDateTime(dateStyle,timeStyle) | Formatter with date and time styles from the locale  | '3 Jun 2008 11:05'|
+|BASIC_ISO_DATE | Basic ISO date | '20111203'|
+|ISO_LOCAL_DATE |ISO Local Date | '2011-12-03'|
+|ISO_OFFSET_DATE |ISO Date with offset | '2011-12-03+01:00'|
+|ISO_DATE | ISO Date with or without offset | '2011-12-03+01:00'; '2011-12-03'|
+|ISO_LOCAL_TIME | Time without offset | '10:15:30'|
+|ISO_OFFSET_TIME | Time with offset | '10:15:30+01:00'|
+|ISO_TIME | Time with or without offset | '10:15:30+01:00'; '10:15:30'|
+|ISO_LOCAL_DATE_TIME | ISO Local Date and Time | '2011-12-03T10:15:30'|
+|ISO_OFFSET_DATE_TIME | Date Time with Offset | 2011-12-03T10:15:30+01:00'|
+|ISO_ZONED_DATE_TIME | Zoned Date Time | '2011-12-03T10:15:30+01:00\[Europe/Paris]'|
+|ISO_DATE_TIME | Date and time with ZoneId | '2011-12-03T10:15:30+01:00\[Europe/Paris]'|
+|ISO_ORDINAL_DATE | Year and day of year | '2012-337'|
+|ISO_WEEK_DATE | Year and Week | '2012-W48-6'|
+|ISO_INSTANT | Date and Time of an Instant | '2011-12-03T10:15:30Z'|
+|RFC_1123_DATE_TIME | RFC 1123 / RFC 822 | 'Tue, 3 Jun 2008 11:05:30 GMT'|
+
+### Formatos construidos
+
 Los símbolos para construir formatos son (entre otros):
 
 | Símbolo | Significado       | Representación | Ejemplo             |
@@ -144,4 +170,3 @@ Los símbolos para construir formatos son (entre otros):
    n       nano-of-second              number            987654321
    N       nano-of-day                 number            1234000000
 ```
-
