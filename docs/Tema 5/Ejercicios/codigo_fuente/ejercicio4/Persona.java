@@ -99,6 +99,10 @@ public class Persona {
         return outputString;
     }
 
+    private String lpad(int number, int length) {
+        return String.format("%0" + length + "d", number);
+    }
+
     private boolean dniValido(String dni) {
         int numero = Integer.parseInt(dni.substring(0, dni.length() - 1));
         char letra = dni.charAt(dni.length() - 1);
@@ -117,15 +121,15 @@ public class Persona {
 
     private char generaLetraDNI(int numero) {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        int letra = numero % 23;
-        return letras.charAt(letra);
+        int pLetra = numero % 23;
+        return letras.charAt(pLetra);
     }
 
     private String generarDNI() {
         int numero = generaNumeroDNI();
         char letra = generaLetraDNI(numero);
 
-        return lpad(numero, 8, '0') + letra;
+        return lpad(numero, 8) + letra;
     }
 
     @Override
