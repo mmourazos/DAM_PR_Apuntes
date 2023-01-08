@@ -5,6 +5,9 @@ public class Recta {
     private Punto p2;
 
     public Recta(Punto p1, Punto p2) {
+        if (p1.equals(p2)) {
+            throw new IllegalArgumentException("Los puntos no pueden ser iguales");
+        }
         this.p1 = p1;
         this.p2 = p2;
     }

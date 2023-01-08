@@ -41,8 +41,6 @@ public class Persona {
         this.altura = altura;
     }
 
-
-
     public int calcularIMC() {
         double imc = peso / Math.pow(altura, 2);
         if (imc < 20) {
@@ -75,14 +73,17 @@ public class Persona {
     }
 
     /**
-     * Genera una cadena de texto a partir de un número entero. Si el número de cifras de
-     * {@code number} es menor que {@code length}, se rellena con ceros a la izquierda. en caso
+     * Genera una cadena de texto a partir de un número entero. Si el número de
+     * cifras de
+     * {@code number} es menor que {@code length}, se rellena con ceros a la
+     * izquierda. en caso
      * contrario se devuleve el número sin rellenar.
      * 
      * @param number Número entero a convertir en cadena de texto.
      * @param length Longitud de la cadena de texto.
-     * @param c Carácter de relleno.
-     * @return Cadena de texto con el número {@code number} rellenado con {@code c} a la izquierda
+     * @param c      Carácter de relleno.
+     * @return Cadena de texto con el número {@code number} rellenado con {@code c}
+     *         a la izquierda
      *         hasta alcanzar la longitud {@code length}.
      */
     private String lpad(int number, int length, char c) {
@@ -96,6 +97,10 @@ public class Persona {
         }
 
         return outputString;
+    }
+
+    private String lpad(int number, int length) {
+        return String.format("%0" + length + "d", number);
     }
 
     private boolean dniValido(String dni) {
@@ -116,15 +121,15 @@ public class Persona {
 
     private char generaLetraDNI(int numero) {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        int letra = numero % 23;
-        return letras.charAt(letra);
+        int pLetra = numero % 23;
+        return letras.charAt(pLetra);
     }
 
     private String generarDNI() {
         int numero = generaNumeroDNI();
         char letra = generaLetraDNI(numero);
 
-        return lpad(numero, 8, '0') + letra;
+        return lpad(numero, 8) + letra;
     }
 
     @Override

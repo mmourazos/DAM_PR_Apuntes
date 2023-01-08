@@ -1,17 +1,19 @@
+package docs.Tareas.codigo_fuente_T2;
+
 public class Matricula {
-    private Alumno alumno;
+    private Persona alumno;
     private Ciclo ciclo;
 
-    public Matricula(Alumno alumno, Ciclo ciclo) {
+    public Matricula(Persona alumno, Ciclo ciclo) {
         this.alumno = alumno;
         this.ciclo = ciclo;
     }
 
-    public Alumno getAlumno() {
+    public Persona getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
+    public void setAlumno(Persona alumno) {
         this.alumno = alumno;
     }
 
@@ -23,7 +25,7 @@ public class Matricula {
         this.ciclo = ciclo;
     }
 
-    public boolean isAlumno(Alumno alumno) {
+    public boolean isAlumno(Persona alumno) {
         return this.alumno.equals(alumno);
     }
 }

@@ -6,9 +6,7 @@ public class DNI {
      * Array constante en que la posición de la letra del DNI se corresponde con el
      * resto de la división del número por 22.
      */
-    private static final char[] TABLA_LETRAS = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
-            'Z', 'S', 'Q',
-            'V', 'H', 'L', 'C', 'K', 'E' };
+    private static final String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
     /**
      * Número asociado al DNI.
      */
@@ -28,9 +26,13 @@ public class DNI {
         this.letra = letra;
     }
 
-    @Override
-    public String toString() {
-        return Integer.toString(numero) + this.letra;
+    public DNI(String dni) {
+        if (dni.length() != 9)
+            throw new IllegalArgumentException("El DNI debe tener 9 caracteres.");
+        this.numero = Integer.parseInt(dni.substring(0, 8));
+        this.letra = dni.charAt(8);
+        if (calculaLetra(numero) != letra)
+            throw new IllegalArgumentException("La letra suministrada no se corresponde con el número.");
     }
 
     /**
@@ -40,7 +42,7 @@ public class DNI {
      * @return la letra del DNI correspondiente al número.
      */
     private static char calculaLetra(int numero) {
-        return TABLA_LETRAS[numero % 22];
+        return LETRAS.charAt(numero % 23);
     }
 
     /**
@@ -82,6 +84,17 @@ public class DNI {
      */
     public static boolean dniValido(int numero, char letra) {
         return letra == calculaLetra(numero);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%08d", numero) + letra;
+    }
+
+    @Override
+    public boolean equals(Object dni) {
+
+        return this.letra == ((DNI) dni).letra && this.numero == ((DNI) dni).numero;
     }
 
 }
