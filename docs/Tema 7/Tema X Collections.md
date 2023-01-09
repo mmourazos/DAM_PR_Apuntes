@@ -12,6 +12,10 @@ La jerarquía de interfaces y clases que veremos en este tema es el siguiente:
 
 ![Interfaces y objetos relacionados con colecciones](C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 7\Imagenes\estructura.svg)
 
+En primer lugar vemos que todos los elementos que vamos a ver son **iterables** ya que todos heredan de **Collection** y éste a su vez de **Iterable**.
+
+**List**, **Set** y **Queue** son _sub-interfaces_ de **Collection** así que tendrán todas las capacidades de una colección y además cada una de ellas añadirán cualidades propias (las listas tendrán asignadas posiciones a sus elementos, etc.)
+
 ## El interfaz `Iterable`
 
 Este interfaz se utiliza para indicar que un objeto puede ser _recorrido_, o lo que es lo mismo, se puede **iterar** sobre él. Las clases que **implementan** el interfaz `Iterable` han de tener un método que permita obtener un objeto `Iterator` que, a su vez, ha de permitir determinar si hemos llegado al final de la _lista_ (`hasNext()`) y obtener un elemento de la _lista_ y avanzar al siguiente (`next()`).
@@ -52,6 +56,20 @@ En una colección **no hay posiciones**. Sólo podremos añadir o eliminar eleme
 ## `Set`
 
 ### `HashSet`
+
+## `HashMap`
+
+Añadimos por su utilidad este objeto aunque no sea un miembro de esta jerarquía ya que proviene del interfaz `Map`.
+
+Un mapa será una estructura de datos que almacena los mismos en pares **clave** - **valor**. Tanto clave como valor serán objetos cuyos tipos decidimos en el momento de crear nuestro mapa.
+
+Así, si queremos crear un mapa usando como clave valores enteros para almacenar cadenas de textos crearíamos un `HashMap` como:
+
+```java
+HashMap<Integer, String> palabras = new HashMap<>();
+```
+
+
 
 
 

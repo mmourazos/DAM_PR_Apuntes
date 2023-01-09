@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +22,16 @@ public class Main {
         System.arraycopy(array, pos + 1, array, pos, array.length - pos - 1);
         array = Arrays.copyOf(array, array.length - 1);
         System.out.println("array menos posición " + pos + " = " + Arrays.toString(array));
+
+        HashMap<Integer, String> palabras = new HashMap<>();
+        palabras.put(1, "uno");
+        palabras.put(2, "dos");
+        palabras.put(3, "tres");
+
+        for (Map.Entry<Integer, String> entry : palabras.entrySet()) {
+            System.out.println("entry.getKey() = " + entry.getKey());
+            System.out.println("entry.getValue() = " + entry.getValue());
+        }
     }
 
 }
