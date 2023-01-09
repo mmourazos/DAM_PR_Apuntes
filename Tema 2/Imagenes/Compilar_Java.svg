@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="142.179mm"
+   height="54.606998mm"
+   viewBox="1 1 152.57385 58.599372"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Compilar_Java.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.74901961"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="353.5"
+     inkscape:cy="187.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="111.64669,126.53652"
+       orientation="0,-1"
+       id="guide2533"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="4"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="8.3240004"
+       markerHeight="9.6231213"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-23.685417,-17.467538)">
+    <rect
+       style="fill:#f2f2f2;stroke:none;stroke-width:0.536554;stroke-linejoin:round;fill-opacity:0.75193805"
+       id="rect2975"
+       width="153.0368"
+       height="58.772949"
+       x="24.453941"
+       y="18.380749" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';stroke-width:0.264583"
+       x="-149.48958"
+       y="114.82916"
+       id="text612"><tspan
+         sodipodi:role="line"
+         id="tspan610"
+         style="stroke-width:0.264583"
+         x="-149.48958"
+         y="114.82916" /></text>
+    <g
+       id="g2616"
+       transform="matrix(0.5,0,0,0.5,25.222343,1.530128)">
+      <rect
+         style="fill:#aad400;stroke:#000000;stroke-width:1"
+         id="rect111"
+         width="75"
+         height="35"
+         x="37.293655"
+         y="35.448383"
+         rx="5"
+         ry="5" />
+      <rect
+         style="fill:#d45500;stroke:#000000;stroke-width:1"
+         id="rect269"
+         width="75"
+         height="35"
+         x="132.39684"
+         y="35.448383"
+         rx="5"
+         ry="5" />
+      <rect
+         style="fill:#aad400;stroke:#000000;stroke-width:1"
+         id="rect271"
+         width="75"
+         height="35"
+         x="227.5"
+         y="35.448383"
+         rx="5"
+         ry="5" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="52.419819"
+         y="54.820446"
+         id="text437"><tspan
+           sodipodi:role="line"
+           id="tspan435"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="52.419819"
+           y="54.820446">Fichero .java</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="169.82449"
+         y="45.289581"
+         id="text441"><tspan
+           sodipodi:role="line"
+           id="tspan439"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="169.82449"
+           y="45.289581">Compilador</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="169.82449"
+           y="55.872917"
+           id="tspan443">de</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="169.82449"
+           y="66.456253"
+           id="tspan445">Java</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="241.63397"
+         y="55.620056"
+         id="text449"><tspan
+           sodipodi:role="line"
+           id="tspan447"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="241.63397"
+           y="55.620056">Fichero .class</tspan></text>
+      <rect
+         style="fill:#37abc8;stroke:#000000;stroke-width:1"
+         id="rect451"
+         width="299"
+         height="49"
+         x="0.5"
+         y="100.5" />
+      <rect
+         style="fill:#afdde9;stroke:#000000;stroke-width:0.999996"
+         id="rect455"
+         width="59"
+         height="29.000004"
+         x="5.4999981"
+         y="115.5"
+         rx="5"
+         ry="5" />
+      <rect
+         style="fill:#afdde9;stroke:#000000;stroke-width:0.999996"
+         id="rect457"
+         width="59"
+         height="29.000004"
+         x="158.83333"
+         y="115.5"
+         rx="5"
+         ry="5" />
+      <rect
+         style="fill:#afdde9;stroke:#000000;stroke-width:0.999996"
+         id="rect459"
+         width="59"
+         height="29.000004"
+         x="82.166664"
+         y="115.5"
+         rx="5"
+         ry="5" />
+      <rect
+         style="fill:#afdde9;stroke:#000000;stroke-width:0.999996"
+         id="rect461"
+         width="59"
+         height="29.000004"
+         x="235.5"
+         y="115.5"
+         rx="5"
+         ry="5" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
+         x="95.811066"
+         y="110.86043"
+         id="text465"><tspan
+           sodipodi:role="line"
+           id="tspan463"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
+           x="95.811066"
+           y="110.86043">Java Virtual Machine</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';stroke-width:0.264583"
+         x="16.03474"
+         y="132.74503"
+         id="text588"><tspan
+           sodipodi:role="line"
+           id="tspan586"
+           style="stroke-width:0.264583"
+           x="16.03474"
+           y="132.74503">S.O. nativo</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="111.43929"
+         y="121.15713"
+         id="text592"><tspan
+           sodipodi:role="line"
+           id="tspan590"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="111.43929"
+           y="121.15713">Java</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="111.43929"
+           y="131.74046"
+           id="tspan594">Runtime</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="111.43929"
+           y="142.32381"
+           id="tspan596">System</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="188.28992"
+         y="126.6617"
+         id="text600"><tspan
+           sodipodi:role="line"
+           id="tspan598"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="188.28992"
+           y="126.6617">Verificador</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="188.28992"
+           y="137.24504"
+           id="tspan602">de bytecode</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="264.95245"
+         y="127.62288"
+         id="text606"><tspan
+           sodipodi:role="line"
+           id="tspan604"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="264.95245"
+           y="127.62288">Cargador de</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="264.95245"
+           y="138.20622"
+           id="tspan608">Class</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="m 112.29366,52.948383 h 20.10318"
+         id="path807"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect111"
+         inkscape:connection-end="#rect269" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="M 207.39684,52.948383 H 227.5"
+         id="path809"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect269"
+         inkscape:connection-end="#rect271" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="M 265,70.448383 265,115.5"
+         id="path811"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect271"
+         inkscape:connection-end="#rect461" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="M 235.5,130 H 217.83333"
+         id="path813"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect461"
+         inkscape:connection-end="#rect457" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="M 158.83333,130 H 141.16666"
+         id="path819"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect457"
+         inkscape:connection-end="#rect459" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="M 82.166664,130 H 64.499998"
+         id="path821"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect459"
+         inkscape:connection-end="#rect455" />
+    </g>
+  </g>
+  <metadata
+     id="metadata2626">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

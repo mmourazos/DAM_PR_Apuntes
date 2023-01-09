@@ -1,0 +1,3232 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Tema%201/Introduccion_a_la_programcacion/">
+      
+      
+        <link rel="next" href="../T2.1%20-%20Tipos_envoltorio/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>Tema 2: Introducción a Java - Apuntes 1º Programación DAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-2-introduccion-a-java" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes 1º Programación DAM" class="md-header__button md-logo" aria-label="Apuntes 1º Programación DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes 1º Programación DAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 2: Introducción a Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mmourazos/DAM_PR_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes 1º Programación DAM" class="md-nav__button md-logo" aria-label="Apuntes 1º Programación DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Apuntes 1º Programación DAM
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mmourazos/DAM_PR_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Programación 1º de DAM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A cerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licencia/" class="md-nav__link">
+        Licencia
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Tareas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tareas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tareas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%201%20-%20Enunciado/" class="md-nav__link">
+        Tarea 1: Programación básica, bucles y arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%202%20-%20Enunciado/" class="md-nav__link">
+        Tarea2: Orientación a objetos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Tema 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 1" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%201/Introduccion_a_la_programcacion/" class="md-nav__link">
+        Tema 1: Introducción a la programación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
+          Tema 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tema 2: Introducción a Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tema 2: Introducción a Java
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hola-mundo" class="md-nav__link">
+    Hola mundo
+  </a>
+  
+    <nav class="md-nav" aria-label="Hola mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-escribir-un-programa-java" class="md-nav__link">
+    ¿Cómo escribir un programa Java?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compilar-ejecutar-un-programa" class="md-nav__link">
+    ¿Cómo compilar / ejecutar un programa?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo compilar / ejecutar un programa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-compilar" class="md-nav__link">
+    ¿Qué significa compilar?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entonces-para-ejecutar-un-programa-java-que" class="md-nav__link">
+    Entonces... para ejecutar un programa Java ¿Qué?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codificacion-en-compilacion" class="md-nav__link">
+    Codificación en compilación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clases-jars-classpath-y-otras-cosas-de-meter" class="md-nav__link">
+    Clases, JARs, CLASSPATH y otras cosas de meter
+  </a>
+  
+    <nav class="md-nav" aria-label="Clases, JARs, CLASSPATH y otras cosas de meter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-classpath" class="md-nav__link">
+    Variable CLASSPATH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-cp" class="md-nav__link">
+    Opción -cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whiskey-in-the-jars" class="md-nav__link">
+    Whiskey in the JARs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-archivos-jar" class="md-nav__link">
+    Creación de archivos JAR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-una-variable" class="md-nav__link">
+    Declaración de una variable
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaración de una variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-en-nombres-de-variables" class="md-nav__link">
+    Limitaciones en nombres de variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-inferidas-var" class="md-nav__link">
+    Variables inferidas: var
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consecuencias" class="md-nav__link">
+    Consecuencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-primitivos" class="md-nav__link">
+    Tipos primitivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos primitivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" class="md-nav__link">
+    Nota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-no-hay-mas-tipos-de-datos" class="md-nav__link">
+    ¿Y no hay más tipos de datos?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Y no hay más tipos de datos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-string" class="md-nav__link">
+    Tipo String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-array" class="md-nav__link">
+    Tipo Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-variables" class="md-nav__link">
+    Nombres de variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores" class="md-nav__link">
+    Operadores
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadores-postfijo-post-indecremento" class="md-nav__link">
+    Operadores postfijo / post-(in/de)cremento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-prefijo-pre-indecremento" class="md-nav__link">
+    Operadores prefijo / pre-(in/de)cremento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    Operadores aritméticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-a-nivel-de-bit" class="md-nav__link">
+    Operadores a nivel de bit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-realacionales" class="md-nav__link">
+    Operadores realacionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    Operadores lógicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    Operador ternario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-de-asignacion" class="md-nav__link">
+    Operador de asignación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inciso-entrada-de-datos" class="md-nav__link">
+    INCISO: Entrada de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="INCISO: Entrada de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-por-consola" class="md-nav__link">
+    Entrada por consola
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada por consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usando-console" class="md-nav__link">
+    Usando Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota_1" class="md-nav__link">
+    NOTA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usando-scanner" class="md-nav__link">
+    Usando Scanner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-argumentos" class="md-nav__link">
+    Parámetros / Argumentos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-control" class="md-nav__link">
+    Estructuras de control
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-condicionales" class="md-nav__link">
+    Estructuras condicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras condicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-else-if" class="md-nav__link">
+    if else / else if
+  </a>
+  
+    <nav class="md-nav" aria-label="if else / else if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variantes" class="md-nav__link">
+    Variantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    switch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-repetitivas-estructuras-iterativas-o-bucles" class="md-nav__link">
+    Estructuras repetitivas (estructuras iterativas o bucles)
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras repetitivas (estructuras iterativas o bucles)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    while
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-while" class="md-nav__link">
+    do while
+  </a>
+  
+    <nav class="md-nav" aria-label="do while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-sentencia" class="md-nav__link">
+    primera sentencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-de-continuacion" class="md-nav__link">
+    condición de continuación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-sentencia" class="md-nav__link">
+    segunda sentencia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentencias-break-y-continue" class="md-nav__link">
+    Sentencias break y continue
+  </a>
+  
+    <nav class="md-nav" aria-label="Sentencias break y continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formas-de-terminar-un-bucle" class="md-nav__link">
+    Formas de terminar un bucle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2.1%20-%20Tipos_envoltorio/" class="md-nav__link">
+        Tema 2.1: Tipos envoltorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2.2%20-%20Cadenas_de_caracteres/" class="md-nav__link">
+        Tema 2.2: Cadenas de caracteres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2.3%20-%20Arrays/" class="md-nav__link">
+        Tema 2.3: Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2.4%20-%20Documentacion/" class="md-nav__link">
+        Tema 2.3: Documentación en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6" tabindex="0" aria-expanded="false">
+          Ejercicios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ejercicios" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ejercicios
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ejercicios/T2%20-%20Ejercicios/" class="md-nav__link">
+        Ejercicios Tema 2: Programación estructurada, arrays y cadenas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7" tabindex="0" aria-expanded="false">
+          Codigo fuente
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Codigo fuente" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Codigo fuente
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7_1" type="checkbox" id="__nav_6_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7_1" tabindex="0" aria-expanded="false">
+          Documentacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentacion" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Documentacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7_1_1" type="checkbox" id="__nav_6_7_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7_1_1" tabindex="0" aria-expanded="false">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docs" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_7_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7_1_1_1" type="checkbox" id="__nav_6_7_1_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7_1_1_1" tabindex="0" aria-expanded="false">
+          Legal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Legal" data-md-level="5">
+        <label class="md-nav__title" for="__nav_6_7_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Legal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codigo_fuente/documentacion/docs/legal/jquery/" class="md-nav__link">
+        Jquery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codigo_fuente/documentacion/docs/legal/jqueryUI/" class="md-nav__link">
+        jqueryUI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7_1_2" type="checkbox" id="__nav_6_7_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7_1_2" tabindex="0" aria-expanded="false">
+          Documentacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentacion" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Documentacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_7_1_2_1" type="checkbox" id="__nav_6_7_1_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7_1_2_1" tabindex="0" aria-expanded="false">
+          Legal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Legal" data-md-level="5">
+        <label class="md-nav__title" for="__nav_6_7_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Legal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codigo_fuente/documentacion/documentacion/legal/jquery/" class="md-nav__link">
+        Jquery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codigo_fuente/documentacion/documentacion/legal/jqueryUI/" class="md-nav__link">
+        jqueryUI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Tema 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.0%20-%20Programaci%C3%B3n%20orientada%20a%20objetos/" class="md-nav__link">
+        Tema 3: Programación orientada a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.1%20-%20Anatom%C3%ADa%20de%20una%20clase/" class="md-nav__link">
+        Tema 3.1: Anatomía de una Clase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.2%20-%20Visibilidad/" class="md-nav__link">
+        Tema 3.2: Visibilidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.3%20-%20Herencia/" class="md-nav__link">
+        Tema 3.3: Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.4%20-%20Paquetes/" class="md-nav__link">
+        Tema 3.4: Paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_6" type="checkbox" id="__nav_7_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_6" tabindex="0" aria-expanded="false">
+          Ejercicios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ejercicios" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ejercicios
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/Ejercicios/T3%20-%20Ejercicios%20-%20Herencia/" class="md-nav__link">
+        Ejercicios tema 3: Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/Ejercicios/T3%20-%20Ejercicios/" class="md-nav__link">
+        Ejercicios Tema3: Prog. orientada a objetos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          Tema 4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 4" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.0%20-%20Excepciones/" class="md-nav__link">
+        Tema 4: Excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.1%20-%20Debugging/" class="md-nav__link">
+        *Debugging*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.2%20-%20Testing/" class="md-nav__link">
+        T4.2   Testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4" tabindex="0" aria-expanded="false">
+          Ejercicios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ejercicios" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ejercicios
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/Ejercicios/T4%20-%20Ejercicios/" class="md-nav__link">
+        Ejercicios tema 4: Excepciones, debugging y testing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+          Tema 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 5" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.0%20-%20Polimorfismo/" class="md-nav__link">
+        Tema 5: Conceptos avanzados de POO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.1%20-%20Interfaces/" class="md-nav__link">
+        Tema 5.1: Interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.2%20-%20Clases%20abstractas/" class="md-nav__link">
+        Tema 5.2: Clases abstractas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.3%20-%20Recursividad/" class="md-nav__link">
+        Tema 5.3: Recursividad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_5" type="checkbox" id="__nav_9_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_5" tabindex="0" aria-expanded="false">
+          Ejercicios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ejercicios" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ejercicios
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/Ejercicios/T5%20-%20Ejericicios/" class="md-nav__link">
+        Tema 5: Ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="false">
+          Tema 6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 6" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%206/T6.0%20-%20Proyectos/" class="md-nav__link">
+        Proyectos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%206/T6.1%20-%20Maven/" class="md-nav__link">
+        T6.1   Maven
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Tema 7
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 7" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 7
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.0%20-%20Estructuras%20avanzadas/" class="md-nav__link">
+        Tema 6: Estructuras de datos avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.1%20-%20Genericos/" class="md-nav__link">
+        Genéricos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.2%20-%20Listas/" class="md-nav__link">
+        Tema 7.2   Listas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.3%20-%20El%20tiempo/" class="md-nav__link">
+        El tiempo en Java: `Date`, `Calendar` y `java.time`
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%20X%20Collections/" class="md-nav__link">
+        Tema X: `Collections`
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          Tema 8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 8" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%208/T8.0%20-%20Lectura%20y%20escritura%20a%20disco/" class="md-nav__link">
+        T8.0   Lectura y escritura a disco
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13" tabindex="0" aria-expanded="false">
+          Tema 9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema 9" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/T9.0%20-%20Bases%20de%20datos/" class="md-nav__link">
+        Tema 8: Bases de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/T9.1%20-%20Conexi%C3%B3n%20a%20BBDD/" class="md-nav__link">
+        T9.1   Conexión a BBDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/T9.2%20-%20Modificaci%C3%B3n%20BBDD/" class="md-nav__link">
+        T9.2   Modificación BBDD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hola-mundo" class="md-nav__link">
+    Hola mundo
+  </a>
+  
+    <nav class="md-nav" aria-label="Hola mundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-escribir-un-programa-java" class="md-nav__link">
+    ¿Cómo escribir un programa Java?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compilar-ejecutar-un-programa" class="md-nav__link">
+    ¿Cómo compilar / ejecutar un programa?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo compilar / ejecutar un programa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-compilar" class="md-nav__link">
+    ¿Qué significa compilar?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entonces-para-ejecutar-un-programa-java-que" class="md-nav__link">
+    Entonces... para ejecutar un programa Java ¿Qué?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codificacion-en-compilacion" class="md-nav__link">
+    Codificación en compilación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clases-jars-classpath-y-otras-cosas-de-meter" class="md-nav__link">
+    Clases, JARs, CLASSPATH y otras cosas de meter
+  </a>
+  
+    <nav class="md-nav" aria-label="Clases, JARs, CLASSPATH y otras cosas de meter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-classpath" class="md-nav__link">
+    Variable CLASSPATH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-cp" class="md-nav__link">
+    Opción -cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whiskey-in-the-jars" class="md-nav__link">
+    Whiskey in the JARs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-archivos-jar" class="md-nav__link">
+    Creación de archivos JAR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-una-variable" class="md-nav__link">
+    Declaración de una variable
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaración de una variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-en-nombres-de-variables" class="md-nav__link">
+    Limitaciones en nombres de variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-inferidas-var" class="md-nav__link">
+    Variables inferidas: var
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consecuencias" class="md-nav__link">
+    Consecuencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-primitivos" class="md-nav__link">
+    Tipos primitivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos primitivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" class="md-nav__link">
+    Nota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-no-hay-mas-tipos-de-datos" class="md-nav__link">
+    ¿Y no hay más tipos de datos?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Y no hay más tipos de datos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-string" class="md-nav__link">
+    Tipo String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-array" class="md-nav__link">
+    Tipo Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-variables" class="md-nav__link">
+    Nombres de variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores" class="md-nav__link">
+    Operadores
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadores-postfijo-post-indecremento" class="md-nav__link">
+    Operadores postfijo / post-(in/de)cremento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-prefijo-pre-indecremento" class="md-nav__link">
+    Operadores prefijo / pre-(in/de)cremento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    Operadores aritméticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-a-nivel-de-bit" class="md-nav__link">
+    Operadores a nivel de bit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-realacionales" class="md-nav__link">
+    Operadores realacionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    Operadores lógicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    Operador ternario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-de-asignacion" class="md-nav__link">
+    Operador de asignación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inciso-entrada-de-datos" class="md-nav__link">
+    INCISO: Entrada de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="INCISO: Entrada de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-por-consola" class="md-nav__link">
+    Entrada por consola
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada por consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usando-console" class="md-nav__link">
+    Usando Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota_1" class="md-nav__link">
+    NOTA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usando-scanner" class="md-nav__link">
+    Usando Scanner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-argumentos" class="md-nav__link">
+    Parámetros / Argumentos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-control" class="md-nav__link">
+    Estructuras de control
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-condicionales" class="md-nav__link">
+    Estructuras condicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras condicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-else-if" class="md-nav__link">
+    if else / else if
+  </a>
+  
+    <nav class="md-nav" aria-label="if else / else if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variantes" class="md-nav__link">
+    Variantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    switch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-repetitivas-estructuras-iterativas-o-bucles" class="md-nav__link">
+    Estructuras repetitivas (estructuras iterativas o bucles)
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras repetitivas (estructuras iterativas o bucles)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    while
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-while" class="md-nav__link">
+    do while
+  </a>
+  
+    <nav class="md-nav" aria-label="do while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-sentencia" class="md-nav__link">
+    primera sentencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicion-de-continuacion" class="md-nav__link">
+    condición de continuación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-sentencia" class="md-nav__link">
+    segunda sentencia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentencias-break-y-continue" class="md-nav__link">
+    Sentencias break y continue
+  </a>
+  
+    <nav class="md-nav" aria-label="Sentencias break y continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formas-de-terminar-un-bucle" class="md-nav__link">
+    Formas de terminar un bucle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="tema-2-introduccion-a-java">Tema 2: Introducción a Java</h1>
+<h2 id="hola-mundo">Hola mundo</h2>
+<h3 id="como-escribir-un-programa-java">¿Cómo escribir un programa Java?</h3>
+<p>Un programa en código Java no es más que un documento de texto con sentencias y sintaxis de Java que puedan ser comprendidas por el compilador.</p>
+<p>Este fichero de código fuente ha de tener la extensión <code>.java</code> para que pueda ser reconocido por los IDE (Entornos integrados de desarrollo).</p>
+<p>Así, para crear nuestro primer programa Java lo único que hemos de hacer es escribir las siguientes líneas de código en un fichero <strong>de nombre <code>HolaMundo.java</code></strong> (es necesario el nombre <code>HolaMundo</code> como explicaremos más adelante):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="como-compilar-ejecutar-un-programa">¿Cómo compilar / ejecutar un programa?</h3>
+<h4 id="que-significa-compilar">¿Qué significa compilar?</h4>
+<p>Compilar un programa consiste en <em>convertir</em> el <strong>código fuente</strong> en <strong>código binario</strong>. El código fuente es el programa tal como nosotros lo hemos escrito en el editor de código, de manera que es legible por los seres humanos. Por el contrario el <strong>código binario</strong> <em>normalmente</em> es únicamente comprensible por el <strong>Sistema Operativo</strong> que puede procesarlo y enviarlo al procesador del ordenador para que se ejecuten las instrucciones que escribió el programador.</p>
+<p>Como podemos ver el <strong>código binario (o simplemente binario)</strong> de un programa es dependiente del <strong>sistema operativo</strong> y el tipo de <strong>procesado</strong>r (arquitectura) de la máquina en la que se quiera ejecutar.</p>
+<p>En Java este proceso es algo diferente. En lugar de compilar para un sistema operativo / arquitectura lo que hace el compilador de Java es crear un binario para ser ejecutado en la <strong>máquina virtual de java (JVM)</strong>. Esta <em>máquina virtual de java</em> no es más que un programa que entiende el código binario de Java (Java bytecode).</p>
+<p>De modo que un programa Java, una vez compilado, podrá ser ejecutado por <strong>cualquier JVM</strong>. Lo que necesitaremos para poder ejecutar un <strong>bytecode</strong> de Java en cualquier arquitectura es una <strong>JVM</strong> que corra sobre ella.</p>
+<p><img alt="Proceso de compilación-ejecución en Java" src="../Imagenes/Compilar_Java.svg" /></p>
+<h4 id="entonces-para-ejecutar-un-programa-java-que">Entonces... para ejecutar un programa Java ¿Qué?</h4>
+<p>Para ejecutar un programa Java hemos de seguir los siguientes pasos:</p>
+<ol>
+<li>Compilar a bytecode de Java: <code>javac -verbose HolaMundo.java</code>.</li>
+<li>Enviarle el bytecode de Java (<code>HolaMundo.class</code>) a la máquina virtual: <code>java HolaMundo</code>.</li>
+</ol>
+<p><strong>Nota:</strong> al ejecutar el segundo paso <strong>no se ha de incluir el .class</strong> al indicar la clase que queremos ejecutar.</p>
+<h4 id="codificacion-en-compilacion">Codificación en compilación</h4>
+<p>El compilador de java <code>javac</code> por defecto interpreta que los <code>.java</code> que le pasamos están codificados como <code>ASCII</code> por lo que, si tenemos tíldes o "ñ" en nuestro código se mostrarán incorrectamente al ejecutarlo. Por ejemplo, si tenemos un archivo (codificado en unidcode) con el sugiente código fuente:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="n">MiClase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;España es así.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>y lo compilamos con: <code>javac .\MiClase.java</code>.</p>
+<p>Obtenedremos la clase <code>MiClase.class</code>, que al ejecutar con el comando <code>java MiClase</code> mostrará por pantalla <code>EspaÃ±a es asÃ­.</code>.</p>
+<p>Para corregir esto hemos de indicarle al compilador que nuestro código fuente está codificado con formato <a href="https://en.wikipedia.org/wiki/Unicode">unicode</a> de la siguiente manera: <code>javac -encoding utf8 MiClase.java</code>.
+Si a continuación ejecutamos el programa:</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>MiClase
+España<span class="w"> </span>es<span class="w"> </span>así.
+</code></pre></div>
+<h4 id="clases-jars-classpath-y-otras-cosas-de-meter">Clases, JARs, <code>CLASSPATH</code> y otras cosas de meter</h4>
+<p>Cuando empecemos a programar usando el modelo de orientación a objetos nos encontraremos creado <em>librerías</em> para nuestro proyecto, así como utilizando librerías de terceros. Para que <code>javac</code> y luego <code>java</code> puedan localizar las liberías que utilizamos (en definitiva los archivos <code>.class</code>) hemos de indicárselo y para ello disponemos de dos formas (cada una con sus cosas):</p>
+<ul>
+<li>Variable de entorno <code>CLASSPATH</code>. <strong>NO RECOMENDABLE.</strong></li>
+<li>Opciones <code>-cp</code>, <code>-classpah</code> o <code>-class-path</code> (son sinónimos) tanto para <code>javac</code> como para <code>java</code>.</li>
+</ul>
+<h5 id="variable-classpath">Variable <code>CLASSPATH</code></h5>
+<p>La variable <code>CLASSPATH</code> contendrá una lista de uno o más directorios. Estos directorios son en los que <code>javac</code> y <code>java</code> buscarán las clases que indiquemos en las sentencias <code>import</code> de nuestro código. Comunmente hemos de indicar el directorio <code>lib</code> de nuestra instalación de JDK (<code>C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot\lib</code> en nuestro caso), también añadiremos el directorio actual <code>.</code> para que se puedan encontrar las clases de nuestro directorio. Además deberemos de indicar el directorio a donde vayamos a guardar las clases de terceros / librerías que vayamos a utilizar.</p>
+<p>Si hacemos esto <em>en principio no deberíamos de tener </em><em>ningún problema... NINGÚN PROBLEMA</em>** (JA JA JA JA JA...).</p>
+<h5 id="opcion-cp">Opción <code>-cp</code></h5>
+<p>La opción <code>-cp</code> <em>sobreescribe</em> a <code>CLASSPATH</code>. De manera que si usamos <code>-cp</code> el valor que tenga <code>CLASSPATH</code> será irrelevante.
+Con esta opción indicamos explícitamente los directorios donde se encontrarán las clases que usamos en nuestro proyecto.</p>
+<p>La sintaxis en la siguiente:</p>
+<ul>
+<li>Linux: <code>-cp &lt;directorio de clases 1&gt;:&lt;directorio de clases 2&gt;:...</code>.</li>
+<li>Windows <code>-cp &lt;directorio de clases 1&gt;;&lt;directorio de clases 2&gt;;...</code>.</li>
+</ul>
+<p>Nótese la diferencia en el separador de directorios ":" en sistemas Linux y ";" en Windows.</p>
+<p>Además de esto es conveniente entrecomillar la lista:</p>
+<div class="highlight"><pre><span></span><code>javac<span class="w"> </span>-cp<span class="w"> </span><span class="s1">&#39;./lib;.&#39;</span><span class="w"> </span>./MiClase.java
+</code></pre></div>
+<h5 id="whiskey-in-the-jars"><a href="https://youtu.be/wsrvmNtWU4E">Whiskey in the JARs</a></h5>
+<p>Los archivos <code>.jar</code> consisten fundamentalmente en la estructura de directorios-paquetes de un conjunto de clases de Java (= librerías).
+Lo más importante que hemos de terner en cuenta es que, a efectos del <strong>CLASSPAH</strong> y la opción <strong>-cp</strong>, <strong>un JAR  es un directorio</strong>.</p>
+<p>Repito.</p>
+<p><strong>UN .jar CUENTA COMO SI FUESE UN DIRECTORIO.</strong></p>
+<p>Esto implica que si hemos descargado un archivo <code>jar</code> de terceros para usar en nuestro proyecto hemos de:</p>
+<ul>
+<li>Añadirlo a nuestra variable <code>CLASSPATH</code> (<code>CLASSPATH=C:\libs\libreria_descargada1.jar;C:\libs\libreria_descargada2.jar</code>).</li>
+<li>Indicarlo explícitamente en la opción <code>-cp</code>: <code>-cp 'C:\libs\libreria_descargada.jar;.</code>.</li>
+<li>Descomprimirla dentro de un diretorio incluido en <code>CLASSPATH</code> o <code>-cp</code>.</li>
+<li>O decirle a nuestro EID que lo incluya. <strong>LA MÁS RECOMENDABLE</strong>.</li>
+</ul>
+<h5 id="creacion-de-archivos-jar">Creación de archivos JAR</h5>
+<p>Un archivo <code>.jar</code> es un tipo de archivo que se puede pasar a comando <code>java</code> para que lo ejecute como cualquier otra clase. Podríamos decir que un JAR contiene comprimida la estructura de directorios / paquetes y clases de una aplicación Java.</p>
+<h2 id="comentarios">Comentarios</h2>
+<p>Cuando escribamos código en cualquier lenguaje hemos de tener presente que no seremos únicamente nosotros los que tendremos que entender y posiblemente modificar ese código. Para ello, cuando estimemos que algo puede ser confuso (para nuestro yo futuro o para otra persona), es conveniente <strong>comentar el código</strong>.</p>
+<p>En Java hay tres tipos de comentarios:</p>
+<ul>
+<li>Comentario de una línea: Se indica escribiendo <code>//</code> antes de comenzar a escribir el comentario.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto no hace falta ni comentarlo.</span>
+</code></pre></div>
+<ul>
+<li>Comentario de varias líneas: Se indica escribiendo <code>/*</code> al comienzo de las líneas de comentario y <code>*/</code> al final:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Y esto es un ejemplo de como se puede escribir un comentario</span>
+<span class="cm">que se extienda várias líneas. */</span>
+<span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>Comentarios para <strong>Javadoc</strong>: Los comentarios para Javadoc son similares a los comentarios para várias líneas pero comienzan con <code>/**</code> en lugar de <code>/*</code>.</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p>Una variable es un <strong><em>nombre</em></strong> que estará enlazado con un <strong><em>espacio de memoria</em></strong> donde se podrá almacenar algún <strong><em>dato</em></strong>.</p>
+<p>Para poder utilizar una variable en Java habrá de <strong>declararla</strong> antes.</p>
+<h3 id="declaracion-de-una-variable">Declaración de una variable</h3>
+<p>Para declarar una variable lo primero que hemos de indicar es el <strong>tipo de dato</strong> de la misma. El tipo de dato determina que tipo de valores podrá contener la variable.</p>
+<p>A continuación indicaremos el nombre de la variable.</p>
+<h4 id="limitaciones-en-nombres-de-variables">Limitaciones en nombres de variables</h4>
+<p>La reglas que rigen el nombrado de las variables son las siguiente:</p>
+<ul>
+<li>Los nobres de variables distinguen entre mayúsculas y minúsculas (La variable <code>Hola</code> es distinta de <code>hola</code>).</li>
+<li>Una variable ha de empezar con un caracter unicode, el síbolo <code>$</code> o el carácter <em>subrayado</em> <code>_</code>.</li>
+<li>La convención dice que el nombre de una variable ha de empezar con una letra minúscula (y no con <code>$</code> o <code>_</code> aunque esté permitido).</li>
+<li>No se permite el uso de espacios en blanco.</li>
+<li>Si el nombre elegido para la variable consta de varias palabras ("codigo" "libro" por ejemplo) se pone en mayúsculas la primera letra de cada palabra a partir de la primera ("codigoLibro").</li>
+<li><strong>Si la variable almacena una constante, se escribe todo el nombre con MAYÚSCULAS y se separarán las palabras mediante el carácter subrayado <code>_</code> ("CODIGO_LIBRO").</strong></li>
+</ul>
+<p>Finalmente, y de manera opcional, podremos asignar un <strong>valor inicial</strong> al la variable utilizando el <strong>operador de asignación</strong> <code>=</code>.</p>
+<div class="highlight"><pre><span></span><code>&lt;tipo de dato&gt; &lt;nombre de la variable&gt; [= valor];
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="variables-inferidas-var">Variables inferidas: <code>var</code></h4>
+<p>Desde la versión 10 del JDK también se pueden declarar variables utilizando la palabra clave <code>var</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<p>En este caso el tipo de la variable <code>a</code> de determinará en el momento en que Java vea que se le está asignando el valor 10 (entero). Es decir, la máquina virtual infiere el tipo de la variable y se lo asigna.</p>
+<p><strong>Una vez se le a asignado un tipo la variable <code>a</code> sólo podrá contener valores de dicho tipo.</strong></p>
+<p>En nuestro ejemplo el siguiente código daría error de compilación:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="c1">//...</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+</code></pre></div>
+<p><code>Type mismatch: cannot convert from double to int"</code>.</p>
+<p>Ya que en Java los números con cifras decimales se consideran del tipo <code>double</code> (número en coma flotante de doble precisión) y <code>a</code> será una variable de tipo <code>int</code> ya que le asignamos un valor entero.</p>
+<h3 id="tipos-de-datos">Tipos de datos</h3>
+<p>Java es un lenguaje de <strong>tipado estático</strong>. Esto quiere decir que hay que indicar siempre el <strong>tipo de dato</strong> de una variable.</p>
+<p>Por esto se dice también que Java es <strong>fuertemente tipado</strong>.</p>
+<p>Un tipo de dato es una declaración mediante la que se indica el contenido que podrá tener una variable.</p>
+<h4 id="consecuencias">Consecuencias</h4>
+<p>Si intentamos guardar en una variable un dato que no encaja con el que hemos indicado en la declaración se producirá un <strong>error de compilación</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>.<span class="se">\t</span>area1<span class="se">\M</span>iNombre.java:4:<span class="w"> </span>error:<span class="w"> </span>incompatible<span class="w"> </span>types:<span class="w"> </span>possible<span class="w"> </span>lossy<span class="w"> </span>conversion<span class="w"> </span>from<span class="w"> </span>double<span class="w"> </span>to<span class="w"> </span>int
+<span class="w">        </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.2<span class="p">;</span>
+<span class="w">            </span>^
+<span class="m">1</span><span class="w"> </span>error
+</code></pre></div>
+<h3 id="tipos-primitivos">Tipos primitivos</h3>
+<p>Estos tipos de datos de base tienen como única característica que <strong>no son objetos</strong>. El resto de elementos del lenguaje Java <strong>son objetos</strong>.</p>
+<ul>
+<li><strong>byte</strong>: números enteros que se pueden representar mediante un byte (8 bits). Es decir, los números entre el -128 y el 127 (ambos inclusive).</li>
+<li><strong>short</strong>: números enteros de 16 bits. Los valores enteros entre -32 768 y 32 767.</li>
+<li><strong>int</strong>: similar a los anteriores pero usando 32 bits ($-2^31$)</li>
+<li><strong>long</strong>: lo mismo pero con 64 bits.</li>
+<li><strong>float</strong>: números reales expresados mediante 32 bits.</li>
+<li><strong>double</strong>: números reales representados mediante 64 bits.</li>
+<li><strong>boolean</strong>: dos valore (lógicos) posibles: <strong>true</strong> y <strong>false</strong>. Utiliza un bit de datos.</li>
+<li><em>char</em>*: representa un carácter Unicode de 16 bits.</li>
+</ul>
+<h4 id="nota">Nota</h4>
+<p>Java toma cualquier dato entero como <code>10.5</code> por defecto como <code>double</code> (aunque pueda ser alamacenado sin problemas como <code>float</code>). Lo <em>normal</em> es que siempre se use <code>double</code> cuando trabajemos con números reales.</p>
+<h3 id="y-no-hay-mas-tipos-de-datos">¿Y no hay más tipos de datos?</h3>
+<p>El resto de tipos de datos en Java <strong>son objetos</strong>.</p>
+<p>Algunos tipos de datos, aunque sean objetos, tienen comportamientos <strong><em>especiales</em></strong> para facilitar la escritura de código. Un ejemplo son los tipos <strong>String</strong> y <strong>Array</strong>.</p>
+<h4 id="tipo-string">Tipo <code>String</code></h4>
+<p>El tipo <strong>String</strong> se utiliza para almacenar y realizar operaciones sobre cadenas de caracteres.</p>
+<p>Para crear una variable que haga referencia a una cadena de caracteres escribiremos los siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Esta es la forma abreviada de escribir el código. La forma <strong><em>correcta</em></strong> teniendo en cuenta que <strong>String</strong> es un objeto sería:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="tipo-array">Tipo Array</h4>
+<p>El tipo array (que veremos en detalle más adelante) consiste en una lista de tamaño fijo de elementos del mismo tipo.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Para definir un array de 10 elementos int:</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">enteros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="c1">// Para crearlo con valores iniciales:</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">tresEnteros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</code></pre></div>
+<h3 id="nombres-de-variables">Nombres de variables</h3>
+<p>Los nombres de las variables han de cumplir las siguientes reglas:</p>
+<ul>
+<li>Han de empezar por <strong>minúscula</strong> (opcional pero recomendado)<strong>, subrayado o $</strong>.</li>
+<li>Han de estar compuestas por caracteres <strong>Unicode</strong>.</li>
+<li>No pueden coincidir con el nombre de las <strong>palabras reservadas</strong> del lenguaje.</li>
+</ul>
+<h2 id="operadores">Operadores</h2>
+<h3 id="operadores-postfijo-post-indecremento">Operadores <em>postfijo</em> / post-(in/de)cremento</h3>
+<p>Estos operadores valen para incrementar (<code>++</code>) o decrementar (<code>--</code>) en una unidad el valor de una variable.</p>
+<p>También se llaman incremento (decremento) <em>diferido</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// x pasa a valer 2.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Se mostrará el valor 2.</span>
+<span class="n">x</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// x pasa a valer 1.*</span>
+</code></pre></div>
+<h3 id="operadores-prefijo-pre-indecremento">Operadores <em>prefijo</em> / pre-(in/de)cremento</h3>
+<p>Son similares a los anteriores pero con menor prioridad:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="o">++</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// x pasa a valer 2.</span>
+<span class="o">--</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// x pasa a valer 1.</span>
+</code></pre></div>
+<p><em>La diferencia entre los operadores unarios </em><em>pre</em><em> y </em><em>post</em><em> incremento / decremento es la siguiente:</em></p>
+<ul>
+<li><strong><em>pre-incremento/decremento</em></strong> se modifica directamente el valor de la variable.</li>
+<li><strong><em>post-incremento/decremento</em></strong> <strong>primero se usa el valor actual de la variable</strong> y a continuación se incrementa.</li>
+</ul>
+<p>Veámoslo con un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Pre-incremento.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">;</span>
+<span class="c1">// z tiene el valor 2.</span>
+<span class="c1">// x e y tienen el valor 1.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;z = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;y = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// Post-incremento.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">;</span>
+<span class="c1">// Primero se usan los valores ACTUALES de x e y para la operación (suma).</span>
+<span class="c1">// por lo que z tomará el valor 0.</span>
+<span class="c1">// A continuación se incrementan.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;z = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;y = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="operadores-aritmeticos">Operadores aritméticos</h3>
+<p>Los operadores aritméticos sirven, como su nombre indica, para realizar operaciones aritméticas. La prioridad de ejecución entre ellos es la común entre las calculadores y el uso general:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Operador de asignación =. Asigna a una variable un valor.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignamos a c el producto de a por b.</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Operador módulo que guarda en c el RESTO de la division de a entre b.</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// Primero multiplicamos b por c y al resultado le añadimos a.</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// Le restamos a a el producto de b por c.</span>
+</code></pre></div>
+<h3 id="operadores-a-nivel-de-bit">Operadores a nivel de bit</h3>
+<ul>
+<li><code>&lt;&lt;</code>: Desplaza el número a su izquierda tantas posiciones como indique el número a su derecha:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0001 en binario.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará el valor 8 (1000)</span>
+</code></pre></div>
+<ul>
+<li><code>&gt;&gt;</code>: Igual que el anterior pero desplazando a la derecha:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1000.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">inc</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará 1 en pantalla.</span>
+</code></pre></div>
+<ul>
+<li>
+<p><code>&amp;</code>: <strong>And</strong> a nivel de bits.</p>
+</li>
+<li>
+<p><code>|</code>: <strong>Or</strong> a nivel de bits.</p>
+</li>
+<li>
+<p><code>^</code>: <strong>Xor</strong> a nivel de bits.</p>
+</li>
+</ul>
+<h3 id="operadores-realacionales">Operadores realacionales</h3>
+<p>Estos operadores sirven para comparar dos valores. Devolverán <strong>true</strong> o <strong>false</strong> dependiendo de si la comparación es <em>cierta</em> o no.</p>
+<ul>
+<li><code>==</code>: El operador <strong>igual</strong> compara si dos valores son iguales.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará false.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará true.</span>
+</code></pre></div>
+<ul>
+<li><code>!=</code>: El operador <strong>distinto</strong> devolverá <strong>cierto</strong> cuando los dos valores comparados sean <strong>distintos</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará true.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará false.</span>
+</code></pre></div>
+<ul>
+<li><code>&gt;</code> y <code>&gt;=</code>: Los operadores <strong>mayor</strong> y <strong>mayor o igual</strong> realizan dicha comparación:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// resultado será igual a false.</span>
+<span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// resultado será igual a true.</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;</code> y <code>&lt;=</code>: Son similares a los anteriores.</li>
+</ul>
+<h3 id="operadores-logicos">Operadores lógicos</h3>
+<p>Estos operadores sirven para:</p>
+<ul>
+<li><strong>negar</strong> (operador <code>!</code>) un valor:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignamos verdadero a t.</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignamos no verdadero (= falso) a f.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">prinln</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará false por pantalla.</span>
+</code></pre></div>
+<ul>
+<li>Hacer la operación <strong>y</strong> (and) de dos valores (operador <code>&amp;&amp;</code>):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w"> </span><span class="c1">// true &amp;&amp; false es igual a false.</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">pringln</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c1">// true &amp;&amp; true es igual a true.</span>
+</code></pre></div>
+<ul>
+<li>Hacer la operación <strong>o</strong> (or) de dos valores (operador <code>||</code>):</li>
+</ul>
+<h3 id="operador-ternario">Operador ternario</h3>
+<p>No es conveniente usarlo ya que vuelve el código difícil de seguir.</p>
+<p>Tiene tres partes: (condición) <strong>?</strong> (resultado si condición <strong>true</strong>) <strong>:</strong> (resultado si condición <strong>false</strong>);</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;a igual a b&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;a distinto de b.&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostrará &quot;a distinto de b.&quot; por pantalla.</span>
+</code></pre></div>
+<h3 id="operador-de-asignacion">Operador de asignación</h3>
+<p>Sólo hay uno <code>=</code> y sirve para asignar un valor a una variable:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;un valor&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// ¿Cuál será el valor de c?</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;un valor&quot;</span><span class="p">;</span>
+<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// ¿Y ahora?</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;un valor&quot;</span><span class="p">);</span>
+<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// ¿¿Y AHORA??</span>
+</code></pre></div>
+<h2 id="inciso-entrada-de-datos">INCISO: Entrada de datos</h2>
+<p>Para poder hacer ejercicios necesitamos interactuar con el programa o, al menos, poder indicar con qué datos va a trabajar (datos de entrada).</p>
+<p>Para ello hemos de ver un par de formas en las que podemos pasar valores a nuestros programas.</p>
+<p>Estas instrucciones van a ser muy superficiales, simplemente para poder realizar entrada de datos. Más adelante las analizaremos en más detalle.</p>
+<h3 id="entrada-por-consola">Entrada por consola</h3>
+<h4 id="usando-console">Usando <code>Console</code></h4>
+<p>Para leer de la consola (entrada por teclado) primero hemos de acceder a ella. Para hacer esto usaremos la clase <code>Console</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Console</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InputOutput</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">();</span><span class="w"> </span><span class="c1">// Accedemos al objeto Console del sistema.</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Dime tu nombre: &quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Quedará esperando a que escribamos un texto y lo guardará en nombre.</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="nota_1">NOTA</h4>
+<p>Los datos leídos con <code>readLine</code> siempre será <strong>cadenas de caracteres</strong>. Para poder usarlos como números habrá que convertirlos en <code>int</code>, <code>float</code>, etc.</p>
+<p>Para ello hemos de usar los métodos / funciones siguientes:</p>
+<ul>
+<li><code>Integer.parseInt()</code>: para convertir una cadena a un valor entero.</li>
+<li><code>Float.parseFloat()</code>: para obtener un valor.</li>
+<li><code>Double.parseDouble()</code>: ...</li>
+</ul>
+<p>Veámoslo en un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Console</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InputNumbers</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">();</span><span class="w"> </span><span class="c1">// Accedemos al objeto Console del sistema.</span>
+
+<span class="w">        </span><span class="c1">// Guaramos lo escrito por teclado en numero.</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">readLine</span><span class="p">(</span><span class="s">&quot;Introduzca un número: &quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="c1">// Puesto que es una cadena (String) hemos de convertirlo al tipo </span>
+<span class="w">        </span><span class="c1">// que nos interesa.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">linea</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El valor &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; + 10 vale &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="usando-scanner">Usando <code>Scanner</code></h4>
+<p>Scanner es ligeramente distinto a <code>Console</code>.  Es más flexible pues <strong>no sólo sirve para leer del teclado</strong> si no que también se puede asociar a:</p>
+<ul>
+<li>Una cadena de texto.</li>
+<li>Un fichero del sistema.</li>
+<li>La entrada por defecto del programa (teclado).</li>
+<li>A un <em>socket</em> (conexión a la que se pueden unir otros procesos).</li>
+</ul>
+<p>Puesto que es más flexible es algo más complejo de utilizar y no ofrece tantas comodidades como <code>Console</code> para acceder a los datos introducidos por el teclado.</p>
+<p><strong>NOTA:</strong> Hay que tener en cuenta que es necesario cerrar el scanner cuando ya no lo vayamos a volver a utilizar.</p>
+<p>Veamos un ejemplo de uso:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PrimerosPasos</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// La sentencia try (&lt;recurso&gt;) { // bloque }</span>
+<span class="w">        </span><span class="c1">// asegura que el recurso será cerrado (liberado) cuando termine el bloque.</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Leído el texto: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Si deseamos convertirlo a un valor entero:</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">linea</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El valor leído es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="parametros-argumentos">Parámetros / Argumentos</h3>
+<p>Cuando creamos el método <code>main</code> podemos ver que a continuación sigue la siguiente secuencia <code>(String[] args)</code>. Esta última parte está indicando el que método <code>main</code> recibe como argumento un <strong>array de cadenas</strong> (una lista de valores <code>String</code>) .</p>
+<p>Este método será utilizado por la máquina virtual de Java para pasarle al programa <strong>los argumentos que indiquemos por consola en el momento de ejecutarlo</strong>.</p>
+<p>Veámoslo con un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Argumentos</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El primer argumento fue: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El segundo argumento fue: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El tercer argumento fue: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Si ahora compilamos e invocamos el programa:</p>
+<div class="highlight"><pre><span></span><code>javac<span class="w"> </span>Argumentos.java
+java<span class="w"> </span>Argumentos<span class="w"> </span>Adiós<span class="w"> </span>Mundo<span class="w"> </span>Cruel
+</code></pre></div>
+<p>El resultado será:</p>
+<div class="highlight"><pre><span></span><code>El<span class="w"> </span>primer<span class="w"> </span>argumento<span class="w"> </span>fue:<span class="w"> </span>Adiós
+El<span class="w"> </span>segundo<span class="w"> </span>argumento<span class="w"> </span>fue:<span class="w"> </span>Mundo
+El<span class="w"> </span>tercer<span class="w"> </span>argumento<span class="w"> </span>fue:<span class="w"> </span>Cruel
+</code></pre></div>
+<h2 id="estructuras-de-control">Estructuras de control</h2>
+<p>En Java hay tres sentencias de control:</p>
+<ul>
+<li>Condicionales: Se determina la ejecución de cierto código fuente dependiendo de una condición:</li>
+<li><code>if else</code> / <code>else if</code></li>
+<li><code>switch</code></li>
+<li>Repetitiva: Se repetirá una secuencia de código tantas veces como se indique o hasta que se cumpla (o deje de cumplirse) una condición:</li>
+<li><code>for</code></li>
+<li><code>while</code></li>
+<li><code>do ... while</code></li>
+<li>Salto incondicional: Se utilizan principalmente para <strong>saltar</strong> o <strong>salir</strong> de la ejecución de una <strong>iteración</strong> de un <strong>bucle</strong>:</li>
+<li><code>break</code></li>
+<li><code>continue</code></li>
+</ul>
+<p>A una estructura de control repetitiva se la llama también <strong>bucle</strong>.</p>
+<p>Cada una de las veces que se ejecuta el código de un <strong>bucle</strong> se dice que se ha producido una <strong>iteración</strong>.</p>
+<h3 id="estructuras-condicionales">Estructuras condicionales</h3>
+<h4 id="if-else-else-if"><code>if else</code> / <code>else if</code></h4>
+<p><img alt="Estructura condicional" src="../Imagenes/Condicional.svg" /></p>
+<p>Esta estructura permitirá que se ejecute un bloque de código u otro dependiendo de la condición.</p>
+<p>Veámoslo con un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Bloque de código A.</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Bloque de código B.</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres menor de edad.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="variantes">Variantes</h5>
+<p>Una variante sería <strong>omitir</strong> la rama del <strong>else</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres menor.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otra variante consiste en <strong>anidar ifs</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres muy jóven para la peli.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Esta peli es para ti.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres muy viejo para la peli.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="switch"><code>switch</code></h4>
+<p>La instrucción <strong>switch</strong> se puede realizar mediante <strong>if else</strong> consecutivos. La idea es que <strong>switch</strong> sea más legible.</p>
+<p>La sintaxis de switch es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">valor_a_comparar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">valor_de_comparación_1</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Código a ejecutar si valor_a_comparar == valor_de_comparación_1.</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">valor_de_comparación_2</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Código a ejecutar si valor_a_comparar == valor_de_comparación_2.</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="c1">// Opcional.</span>
+<span class="w">        </span><span class="c1">// Código a ejecutar en caso de que se haya cumplido ninguna de las igualdades anteriores.</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Un ejemplo del uso de <strong>switch</strong> sería:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Console</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Instroduzca un número entre 1 y 3: &quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número introducido fue uno.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número introducido fue dos.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número introducido fue tres.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número introducido no estaba entre 1 y 3.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="estructuras-repetitivas-estructuras-iterativas-o-bucles">Estructuras repetitivas (estructuras iterativas o bucles)</h3>
+<p>Estas estructuras determinan cuantas veces ha de repetirse un bloque de código. Puede indicarse un número fijo de repeticiones, como es el caso del <code>for</code> o establecer una condición para la repetición como es el caso del <code>while</code> y el <code>do while</code>.</p>
+<p><img alt="Estructura iterativa" src="../Imagenes/Iterativa.svg" /></p>
+<h4 id="for"><code>for</code></h4>
+<p>El bucle <code>for</code> tiene la siguiente sintaxis:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">sentencia</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">condición</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">modificación</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">condición</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Bloque de código a repetir</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>así, un bucle <strong>for</strong> que muestre los números del 1 al 100 sertía:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="while"><code>while</code></h4>
+<p>El bucle <code>while</code> tiene la siguiente sintaxis:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">condición</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Bloque a repetir mientras se cumpla la condición.</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El mismo código que muestre los números del 1 al 100 con un bucle <strong>while</strong> sería:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="do-while"><code>do while</code></h4>
+<p>La única diferencia con los bucles anteriores es que en este <strong>siempre se ejecuta el bloque de código</strong> al menso <strong>una vez</strong>:</p>
+<p>Su sintaxis es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Bloque a repetir</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">condición</span><span class="o">&gt;</span><span class="p">);</span>
+</code></pre></div>
+<p>El mismo ejemplo de los casos anteriores con un bucle <strong>do while</strong> sería:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">++</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="primera-sentencia">primera sentencia</h5>
+<p>Esta sentencia se ejecuta únicamente <strong>una vez</strong> antes de iniciar el bucle. Normalmente se declara y se le da valor a una variable que irá modificándose con cada iteración del bucle.</p>
+<h5 id="condicion-de-continuacion">condición de continuación</h5>
+<p>Mientras se cumpla la condición indicada en esta sección el bucle seguirá repitiéndose. Normalmente es una comparación respecto a la variable declarada en la <strong>primera sentencia</strong>.</p>
+<h5 id="segunda-sentencia">segunda sentencia</h5>
+<p>Esta sentencia se ejecutará <strong>cada vez que se ejecute una iteración</strong> del bucle. Normalmente modifica el valor de la variable declarada en la <strong>primera sentencia</strong> de modo que se acerque cada vez más al fin del bucle (a que la <strong>condición de continuación</strong> deje de cumplirse).</p>
+<p>Un ejemplo con código real sería el siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Mostremos una línea de texto por cada iteración del bucle.</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iteración número &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="sentencias-break-y-continue">Sentencias <code>break</code> y <code>continue</code></h3>
+<p>En algunos casos es necesario <strong>alterar</strong> el normal funcionamiento de un bucle.</p>
+<p>Imaginemos que normalmente un bucle se ejecutará diez veces pero que desamos que el bucle termine si el usuario introduce un valor que no sea válido. Para <strong>forzar la terminación</strong> del bucle, es decir, para <em>romper</em> la repetición usaremos la sentencia <code>break</code>.</p>
+<p>En otros casos puede que no deseamos terminar el bucle definitivamente pero sí deseamos saltar el resto del código y pasar a la siguiente iteración (o repetición) del bucle. Para ello hemos de usar la sentencia <code>continue</code>.</p>
+<h4 id="break"><code>break</code></h4>
+<p>Veamos algunos ejemplos del funcionamiento de la sentencia <code>break</code> de terminación de un bucle:</p>
+<p>Si deseamos terminar el bucle si encontramos el valor que no sea válido:</p>
+<div class="highlight"><pre><span></span><code><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Imaginemos que hay un método que genera un valor.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generaValor</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// El método &quot;esValido&quot; devolverá &quot;true&quot; o &quot;false&quot; dependiendo de si el valor es o no válido.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">esValido</span><span class="p">(</span><span class="n">valor</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Si el valor es no válido salimos fuera del bucle.</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Código para procesar el valor.</span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="c1">// Código exterior al bucle.</span>
+<span class="c1">// ...</span>
+</code></pre></div>
+<h4 id="continue"><code>continue</code></h4>
+<p>Veamos algunos ejemplos del funcionamiento de la sentencia <code>continue</code> de salto a la siguiente iteración de un bucle:</p>
+<p>Si quisiésemos crear un blucle que se saltase las iteraciones múltiplo de tres podríamos escribir:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// No saltamos todo el código hasta el principio del siguiente blucle.</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iteración número &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="formas-de-terminar-un-bucle">Formas de terminar un bucle</h4>
+<p>Todo bucle (en general) debería de disponer de algún mecanismo de terminación. Así, los bucles <code>while</code> y <code>do while</code> se repetirían mientras se cumpla una condición y el bucle <code>for</code> (y el <strong>for-each</strong>) se repetirían un número predeterminado de veces.</p>
+<p>No obstante a veces es conveniente terminar un bucle antes de que se alcance la condición de terminación <em>estándar</em>. Para ello disponemos de varios métodos:</p>
+<ul>
+<li>Podemos usar la sentencia que acabamos de ver <code>break</code>. Que nos <em>moverá</em> a la primera sentencia exterior al bucle.</li>
+<li>Otra forma de terminar (si estamos dentro de un método) es <em>retornar el resultado</em> del método utilizando la sentencia <code>return</code>.</li>
+<li>Finalmente otra forma de terminar un bucle es terminar la ejecución del programa mediante la sentencia <code>System.exit(0)</code>.</li>
+</ul>
+<p>Un ejemplo de la conveniencia de terminación anticipada de un bucle es cuando estamos comprobando si un valor se encuentra en un array. Para ello, en principio, hemos de recorrer todo el array comprobando posición a posición (imaginemos un array no ordenado).
+Pero una vez hayamos encontrado el elemento no necesitamos seguir comprobando el resto de elementos del array. Así un método que compruebe si un array contiene un elemento podría ser:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">buscado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Si encontramos dos objetos iguales retornamos true </span>
+<span class="w">        </span><span class="c1">// (el objeto buscado está en el array).</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">buscado</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Si hemos recorrido todo el array y no hemos econtrado el objeto</span>
+<span class="w">    </span><span class="c1">// buscado retornamos flase.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/mmourazos/DAM_PR_Apuntes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+    
+  </body>
+</html>

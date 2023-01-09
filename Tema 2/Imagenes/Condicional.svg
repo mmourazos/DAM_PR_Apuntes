@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="98.95446mm"
+   height="151.53148mm"
+   viewBox="0 0 98.95446 151.53148"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Condicional.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8822254"
+     inkscape:cx="203.74818"
+     inkscape:cy="88.990405"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker1949"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="RoundedArrow"
+       markerWidth="12.135"
+       markerHeight="11.730964"
+       viewBox="0 0 6.1347524 5.9304951"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path1947" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="RoundedArrow"
+       markerWidth="12.135"
+       markerHeight="11.730965"
+       viewBox="0 0 6.1347524 5.9304951"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path1367" />
+    </marker>
+    <rect
+       x="-615.71045"
+       y="141.01305"
+       width="276.44141"
+       height="150.78622"
+       id="rect281" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.388384,-87.488947)">
+    <rect
+       style="fill:#f2f2f2;fill-opacity:0.751938;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect4754"
+       width="99.382584"
+       height="151.95554"
+       x="28.174322"
+       y="86.855209" />
+    <g
+       id="g2447"
+       transform="matrix(0.59757116,0,0,0.59011081,16.971329,57.119948)"
+       style="stroke-width:1.68399">
+      <text
+         xml:space="preserve"
+         transform="scale(0.26458333)"
+         id="text279"
+         style="font-size:21.3333px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';white-space:pre;shape-inside:url(#rect281);display:inline;stroke-width:1.68399" />
+      <path
+         id="rect445"
+         style="fill:#71c837;stroke:#447821;stroke-width:1.68399"
+         d="m 19.947762,147.58836 h 59 v 101.58583 h -29.5 -29.5 z"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         id="rect447"
+         style="fill:#ff2a7f;stroke:#aa0044;stroke-width:1.68399"
+         d="m 124.85821,147.58836 h 29.5 29.5 v 101.58583 h -29.5 -29.5 z"
+         sodipodi:nodetypes="ccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+         x="31.439569"
+         y="160.08084"
+         id="text652"><tspan
+           sodipodi:role="line"
+           id="tspan650"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="31.439569"
+           y="160.08084">Bloque de</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="31.439569"
+           y="170.66418"
+           id="tspan654">código A</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+         x="136.35001"
+         y="160.08084"
+         id="text658"><tspan
+           sodipodi:role="line"
+           id="tspan656"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="136.35001"
+           y="160.08084">Bloque de</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="136.35001"
+           y="170.66418"
+           id="tspan660">código B</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.445554"
+         x="86.957458"
+         y="110.80937"
+         id="text273"><tspan
+           sodipodi:role="line"
+           id="tspan271"
+           style="stroke-width:0.445554"
+           x="86.957458"
+           y="110.80937">Condición</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.445554px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 127.76251,108.78918 h 27.01734 v 38.79918"
+         id="path769"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="rect217"
+         style="fill:#71c837;stroke:#447821;stroke-width:1.68399"
+         d="M 101.90298,82.929652 127.76251,108.78918 101.90298,134.6487 76.043458,108.78918 Z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 127.76251,108.78918 h 27.01734 v 38.79918"
+         id="path774"
+         sodipodi:nodetypes="ccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+         x="84.06221"
+         y="111.70373"
+         id="text792"><tspan
+           sodipodi:role="line"
+           id="tspan790"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="84.06221"
+           y="111.70373">Condición</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 75.84743,108.78918 H 48.83009 v 38.79918"
+         id="path794"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path501"
+         style="fill:#71c837;stroke:#447821;stroke-width:1.68399"
+         d="m 109.47574,269.47949 c 0,4.18232 -3.39044,7.57276 -7.57276,7.57276 -4.182321,0 -7.572763,-3.39044 -7.572764,-7.57276 1e-6,-4.18232 3.390443,-7.57276 7.572764,-7.57276 4.18232,0 7.57276,3.39044 7.57276,7.57276 z"
+         sodipodi:nodetypes="sssss" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 49.447762,249.17419 v 20.3053 h 44.882454"
+         id="path815"
+         sodipodi:nodetypes="ccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 154.35821,249.17419 v 20.3053 h -44.88247"
+         id="path829"
+         sodipodi:nodetypes="ccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+         d="m 101.90298,277.05225 v 23.3099"
+         id="path859"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+         x="58.819653"
+         y="107.41195"
+         id="text1852"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="58.819653"
+           y="107.41195"
+           id="tspan1908">Sí</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+         x="135.98669"
+         y="107.41195"
+         id="text1856"><tspan
+           sodipodi:role="line"
+           id="tspan1854"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.445554"
+           x="135.98669"
+           y="107.41195">No</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.841994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker1949)"
+         d="m 101.90298,53.794953 v 28.70873"
+         id="path1945"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+</svg>
