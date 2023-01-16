@@ -2,11 +2,13 @@
 
 ## Introducción
 
-¿Para qué sirven los generics?
+¿Para qué sirven los genéricas?
 
-Los generics nos permiten crear clases y métodos que pueden trabajar con cualquier tipo de dato, sin necesidad de especificar el tipo de dato concreto.
+Los genéricos nos permiten crear clases y métodos que pueden trabajar con cualquier tipo de dato, sin necesidad de especificar el tipo de dato concreto. De esta cualidad de no tener que especificar el tipo exacto en la fase de diseño de la clase viene el concepto de _genérico_.
 
-Veamos un ejemplo:
+En el momento en que creemos objetos de una clase que use genéricos **sí hemos de concretar con qué tipo de datos va a trabajar**.
+
+#### Veamos un ejemplo:
 
 Imaginemos que queremos que una clase almacenen un valor `Integer` y pueda imprimirlo:
 
@@ -22,7 +24,7 @@ public class AlmacenadorEntero {
 }
 ```
 
-Esta clase sólo puede almacenar valores `Integer`, pero si queremos que pueda almacenar valores de cualquier tipo, tendremos que crear una clase para cada tipo de dato que queramos almacenar:
+Esta clase sólo puede almacenar valores `Integer`, pero si queremos una clase que tenga la misma funcionalidad que pueda almacenar valores `Double` o `Float`, tendremos que crear una nueva clase (virtualmente idéntica) para cada tipo de dato nuevo:
 
 ```java
 public class AmacenadorDoble {
@@ -36,9 +38,9 @@ public class AmacenadorDoble {
 }
 ```
 
-Y tendríamos que crear una clase para cualquier nuevo tipo de dato que queramos almacenar e imprimir.
+Para evitar tener que repetir una y otra vez _el mismo código_ en cada clase podemos utilizar los **genéricos**. Esto permitirá crear una clase que pueda almacenar cualquier tipo de dato y que pueda imprimirlo. Indicaremos el tipo concreto en el momento de usar la clase (de crear un objeto). El código de la clase sería de esta forma *genérico*. Valdría para cualquier tipo de dato.
 
-Para evitar tener que repetir una y otra vez el código de la clase podemos utilizar los generics. Esto permitirá crear una clase que pueda almacenar cualquier tipo de dato y que pueda imprimirlo. Indicaremos el tipo concreto en el momento de usar la clase. El código de la clase sería de esta forma *genérico*. Valdría para cualquier tipo de dato.
+En el siguiente ejemplo de código usamos `T` para indicar _un tipo cualquiera_ que especificaremos en otro momento. No es necesario usar la letra **T** pero una vez la indiquemos hemos de mantener la consistencia y emplear la misma letra para indicar el tipo genérico:
 
 ```java
 public class Almacenador<T> {
@@ -63,24 +65,118 @@ public class Main {
 }
 ```
 
-## Sintaxis de los generics
+## Sintaxis de los genéricos
 
-Los generics se definen entre `<` y `>`. Dentro de los `<` y `>` se indica el tipo de dato que queremos almacenar.
+### Declaración de la clase
+
+En el momento de declarar una clase que use genéricos primero escribiremos el código de declaración de la misma como siempre:
+```java
+public class MiClase {
+    //...
+}
+```
+
+A continuación indicaremos entre los símbolos `<` y `>` una palabra (generalmente la letra T) que indica el tipo genérico:
 
 ```java
-ArrayList<String> lista = new ArrayList<>();
+public class MiClase<T> {
+    //... 
+}
+```
+
+Si fuese necesario se podrán indicar varios genéricos:
+
+```java
+public class MiClase<T, E> {
+    //...
+}
+```
+
+Después de indicar el **código** del tipo genérico que se va a utilizar en la clase podremos utilizarlo en su código como indicador de tipo de las variables y métodos:
+
+```java
+public class MiClase<T, E> {
+    private ArrayList<T> datos;
+    
+    public E resultado(T dato) {
+        // ...
+    }
+}
+```
+
+### Uso de la clase
+
+Cuando necesitemos crear una instancia de nuestra clase **hemos de concretar con qué dato va a trabajar**:
+
+```java
+MiClase<String> mc = new MiClase<String>();
+```
+
+Puesto que es redundante repetir el tipo de dato Java permite omitirlo:
+
+```java
+MiClase<String> mc = new MiClase<>();
 ```
 
 Nótese que no es necesario repetir el tipo que usamos al crear la instancia de clase y en su lugar podemos poner simplemente `<>`.
 
 ### Tipos de datos genéricos
 
-El tipo dato que indicamos al crear la clase genérica puede ser cualquier tipo de dato, incluyendo clases, interfaces, etc. pero **no puede ser un tipo primitivo**.
+El tipo dato que indicamos al crear la clase genérica puede ser cualquier _tipo de dato_, incluyendo clases, interfaces, etc. pero **no puede ser un tipo primitivo**.
 
-Por ejemplo, podemos indicar que nuestro genérico solo administre tipos de datos que implementen la interfaz `Comparable`:
+```java
+// El siguiente código no sería válido:
+MiClase<int> mc = new MiClase<>();
+// Tendríamos que utilizar la clase envoltorio Integer:
+MiClase<Integer> mc = new MiClase<>();
+```
+
+## Genéricos limitados
+
+También es posible **limitar o restringir** las características del tipo de datos genérico que vamos a usar.
+
+### Limitar superclase
+
+Por ejemplo, si queremos usar un tipo genérico pero que sea **subclase de Persona** lo podemos indicar como:
+
+```java
+public class Almacenador<T extends Persona> {
+    private T valor;
+    public Almacenador(T valor) {
+        this.valor = valor;
+    }
+    public void imprimir() {
+        System.out.println(valor);
+    }
+}
+```
+
+Una vez hecho esto una variable de tipo `T` tendrá acceso a todos los métodos de `Persona`.
+
+### Limitar interfaz
+
+Si queremos indicar que nuestro tipo genérico `T` implementa un interfaz lo haremos de la misma manera utilizando `extends`:
 
 ```java
 public class Almacenador<T extends Comparable> {
+    private T valor;
+    public Almacenador(T valor) {
+        this.valor = valor;
+    }
+    public void imprimir() {
+        System.out.println(valor);
+    }
+}
+```
+
+Nótese que hemos de utilizar **extends** tanto para indicar la superclase como el interfaz que implementa y no **implements**.
+
+### Limitar superclase e interfaces
+
+Podemos combinar la limitación de superclase con la indicación de que ha de implementar uno o más interfaces. Para ello **hemos de indicar primero siempre la superclase** y a continuación todos los interfaces que deseemos **separados por &**:
+
+```java
+public class Almacenador<T extends Persona & Comparable & Serializable> {
     private T valor;
     public Almacenador(T valor) {
         this.valor = valor;
@@ -110,6 +206,32 @@ public class GenericMethod {
     public static <T, U> void print(T valor1, U valor2) {
         System.out.println(valor1);
         System.out.println(valor2);
+    }
+}
+```
+
+## Comodines (_wildcards_)
+
+Hay casos en los que deseamos indicar que un método que estamos escribiendo admite un tipo genérico con cualquier tipo de datos. Veamos un ejemplo:
+
+```java
+public class MiClase {
+    //...
+    // Este código no es correcto, es sólo ilustrativo.
+    public static void imprime(List<DeLoQueSea> lista) {
+        //...
+    }
+}
+```
+
+Nuestro método `imprime` estará diseñado de manera que pueda imprimir una lista independientemente de lo que contenga. Para indicar esto en la sintaxis de genéricos hemos de escribir un **comodín (`?`)** como tipo de la lista:
+
+```java
+public class MiClase {
+    //...
+    // Este código no es correcto, es sólo ilustrativo.
+    public static void imprime(List<?> lista) {
+        //...
     }
 }
 ```

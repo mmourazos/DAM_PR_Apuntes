@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class MiColeccion<T> implements Collection<T> {
+public class MiColeccion<T extends Comparable> implements Collection<T> {
     private T[] content = (T[]) new Object[10];
     private int currentSize = 10;
     private int sizeIncrement = 10;
