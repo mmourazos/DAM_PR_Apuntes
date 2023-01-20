@@ -3,7 +3,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
+    private static String datos = "abcdefghijklmnñopqrstuvwxyz";
+    private static char[] datos1 = { 'a', 'b', 'c', 'd', 'e', 'f' };
+
     public static void main(String[] args) {
+        datos.charAt(pos);
+        datos1[pos]
+
         // Rango r = new Rango(5, 15);
 
         // for (int i : r) {
@@ -21,7 +27,8 @@ public class Main {
         // System.out.println("array original = " + Arrays.toString(array));
         // System.arraycopy(array, pos + 1, array, pos, array.length - pos - 1);
         // array = Arrays.copyOf(array, array.length - 1);
-        // System.out.println("array menos posición " + pos + " = " + Arrays.toString(array));
+        // System.out.println("array menos posición " + pos + " = " +
+        // Arrays.toString(array));
 
         // HashMap<Integer, String> palabras = new HashMap<>();
         // palabras.put(1, "uno");
@@ -32,21 +39,39 @@ public class Main {
         // System.out.println("entry.getKey() = " + entry.getKey());
         // System.out.println("entry.getValue() = " + entry.getValue());
         // }
+        Abecedario abc = new Abecedario();
 
-        VariableMem<Integer> vm = new VariableMem<>();
+        for (char x : abc) {
+            System.out.println("caracter: " + x);
+        }
 
-        vm.add(1);
-        vm.add(2);
+        // caracter: a
+        // caracter: b
+        // caracter: c
+        // caracter: d
+        // caracter: e
+        // ...
 
-        System.out.println("El resulaod de 1 + vm (2) es: " + (1 + vm.get()));
+        AbecedarioB abcb = new AbecedarioB();
+        AbecedarioB.VocIt iter = abcb.iterator();
 
-        vm.reset();
+        while (iter.hasNextVocal()) {
+            System.out.println("vocal: " + iter.nextVocal());
+        }
+        // vocal: a
+        // vocal: e
+        // vocal: i
+        // ...
 
-        System.out.println("El resulaod de 1 + vm (1) es: " + (1 + vm.get()));
+        Vocales voc = new Vocales();
 
-        vm.reset();
-
-        System.out.println("Ahora vm vale: " + vm.get());
+        for (char x : voc) {
+            System.out.println("Vocal: " + x);
+        }
+        // Vocal: a
+        // Vocal: e
+        // Vocal: i
+        // ...
     }
 
 }
