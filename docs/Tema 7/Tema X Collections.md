@@ -20,7 +20,7 @@ Por ejemplo, los objetos cuya clase implemente el interfaz **iterable** podrán 
 
 La jerarquía de interfaces y clases que veremos en este tema es el siguiente:
 
-![Interfaces y objetos relacionados con colecciones](.\Imagenes\estructura.svg)
+![Interfaces y objetos relacionados con colecciones](./Imagenes/estructura.svg)
 
 En primer lugar vemos que todos los elementos que vamos a ver son **iterables** ya que todos heredan de **Collection** y éste a su vez de **Iterable**.
 
