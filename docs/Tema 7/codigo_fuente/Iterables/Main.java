@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,20 +34,41 @@ public class Main {
         // System.out.println("entry.getValue() = " + entry.getValue());
         // }
 
-        VariableMem<Integer> vm = new VariableMem<>();
+        // VariableMem<Integer> vm = new VariableMem<>();
 
-        vm.add(1);
-        vm.add(2);
+        // vm.add(1);
+        // vm.add(2);
 
-        System.out.println("El resulaod de 1 + vm (2) es: " + (1 + vm.get()));
+        // System.out.println("El resulaod de 1 + vm (2) es: " + (1 + vm.get()));
 
-        vm.reset();
+        // vm.reset();
 
-        System.out.println("El resulaod de 1 + vm (1) es: " + (1 + vm.get()));
+        // System.out.println("El resulaod de 1 + vm (1) es: " + (1 + vm.get()));
 
-        vm.reset();
+        // vm.reset();
 
-        System.out.println("Ahora vm vale: " + vm.get());
+        // System.out.println("Ahora vm vale: " + vm.get());
+
+        Alfabeto alf = new Alfabeto();
+
+        for (char c : alf) {
+            System.out.println("c = " + c);
+        }
+
+        AlfabetoV alfV = new AlfabetoV();
+
+        AlfabetoV.AlfIter it = (AlfabetoV.AlfIter) alfV.iterator();
+
+        int i = 0;
+        while (it.hasNextVocal()) {
+            System.out.println("vocal " + i++ + " = " + it.nextVocal());
+        }
+
+        Vocales v = new Vocales();
+
+        for (char vocal : v) {
+            System.out.println("vocal = " + vocal);
+        }
     }
 
 }
