@@ -4,36 +4,38 @@ import java.util.Iterator;
  * Rango
  */
 public class Rango implements Iterable<Integer> {
-    private int min;
-    private int max;
+    private int[] datos;
 
-    public Rango(int min, int max) {
-        this.min = min;
-        this.max = max;
+    public Rango(int[] datos) {
+        this.datos = datos;
     }
 
     @Override
-    public Iterator<Integer> iterator() {
-        return new RangoIterator(this);
+    public RangoIterator iterator() {
+        // return new RangoIterator(this);
+        return new RangoIterator();
     }
 
-    private class RangoIterator implements Iterator<Integer> {
-        private Rango rango;
-        private int posicion;
+    public int[] dameLosDatos() {
+        return datos;
+    }
 
-        public RangoIterator(Rango rango) {
-            this.rango = rango;
-            posicion = rango.min;
-        }
+    class RangoIterator implements Iterator<Integer> {
+        // private Rango r;
+        private int pos = 0;
+
+        // public RangoIterator(Rango r) {
+        // this.r = r;
+        // }
 
         @Override
         public boolean hasNext() {
-            return posicion < rango.max;
+            return pos < datos.length;
         }
 
         @Override
         public Integer next() {
-            return posicion++;
+            return datos[pos++];
         }
     }
 

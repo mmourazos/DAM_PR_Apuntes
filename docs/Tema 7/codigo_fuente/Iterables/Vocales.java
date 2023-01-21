@@ -1,3 +1,8 @@
+public class Vocales extends AbecedarioB {
+
+}
+
+
 public class Vocales extends AlfabetoV {
     class AlfIter extends AlfabetoV.AlfIter {
         @Override
