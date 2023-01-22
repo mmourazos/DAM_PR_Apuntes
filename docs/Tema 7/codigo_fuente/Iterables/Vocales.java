@@ -1,10 +1,6 @@
-public class Vocales extends AbecedarioB {
+public class Vocales extends AbcedearioStr {
 
-}
-
-
-public class Vocales extends AlfabetoV {
-    class AlfIter extends AlfabetoV.AlfIter {
+    class AlfIter extends AbcedearioStr.VocIt {
         @Override
         public boolean hasNext() {
             return hasNextVocal();

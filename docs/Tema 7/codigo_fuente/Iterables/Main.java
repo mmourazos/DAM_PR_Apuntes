@@ -8,9 +8,6 @@ public class Main {
     private static char[] datos1 = {'a', 'b', 'c', 'd', 'e', 'f'};
 
     public static void main(String[] args) {
-        datos.charAt(pos);
-        datos1[pos]
-
         // Rango r = new Rango(5, 15);
 
         // for (int i : r) {
@@ -40,7 +37,25 @@ public class Main {
         // System.out.println("entry.getKey() = " + entry.getKey());
         // System.out.println("entry.getValue() = " + entry.getValue());
         // }
-        Abecedario abc = new Abecedario();
+
+        // Probando rangos:
+        System.out.println("Prueba de Rango: rango de 5 a 15:");
+        Rango r = new Rango(5, 15);
+        for (int i : r) {
+            System.out.println("i = " + i);
+        }
+
+        System.out.println("Prueba de RangoB: rango de 100 a 200 con salto de 15:");
+        RangoB rb = new RangoB(100, 200, 15);
+        for (int i : rb) {
+            System.out.println("i = " + i);
+        }
+
+        // Porbando abecedarios:
+        System.out.println("Prueba de AbecedarioArr:");
+
+
+        AbecedarioArr abc = new AbecedarioArr();
 
         for (char x : abc) {
             System.out.println("caracter: " + x);
@@ -53,8 +68,8 @@ public class Main {
         // caracter: e
         // ...
 
-        AbecedarioB abcb = new AbecedarioB();
-        AbecedarioB.VocIt iter = abcb.iterator();
+        AbcedearioStr abcb = new AbcedearioStr();
+        AbcedearioStr.VocIt iter = abcb.iterator();
 
         while (iter.hasNextVocal()) {
             System.out.println("vocal: " + iter.nextVocal());
@@ -64,11 +79,11 @@ public class Main {
         // vocal: i
         // ...
 
-        Vocales voc = new Vocales();
+        // Vocales voc = new Vocales();
 
-        for (char x : voc) {
-            System.out.println("Vocal: " + x);
-        }
+        // for (char x : voc) {
+        // System.out.println("Vocal: " + x);
+        // }
         // Vocal: a
         // Vocal: e
         // Vocal: i

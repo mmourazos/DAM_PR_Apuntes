@@ -1,27 +1,20 @@
 import java.util.Iterator;
 
-public class RangoB implements Iterable<Integer> {
-    private int min;
-    private int max;
+public class RangoB extends Rango {
+
     private int step;
 
     public RangoB(int min, int max) {
-        this.min = min;
-        this.max = max;
+        super(min, max);
         step = 1;
     }
 
     public RangoB(int min, int max, int step) {
-        if (min > max) {
-            throw new IllegalArgumentException("min must be less or equal to max");
-        }
+        super(min, max);
         if (step >= (max - min)) {
             throw new IllegalArgumentException(
                     "step must be less than " + (max - min) + " (max - min)");
         }
-
-        this.min = min;
-        this.max = max;
         this.step = step;
     }
 

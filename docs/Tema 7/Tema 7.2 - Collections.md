@@ -32,6 +32,47 @@ Este interfaz se utiliza para indicar que un objeto puede ser _recorrido_, o lo 
 
 El interfaz `Iterable` utiliza **genéricos** de modo que el iterador podrá aplicarse sobre cualquier tipo de dato (clase) que deseemos.
 
+### El interfaz `Iterator`
+
+Como acabamos de ver el interfaz `Iterable` exige que se implemente un método (`iterator()`) que devuelva un objeto `Iterator`. Este objeto `Iterator` es el que se encarga de recorrer la _lista_ y de devolver los elementos de la misma.
+
+Al igual que el interfaz `Iterable`, el interfaz `Iterator` utiliza **genéricos** de modo que el iterador podrá aplicarse sobre cualquier tipo de dato que deseemos. El tipo de dato que se utilice en el interfaz `Iterator` ha de ser el mismo que se utilice en el interfaz `Iterable`.
+
+Por último `Iterator` exigue que se implementen los siguientes métodos:
+
+* `hasNext()`: Devuelve `true` si quedan elementos por recorrer y `false` en caso contrario.
+* `next()`: Devuelve el siguiente elemento de la _lista_ y avanza el iterador al siguiente elemento.
+
+De este modo podemos recorrer una _lista_ usando un bucle while:
+
+```java	
+// Creemos primero un iterable como por ejemplo una lista de cadenas:
+Lista<String> lista = new ArrayList<String>();
+lista.add("Hola");
+lista.add("Mundo");
+lista.add("!");
+
+// Ahora podremos acceder a su iterador:
+Iterator<String> iterador = lista.iterator();
+
+// Y recorrerla usando un bucle while:
+while (iterador.hasNext()) {
+    System.out.println(iterador.next());
+}
+
+// o usando un bucle for:
+for (Iterator<String> iterador = lista.iterator(); iterador.hasNext(); ) {
+    System.out.println(iterador.next());
+}
+
+// o usando un bucle for-each (lo más sencillo en el caso de un iterable):
+for (String elemento : lista) {
+    System.out.println(elemento);
+}
+```
+
+Puesto que el **iterador** estará muy ligado a la **colección** que estamos recorriendo, es habitual que se implemente como una **clase interna** de la **colección**.
+
 ## El interfaz `Collection`
 
 `Collection` hereda del interfaz `Iterable`. Esto implica que toda clase que implemente `Collection` también ha de implementar los métodos que exige el interfaz `Iterable` (`iterator()`) y, a su vez, hemos de crear una clase que implemente el interfaz `Iterator` que funcione para nuestra _colección_.
@@ -52,10 +93,6 @@ Además del método anterior, `Collection`, también exige que se implementen lo
 * `toArray(T[] a)`:  Devolverá un array conteniendo todos los elementos de la colección; el tipo del array devuelto ha de ser el mismo del del array indicado `T`.
 
 En una colección **no hay posiciones**. Sólo podremos añadir o eliminar elementos pero no podremos ni insertar un valor en una posición ni obtener el contenido de una posición. Podríamos decir que una `Collection` es ignorante respecto a **índice** de sus elementos.
-
-### `Iterator`
-
-
 
 ## `List`
 
@@ -79,6 +116,10 @@ Además de los métodos requeridos por el interfaz `Collection`, el interfaz `Li
 ### `ListIterator`
 
 ## `ArrayList`
+
+La clase `ArrayList` implementa una lista de elementos que, internamente, se almacenan en un array. Esta clase es muy eficiente para acceder a los elementos de la lista ya que se puede acceder a ellos indicando su posición (índice) y no es necesario recorrer la lista para encontrarlos.
+
+A diferencia de un array, el tamaño de un `ArrayList` puede crecer o decrecer dinámicamente. Los elementos de un `ArrayList` pueden ser de cualquier tipo (genéricos).
 
 
 ## `LinkedList`
@@ -110,8 +151,3 @@ palabras.put(1, "Uno");
 palabras.put(2, "Dos");
 // etc.
 ```
-
-
-
-
-
