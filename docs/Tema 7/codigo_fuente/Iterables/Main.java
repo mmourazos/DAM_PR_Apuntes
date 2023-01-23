@@ -1,6 +1,12 @@
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Random;
+import java.util.Set;
 import java.util.Iterator;
 
 public class Main {
@@ -88,6 +94,67 @@ public class Main {
         // Vocal: e
         // Vocal: i
         // ...
-    }
 
+        // Probando Conjunto:
+
+        // Selecciona el número de elementos:
+        int numElementos =
+                Integer.valueOf(System.console().readLine("Introduce el número de elementos: "));
+
+        LocalTime startTime = LocalTime.now();
+        // Set<Integer> cto = new Conjunto<>();
+        Set<Integer> cto = new HashSet<>();
+        for (int i = 0; i < numElementos; ++i) {
+            cto.add(i);
+        }
+        LocalTime endTime = LocalTime.now();
+
+        System.out.printf("Tiempo que tarda en añadir %d elementos: %d ms.%n", numElementos,
+                startTime.until(endTime, ChronoUnit.NANOS) / 1000000);
+
+
+        // Tiempo que tarda en comprobar 1000 elementos (empezando por el final)
+        startTime = LocalTime.now();
+        for (int i = numElementos - 1; i >= 0; --i) {
+            cto.contains(i);
+        }
+        endTime = LocalTime.now();
+
+        System.out.printf("Tiempo que tarda en comprobar %d elementos (por el final): %d ms.%n",
+                numElementos, startTime.until(endTime, ChronoUnit.NANOS) / 1000000);
+
+        // Tiempo que tarda en comprobar 1000 elementos (empezando por el principio)
+        startTime = LocalTime.now();
+        for (int i = 0; i < numElementos; ++i) {
+            cto.contains(i);
+        }
+        endTime = LocalTime.now();
+
+        System.out.printf("Tiempo que tarda en comprobar %d elementos (por el principio): %d ms.%n",
+                numElementos, startTime.until(endTime, ChronoUnit.NANOS) / 1000000);
+
+        // Tiempo que tarda en eliminar numElementos (empezando por el principio)
+        startTime = LocalTime.now();
+        for (int i = 0; i < numElementos; ++i) {
+            cto.remove(i);
+        }
+        endTime = LocalTime.now();
+
+        System.out.printf("Tiempo que tarda en eliminar %d elementos (por el principio): %d ms.%n",
+                numElementos, startTime.until(endTime, ChronoUnit.NANOS) / 1000000);
+
+        for (int i = 0; i < numElementos; ++i) {
+            cto.add(i);
+        }
+
+        // Tiempo que tarda en eliminar 1000 elementos (empezando por el final)
+        startTime = LocalTime.now();
+        for (int i = numElementos; i <= 0; ++i) {
+            cto.remove(i);
+        }
+        endTime = LocalTime.now();
+
+        System.out.printf("Tiempo que tarda en eliminar %d elementos (por el final): %d ms.%n",
+                numElementos, startTime.until(endTime, ChronoUnit.NANOS) / 1000000);
+    }
 }
