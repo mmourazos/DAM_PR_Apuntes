@@ -1,5 +1,14 @@
-# Tema 7 - Tarea 3: _Lambdas_ y cosas
+# Tema 7 - Tarea 2: Pilas
 
-Crea una clase `ListaPersonas` permita almacenar una lista de personas. La clase ha de extender `PriorityQueue` y se le han de crear dos `Comparator`. Uno que permita ordenar las personas por su edad. Y otro que permita ordenar las personas por su nombre.
+Utilizando las clases que hemos visto hasta el momento (`ArrayList`, `LinkedList`, etc.) construye una clase `Pila` que e comporte como una pila:
 
-**No se ha de guardar la edad de la persona si no su fecha de nacimento**. La edad se ha de calcular a partir de la fecha de nacimiento mediante el método `int getEdad()`.
+1. Cuando se inserta un elemento en la pila, se inserta al final de la lista.
+2. Cuando se extrae un elemento de la pila, se extrae el último elemento de la lista.
+
+Para ello hemos de implementar los siguientes métodos:
+
+1. `push(T elemento)`: Que inserte un elemento en la pila.
+2. `T pop()`: Que extraiga un elemento de la pila.
+
+La pila ha de poder contener cualquier tipo de elementos (hemos de usar _genéricos_).
+
