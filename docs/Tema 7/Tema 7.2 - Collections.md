@@ -174,7 +174,9 @@ Como podemos ver hay dos métodos para cada operación, uno de ellos lanza una e
 
 ### `PriorityQueue`
 
-La clase `PriorityQueue` implementa el interfaz `Queue`. Además los elementos de la cola se ordenan según su _prioridad_, que se define mediante un objeto `Comparator` que se pasa al constructor de la cola. Si no se pasa ningún `Comparator` se usará el orden natural de los elementos.
+La clase `PriorityQueue` implementa el interfaz `Queue`. Además los elementos de la cola se _ordenan_ según su _prioridad_, que se define mediante un objeto `Comparator` que se pasa al constructor de la cola. Si no se pasa ningún `Comparator` se usará el orden natural de los elementos.
+
+Esto **no significa** que los elementos se ordenen automáticamente cuando se añaden a la cola. Los elementos se obtendrán ordenados cuando se extraigan de la cola.
 
 #### Comparadores
 
