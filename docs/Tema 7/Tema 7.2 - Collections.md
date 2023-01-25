@@ -1,4 +1,4 @@
-# Tema X: `Collections`
+# Tema 7.2: `Collections`
 
 Para hablar de las estructura de datos avanzadas de Java hemos de tener claros varios conceptos.
 
@@ -122,8 +122,8 @@ La clase `ArrayList` implementa una lista de elementos que internamente se almac
 A diferencia de un array, el tamaño de un `ArrayList` puede crecer o decrecer dinámicamente. Los elementos de un `ArrayList` pueden ser de cualquier tipo (genéricos).
 
 ### Ejemplo de uso
-    
-```java	
+
+```java
 ArrayList<String> lista = new ArrayList<>();
 
 lista.add("Hola");
@@ -175,6 +175,39 @@ Como podemos ver hay dos métodos para cada operación, uno de ellos lanza una e
 ### `PriorityQueue`
 
 La clase `PriorityQueue` implementa el interfaz `Queue`. Además los elementos de la cola se ordenan según su _prioridad_, que se define mediante un objeto `Comparator` que se pasa al constructor de la cola. Si no se pasa ningún `Comparator` se usará el orden natural de los elementos.
+
+#### Comparadores
+
+Un comparador será un objeto que implemente la iterfaz `Comparator`. Ésta exige que se implemente el método `compare` que recibe dos objetos y devuelve un entero que indica si el primer objeto es menor (menor que 0), igual (0) o mayor que el segundo (mayor que 0).
+
+```java
+public class ComparadorInverso implements Comparator<Integer> {
+    @Override
+    public int compare(Integer i1, Integer i2) {
+        return i2 - i1;
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main() {
+        PriorityQueue<Integer> cola = new PriorityQueue<>(new ComparadorInverso());
+        cola.add(1);
+        cola.add(2);
+        cola.add(3);
+        cola.add(4);
+        cola.add(5);
+        cola.add(6);
+        cola.add(7);
+        cola.add(8);
+        cola.add(9);
+        cola.add(10);
+        while (!cola.isEmpty()) {
+            System.out.println(cola.poll());
+        }
+    }
+}
 
 #### Interfaz `Comparator`
 

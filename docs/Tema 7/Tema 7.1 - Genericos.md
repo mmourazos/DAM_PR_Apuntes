@@ -1,4 +1,4 @@
-# Tema 7.1 Genéricos
+# Tema 7.1: Genéricos
 
 ## Introducción
 
