@@ -4,6 +4,10 @@ Se han de crear dos listas: `ArrayList` y `LinkedList`.
 
 Se pedirá por pantalla un tamaño para ambas listas.
 
+Se pedirá también el número de veces que se han de repetir las pruebas.
+
+Se calculará y mostrará el resultado medio para cada tipo de prueba realizado.
+
 Se realizarán las siguientes operaciones con cada lista:
 
 1. Se insertará en cada una de las listas tantos elementos (números enteros) como su tamaño.
