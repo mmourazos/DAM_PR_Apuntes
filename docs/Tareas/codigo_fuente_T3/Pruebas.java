@@ -20,9 +20,11 @@ public class Pruebas {
         int numPruebas = Integer.parseInt(c.readLine("Indica cuantas pruebas se realizarán: "));
         long[] pruebas = new long[numPruebas];
 
-        long t0, t1;
+        // long t0, t1;
 
-        for (int i = 0; i < numPruebas; ++i) {
+        numPruebas = 10;
+        for (int i = 0; i < numPruebas--; ++i) {
+            long t0, t1;
             t0 = System.nanoTime();
 
             // Código a probar.
