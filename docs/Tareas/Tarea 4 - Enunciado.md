@@ -14,8 +14,8 @@ Se realizarán las siguientes operaciones con cada lista:
 2. Recorreremos cada lista desde el final al principio.
 3. Comprobar (`contains()`) que contiene todos los elementos.
 4. Eliminar los elementos de la lista:
-   1. Comenzando por el principio.
-   2. Comenzando por el final.
+   * Comenzando por el principio.
+   * Comenzando por el final.
 
 Mediremos el tiempo que se tarda en realizar cada operación (para todos los elementos).
 
