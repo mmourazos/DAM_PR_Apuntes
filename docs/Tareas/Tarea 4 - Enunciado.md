@@ -19,7 +19,7 @@ Se realizarán las siguientes operaciones con cada lista:
 
 Mediremos el tiempo que se tarda en realizar cada operación (para todos los elementos).
 
-**Nota:** Para medir tiempos se recomienda usar `LocalTime`.
+**Nota:** Para medir tiempos se recomienda usar `System.nanoTime` o `System.currentTimeMillis()`.
 
 ```java
 // Apunto el tiempo en este instante: t0
