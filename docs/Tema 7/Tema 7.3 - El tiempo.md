@@ -1,4 +1,4 @@
-# El tiempo en Java: `Date`, `Calendar` y `java.time`
+# Tema 7: El tiempo, _The_Times_, en Java: `Date`, `Calendar` y `java.time`
 
 En todos los lenguajes de programación existe la necesidad de almacenar valores que representen el tiempo. Es necesario saber, por ejemplo, cuando fue la última vez que se accedió o modificó un fichero, en qué fecha se realizó la última actualización o en qué momento se estableció una conexión con un servidor.
 
@@ -8,7 +8,7 @@ Java intenta resolver este problema mediante las clases `Date` y `Calendar`.
 
 ## `Date`
 
-Este es el sistema *antiguo* y prácticamente obsoleto de almacenar fechas y horas.
+Este es el sistema _antiguo_ y prácticamente obsoleto de almacenar fechas y horas.
 
 En Java (al igual que otros muchos lenguajes) se mide el tiempo contando los **milisegundos** (segundos, microsegundos o nanosegundos en otros sistemas) que han transcurrido desde el **año cero de la informática** o tiempo de Unix (**oo:oo:oo del 1 de enero de 1970**).
 
