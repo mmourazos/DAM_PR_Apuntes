@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.0387346"
-     inkscape:cx="345.13148"
-     inkscape:cy="431.29401"
+     inkscape:cx="346.09418"
+     inkscape:cy="431.294"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1912"
@@ -41,15 +41,14 @@
      id="layer1"
      transform="translate(-13.759432,-34.391511)">
     <g
-       id="g827"
-       transform="translate(-17.575472,1.5283019)">
+       id="g530">
       <rect
          style="fill:#aaeeff;fill-opacity:0.751938;stroke:#00aad4;stroke-width:0.499999;stroke-linejoin:round"
          id="rect705"
          width="179.5"
          height="79.5"
-         x="31.584904"
-         y="115.88206"
+         x="14.009432"
+         y="117.41036"
          rx="2.207262"
          ry="1.8304137" />
       <rect
@@ -57,13 +56,13 @@
          id="rect703"
          width="179.5"
          height="82.430824"
-         x="31.584904"
-         y="33.113209"
+         x="14.009432"
+         y="34.64151"
          rx="2.207262"
          ry="1.8978933" />
       <g
          id="g728"
-         transform="translate(1.9394531,1.0473636)">
+         transform="translate(-15.636019,2.5756655)">
         <g
            id="g501"
            transform="translate(59.603773,5.2916667)">
@@ -189,196 +188,185 @@
         </g>
       </g>
       <g
-         id="g759"
-         transform="translate(1.9394531,4.1839169)">
+         id="g526"
+         transform="translate(-16.145453,1.6754834)">
+        <rect
+           style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+           id="rect490"
+           width="44.696568"
+           height="14.500001"
+           x="39.990562"
+           y="122.00944"
+           rx="2.1486785"
+           ry="2.1347225" />
+        <text
+           xml:space="preserve"
+           style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+           x="51.270451"
+           y="130.68709"
+           id="text310"><tspan
+             sodipodi:role="line"
+             id="tspan308"
+             style="stroke-width:0.264583"
+             x="51.270451"
+             y="130.68709">ArrayList</tspan></text>
+      </g>
+      <g
+         id="g531"
+         transform="translate(45.750776,0.40189331)">
+        <rect
+           style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+           id="rect494"
+           width="44.696568"
+           height="14.500001"
+           x="93.22641"
+           y="123.02831"
+           rx="2.1486785"
+           ry="2.1347225" />
+        <text
+           xml:space="preserve"
+           style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+           x="98.179733"
+           y="131.74042"
+           id="text368"><tspan
+             sodipodi:role="line"
+             id="tspan366"
+             style="stroke-width:0.264583"
+             x="98.179733"
+             y="131.74042">PriorityQueue</tspan></text>
+      </g>
+      <g
+         id="g541"
+         transform="translate(-18.437906,6.1226312)">
+        <rect
+           style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+           id="rect496"
+           width="44.696568"
+           height="14.500001"
+           x="42.283016"
+           y="144.42453"
+           rx="2.1486785"
+           ry="2.1347225" />
+        <text
+           xml:space="preserve"
+           style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+           x="51.814178"
+           y="153.66028"
+           id="text364"><tspan
+             sodipodi:role="line"
+             id="tspan362"
+             style="stroke-width:0.264583"
+             x="51.814178"
+             y="153.66028">LinkedList</tspan></text>
+      </g>
+      <g
+         id="g473"
+         transform="translate(-57.566038)">
         <g
-           id="g639"
-           transform="translate(0,-4.0367354)">
-          <g
-             id="g526"
-             transform="translate(-0.50943375)">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect490"
-               width="44.696568"
-               height="14.500001"
-               x="39.990562"
-               y="122.00944"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-               x="51.270451"
-               y="130.68709"
-               id="text310"><tspan
-                 sodipodi:role="line"
-                 id="tspan308"
-                 style="stroke-width:0.264583"
-                 x="51.270451"
-                 y="130.68709">ArrayList</tspan></text>
-          </g>
-          <g
-             id="g531"
-             transform="translate(3.8207569)">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect494"
-               width="44.696568"
-               height="14.500001"
-               x="93.22641"
-               y="123.02831"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-               x="98.179733"
-               y="131.74042"
-               id="text368"><tspan
-                 sodipodi:role="line"
-                 id="tspan366"
-                 style="stroke-width:0.264583"
-                 x="98.179733"
-                 y="131.74042">PriorityQueue</tspan></text>
-          </g>
-          <g
-             id="g598">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect492"
-               width="44.696568"
-               height="14.500001"
-               x="154.6132"
-               y="121.75472"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-               x="166.24863"
-               y="131.02493"
-               id="text372"><tspan
-                 sodipodi:role="line"
-                 id="tspan370"
-                 style="stroke-width:0.264583"
-                 x="166.24863"
-                 y="131.02493">HashSet</tspan></text>
-          </g>
-        </g>
-        <g
-           id="g649"
-           transform="translate(0,0.4104124)">
-          <g
-             id="g541"
-             transform="translate(-2.8018875)">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect496"
-               width="44.696568"
-               height="14.500001"
-               x="42.283016"
-               y="144.42453"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-               x="51.814178"
-               y="153.66028"
-               id="text364"><tspan
-                 sodipodi:role="line"
-                 id="tspan362"
-                 style="stroke-width:0.264583"
-                 x="51.814178"
-                 y="153.66028">LinkedList</tspan></text>
-          </g>
-          <g
-             id="g603"
-             transform="translate(-4.07547,-6.3679352)">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect577"
-               width="44.696568"
-               height="14.500001"
-               x="158.68867"
-               y="150.79247"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-               x="171.37279"
-               y="160.06267"
-               id="text581"><tspan
-                 sodipodi:role="line"
-                 id="tspan579"
-                 style="stroke-width:0.264583"
-                 x="171.37279"
-                 y="160.06267">TreeSet</tspan></text>
-          </g>
-        </g>
-        <g
-           id="g611"
-           transform="translate(1.5283019,-6.35)">
-          <g
-             id="g575"
-             transform="translate(5.094333,55.273585)">
-            <rect
-               style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
-               id="rect569"
-               width="44.696568"
-               height="14.500001"
-               x="147.99057"
-               y="121.75472"
-               rx="2.1486785"
-               ry="2.1347225" />
-            <text
-               xml:space="preserve"
-               style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';white-space:pre;inline-size:0;stroke-width:0.264583"
-               x="159.62599"
-               y="131.02493"
-               id="text573"><tspan
-                 id="tspan571"
-                 style="stroke-width:0.264583"
-                 x="159.62599"
-                 y="131.02493" /></text>
-          </g>
+           id="g598"
+           transform="translate(-15.636019,1.6754834)">
+          <rect
+             style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+             id="rect492"
+             width="44.696568"
+             height="14.500001"
+             x="154.6132"
+             y="121.75472"
+             rx="2.1486785"
+             ry="2.1347225" />
           <text
              xml:space="preserve"
              style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
-             x="156.45486"
-             y="186.29851"
-             id="text587"><tspan
+             x="166.24863"
+             y="131.02493"
+             id="text372"><tspan
                sodipodi:role="line"
-               id="tspan585"
+               id="tspan370"
                style="stroke-width:0.264583"
-               x="156.45486"
-               y="186.29851">LinkedHashSet</tspan></text>
+               x="166.24863"
+               y="131.02493">HashSet</tspan></text>
         </g>
+        <g
+           id="g603"
+           transform="translate(-19.711489,-0.245304)">
+          <rect
+             style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+             id="rect577"
+             width="44.696568"
+             height="14.500001"
+             x="158.68867"
+             y="150.79247"
+             rx="2.1486785"
+             ry="2.1347225" />
+          <text
+             xml:space="preserve"
+             style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+             x="171.37279"
+             y="160.06267"
+             id="text581"><tspan
+               sodipodi:role="line"
+               id="tspan579"
+               style="stroke-width:0.264583"
+               x="171.37279"
+               y="160.06267">TreeSet</tspan></text>
+        </g>
+        <g
+           id="g575"
+           transform="translate(-9.013384,54.635804)">
+          <rect
+             style="fill:#80b3ff;fill-opacity:0.751938;stroke:#0066ff;stroke-width:0.499999;stroke-linejoin:round"
+             id="rect569"
+             width="44.696568"
+             height="14.500001"
+             x="147.99057"
+             y="121.75472"
+             rx="2.1486785"
+             ry="2.1347225" />
+          <text
+             xml:space="preserve"
+             style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';white-space:pre;inline-size:0;stroke-width:0.264583"
+             x="159.62599"
+             y="131.02493"
+             id="text573"><tspan
+               id="tspan571"
+               style="stroke-width:0.264583"
+               x="159.62599"
+               y="131.02493" /></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+           x="142.34715"
+           y="185.66072"
+           id="text587"><tspan
+             sodipodi:role="line"
+             id="tspan585"
+             style="stroke-width:0.264583"
+             x="142.34715"
+             y="185.66072">LinkedHashSet</tspan></text>
       </g>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Candara;-inkscape-font-specification:'Candara, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="40.905312"
-         y="188.04126"
+         x="23.32984"
+         y="189.56956"
          id="text763"><tspan
            sodipodi:role="line"
            id="tspan761"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Candara;-inkscape-font-specification:'Candara, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-           x="40.905312"
-           y="188.04126">Clases / Objetos</tspan></text>
+           x="23.32984"
+           y="189.56956">Clases / Objetos</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Candara;-inkscape-font-specification:'Candara, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="40.674488"
-         y="45.932415"
+         x="23.099016"
+         y="47.460716"
          id="text767"><tspan
            sodipodi:role="line"
            id="tspan765"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Candara;-inkscape-font-specification:'Candara, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-           x="40.674488"
-           y="45.932415">Interfaces</tspan></text>
+           x="23.099016"
+           y="47.460716">Interfaces</tspan></text>
     </g>
   </g>
 </svg>

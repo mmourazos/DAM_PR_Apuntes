@@ -238,6 +238,10 @@ public class GenericMethod {
 }
 ```
 
+### ¿Cómo usarlos?
+
+Se usan como cualquier otro método sin que haya que tener en cuenta que son genéricos. Si se incumple alguna de las restricciones en la invocación el compilador nos indicará cuál es el problema.
+
 ## Comodines (_wildcards_)
 
 Hay casos en los que deseamos indicar que un método que estamos escribiendo admite un tipo genérico con cualquier tipo de datos. Veamos un ejemplo:
@@ -261,5 +265,24 @@ public class MiClase {
     public static void imprime(List<?> lista) {
         //...
     }
-}
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+
+        imprime(list); // No daría problemas.
+
+        LinkcedList<String> llist = new LinkedList<>();
+        ll.add("1");
+        ll.add("2");
+        ll.add("3");
+
+        imprime(llist); // No daría problemas.
+
+
+        int[] intArr = {1, 2, 3};
+        imprime(intArr); // Daría error.
+    }
 ```
