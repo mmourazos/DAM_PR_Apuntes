@@ -13,6 +13,8 @@ public class Main {
         // Creamos un mapa para guardar alumnos usando como clave el DNI:
         Map<String, Alumno> mapaAlumnos = new HashMap<>();
 
+        var x = 5;
+
         mapaAlumnos.put(a1.getDni(), a1);
         mapaAlumnos.put(a2.getDni(), a2);
         mapaAlumnos.put(a3.getDni(), a3);

@@ -22,6 +22,6 @@ Escribe un método con la forma `public static List<String> readLinesFromFile(St
 
 En el método `public static void main(String[] args)` de nuestra clase `Main` se escribirá el código necesario para probar el correcto funcionamiento de los ejercicios:
 
-1. Ejercicios 1: Se pedirá el nombre de un fichero donde escribir texto . Se pedrirá también texto para escribir en el fichero.
-2. Ejer
-
+1. Ejercicio 1: Se pedirá el nombre de un fichero donde escribir texto. Se pedrirá también texto para escribir en el fichero.
+2. Ejercicio 2: Se pedirá el nombre del fichero donde se escribirá (deberá tener texto previo) y a continuación se pedirá el texto a añadir (en una nueva línea).
+3. Ejercicio 3: Se pedirá el nombre del fichero donde se escribirán las nuevas líneas. A continuación se pedirá el número de líneas a añadir y el contenido de cada una de ellas.
