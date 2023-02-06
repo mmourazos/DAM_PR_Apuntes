@@ -18,6 +18,6 @@ Escribe un método con la siguiente declaración `public static void appendLines
 
 Escribe un método con la forma `public static List<String> readLinesFromFile(String fn)` que devuelva en una lista las líneas del fichero de nombre `fn`.
 
-## Ejecución
+## Comprobación
 
-En el método `public static void main(String[] args)`
+Incluid el código que hayáis usado para comprobar el correcto funcionamiento de las funciones antes descritas.
