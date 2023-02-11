@@ -31,9 +31,9 @@ Todas los objetos han de poder generar una cadena de caracteres que los represen
 * Un profesor tendrá nombre y apellidos además de un DNI (único).
 * Un profesor tendrá una fecha de nacimiento.
 * Un profesor tendrá información de contacto:
-    * Teléfono
-    * e-mail.
-    * Dirección.
+  * Teléfono
+  * e-mail.
+  * Dirección.
 
 ## Tutores
 
@@ -48,7 +48,7 @@ Todas los objetos han de poder generar una cadena de caracteres que los represen
 * Un ciclo tiene uno o más módulos.
 * Un ciclo tendrá dos os tres cursos.
 
-## Modulos 
+## Modulos
 
 * Un módulo tiene un nombre.
 * Un módulo tiene un código único.
@@ -69,4 +69,3 @@ Para reflejar la relación entre aulas y módulos podremos utilizar la clase `Au
 Un módulo solo se impartirá en un aula.
 
 Un aula podrá utilizarse en varios módulos.
-

@@ -1,0 +1,15 @@
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\bin\Debug\net7.0\Iterables.exe
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\bin\Debug\net7.0\Iterables.deps.json
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\bin\Debug\net7.0\Iterables.runtimeconfig.json
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\bin\Debug\net7.0\Iterables.dll
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\bin\Debug\net7.0\Iterables.pdb
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.csproj.AssemblyReference.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.AssemblyInfoInputs.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.AssemblyInfo.cs
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.csproj.CoreCompileInputs.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.dll
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\refint\Iterables.dll
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.pdb
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\Iterables.genruntimeconfig.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Tareas C#\Tarea3\Iterables\obj\Debug\net7.0\ref\Iterables.dll
