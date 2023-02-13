@@ -26,13 +26,15 @@ dotnet run
 
 ### Compilación del proyecto
 
-A diferencia de Java en C# se puede crear directamente un archivo ejecutable (`.exe`) a partir del código fuente de la aplicación.
+A diferencia de Java en C# se puede generar un archivo ejecutable (`.exe`) a partir del código fuente de la aplicación.
 
-Para ello usaremos el comando `dotnet build`.
+Para ello usaremos el comando `dotnet build`. Este comando **compilará** el código fuente de la aplicación y dará como resultado un archivo ejecutable Windows (`.exe`).
 
 El resultado de la compilación se guardará en el directorio `bin` (binarios) del proyecto.
 
 ## Variables
+
+Las principales diferencias entre las variables de C# y Java es que en el primero las variables _primitivas_ podrán pasarse **por valor** o **por referencia**. La segunda diferencia es que en lugar de disponer de **tipos envoltorio**, como Java, para trabajar con variables _sencillas_ (los tipos primitivos de Java) se utiliza un nuevo tipo de datos `struct` para realizar una función similar. Los _tipos primitivos_ de C# serán todos `struct`s, una especie de clases limitadas con valores y métodos.
 
 ### Situación en Java
 
@@ -226,7 +228,7 @@ Sección de incremento i = 5 y j = 5.
 Las diferencias en el bucle `for-each` son también (al menos externamente) muy pequeñas:
 
 ```c#
-List
+List<int> listInt = new List<int>();
 ```
 
 ### `while`
