@@ -1,10 +1,10 @@
-# Tema 9.0: Introducción a C\#
+# Tema 9.0: Introducción a C Sharp
 
 ## Instalación de Visual Studio
 
 Existen varias opciones para instalar Visual Studio y también varias versiones del mismo. Para nosotros será suficiente Visual Studio Community.
 
-Como opción de instalación realizaremos una _offline_ ya que así evitaremos tener que descargar Visual Studio y los componentes necesearios para cada instalación.
+Como opción de instalación realizaremos una _offline_ ya que así evitaremos tener que descargar Visual Studio y los componentes necesarios para cada instalación.
 
 Los pasos a seguir para realizar esta instalación (Visual Studio Community + Herramientas de desarrollo en C# para consola) son los [siguientes](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022#use-the-command-line-to-create-a-local-layout):
 
@@ -26,28 +26,28 @@ Una vez finalice de descargar los ficheros entraremos en el directorio elegido (
 vs_community.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeOptional
 ```
 
-## ¿Qué es C#?
+## ¿Qué es C Sharp?
 
 Este lenguaje de programación fue diseñado en el año 2000 por Anders Hejlsberg (Microsoft). Se trata de un lenguaje de **alto nivel** y **propósito general** con soporte para múltiples paradigmas de programación como: tipado estático, tipado fuerte, ámbito léxico, **imperativo**, **declarativo**, **funcional**, genérico, **orientado a objetos** (basado en clases) y orientado a componentes.
 
 El estándar Ecma lista como objetivos de diseño para C# los siguientes:
 _(copiado de la Wikipedia)_
 
-* Su intención es ser un lenguajde de programación simple, moderno, de propósito general y **orientado a objetos**.
+* Su intención es ser un lenguaje de programación simple, moderno, de propósito general y **orientado a objetos**.
 * El lenguaje deberá de incluir **comprobación de tipado fuerte, comprobación de los límites de los array, detectar el uso de variables no inicilizadas y _recolección de basura_ automática**.
-* La robusted del software, durabilidad y la productividad del programador serán aspectos importantes.
+* La robustez del software, durabilidad y la productividad del programador serán aspectos importantes.
 * El lenguaje está pensado para desarrollo de componentes software en **entornos distribuidos**.
 * La **portabilidad** es muy importante para el código fuente y los programadores, especialmente los familiarizados con **C y C++**.
 * El soporte para **internacionalización** es muy importante.
-* Aunque la inteción es que las aplicaciones escritas en C# sean _económicas_ en cuanto al uso de memoria y CPU, el lenguaje no ha sido diseñado para competir directamente en rendimiento y tamaño con C o ensamblador.
+* Aunque la intención es que las aplicaciones escritas en C# sean _económicas_ en cuanto al uso de memoria y CPU, el lenguaje no ha sido diseñado para competir directamente en rendimiento y tamaño con C o ensamblador.
 
 ## La sintaxis de C Sharp
 
-Los elementos fundamentales de la sistaxis de C#  es similar a la de otros lenguajes estilo C como C, C++ y Java:
+Los elementos fundamentales de la sintaxis de C#  es similar a la de otros lenguajes estilo C como C, C++ y Java:
 
-* Se usand `;` para indicar el fin de una instrucción.
+* Se usan `;` para indicar el fin de una instrucción.
 * Las `{}` se usan para agrupar instrucciones.
-* Las instrucciones se agrupan generalmente en métodos (funciones), los métods en clases y las clases en _namespaces_ (paquetes).
+* Las instrucciones se agrupan generalmente en métodos (funciones), los métodos en clases y las clases en _namespaces_ (paquetes).
 * Los valores se asignan a variables mediante el símbolo `=` y se comparan con `==`.
 * Los `[]` se usan con _arrays_, tanto para declararlos como para acceder a sus posiciones.
 * ...
