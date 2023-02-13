@@ -6,7 +6,7 @@ Crea o copia un fichero dentro del directorio donde vas a escribir el código de
 
 Se han de crear dos métodos: 
 
-* El primer método recibirá como argumeto el nombre de un fichero y leerá su contenido devolviéndolo como un array de bytes.
+* El primer método recibirá como argumento el nombre de un fichero y leerá su contenido devolviéndolo como un array de bytes.
 * El segundo método aceptará como argumento el nombre de un fichero y un array de bytes y guardará dicho array como contenido del fichero.
 
 ### Ejemplo
