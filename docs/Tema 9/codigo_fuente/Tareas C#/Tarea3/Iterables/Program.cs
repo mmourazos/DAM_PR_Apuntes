@@ -39,6 +39,15 @@ namespace Estructuras
             {
                 Console.WriteLine($"Elemento: {pila.Pop()}.");
             }
+
+            Queue<string> cola = new Queue<string>();
+            fin = false;
+            do
+            {
+                System.Console.Write("Introduzca una palabra (ENTER para terminar): ");
+                string palabra = Console.ReadLine();
+                cola.Enqueue(palabra);
+            } while (!fin);
         }
 
     }
