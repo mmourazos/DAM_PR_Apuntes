@@ -6,11 +6,15 @@ namespace Estructuras
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("¡Hola mundo CRUEL!");
+            int[] intArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            System.Console.WriteLine()");
+            intArr.Length
 
             Console.WriteLine("Probando la lista genérica:");
 
             List<string> lista = new List<string>();
+
 
             bool fin = false;
             do
