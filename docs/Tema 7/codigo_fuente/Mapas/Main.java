@@ -1,3 +1,4 @@
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +26,8 @@ public class Main {
         Alumno a = mapaAlumnos.get(a1.getDni());
 
         System.out.println(a);
+
+        Method m = String::length;
 
     }
 }

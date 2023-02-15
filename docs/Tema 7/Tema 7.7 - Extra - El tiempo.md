@@ -1,4 +1,4 @@
-# Tema 7.3: El tiempo, _The_Times_, en Java: `Date`, `Calendar` y `java.time`
+# Tema 7.7: El tiempo, _The_Times_, en Java: `Date`, `Calendar` y `java.time`
 
 En todos los lenguajes de programación existe la necesidad de almacenar valores que representen el tiempo. Es necesario saber, por ejemplo, cuando fue la última vez que se accedió o modificó un fichero, en qué fecha se realizó la última actualización o en qué momento se estableció una conexión con un servidor.
 

@@ -1,4 +1,4 @@
-# Tema 7.4: Mapas
+# Tema 7.6: Mapas
 
 Los mapas son estructuras de datos de Java que almacenan dos valores por cada entrada. Un de los valores funcionará como una clave a partir de la cual se podrá obtener el valor con el que está emparejado. Así, diremos que un mapa se compone de pares **clave - valor**.
 
