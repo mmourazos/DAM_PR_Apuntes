@@ -37,6 +37,30 @@ Las diferencias existentes entre ellos son respecto a cómo almacenan los datos 
 
 ### `HashMap`
 
-Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia del método de almacenamiento no se puede saber a priori con qué orden se iteraría sobre los datos.
+Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia de este método de almacenamiento **no se puede saber a priori con qué orden se iteraría sobre los datos**.
+
+En cuanto a rendimiento las operaciones básicas se realizan en tiempo constante.
+
+Tiene penalización si varía mucho de tamaño o en caso de colecciones muy grandes (cuando un `HashMap` alcanza un cierto tamaño se _transformará_ en un tipo de `TreeMap`).
 
 ### `TreeMap`
+
+Este mapa almacena sus elementos en un árbol binario equilibrado. El orden con que se almacenan los elementos será siguiente el **orden natural de sus claves**.
+
+El rendimiento es logarítmico respecto al tamaño del mapa.
+
+Sólo utiliza la memoria necesaria para almacenar los datos.
+
+### `LinkedHasMap`
+
+Este útimo tiene las ventajas del `HashMap` pero garantiza que el orden de iteración sobre los elementos coincide con el orden de inserción de los mismos en el mapa.
+
+## Uso de un mapa
+
+Para crear un `Map` hemos de indicar los tipos de datos de la clave y el valor:
+
+```java
+Map<String, Alumno> mapaAlumnos = new HashMap<>();
+mapaAlumnos.put(a1.getDni(), a1);
+mapaAlumnos.put(a2.getDni(), a2);
+```
