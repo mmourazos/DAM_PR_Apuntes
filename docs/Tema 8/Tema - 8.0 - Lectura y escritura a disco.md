@@ -162,7 +162,7 @@ Para escribir datos podremos usar distintos métodos pero el más sencillo será
 
 1. El array de bytes que deseamos escribir.
 2. El número de bytes del array que deseamos saltarnos (en nuestro caso 0).
-3. El número de bytes del array que desamos escribir (en nuestro caso la longitud del array).
+3. El número de bytes del array que deseamos escribir (en nuestro caso la longitud del array).
 
 ```java
 OutputStream out = new FileOutputStream(fileName);
@@ -193,7 +193,7 @@ Este caso es muy similar al anterior. La única diferencia es que si especificam
 Por este motivo el método `read` de `InputStream` puede devolver dos valores:
 
 * `-1`: en caso de que no haya podido leer (fin de fichero, fichero vacío, etc.).
-* El número de bytes leidos.
+* El número de bytes leídos.
 
 Por lo tanto si deseamos leer el contenido **total** de un fichero a memoria usaremos el método `readAllBytes` pero hemos de tener en cuenta que es posible que el fichero no quepa en memoria.
 
@@ -220,7 +220,7 @@ byte[] buffer = new byte[BUFFER_SIZE];
 
 // ...
 
-while ((bytesReaded = input.read(buffer, 0, BUFFER_SIZE)) != -1) {
-    // Hacer cosas con los datos leidos, bytesReaded bytes guardados en buffer.
+while ((bytesRead = input.read(buffer, 0, BUFFER_SIZE)) != -1) {
+    // Hacer cosas con los datos leídos, bytesRead bytes guardados en buffer.
 }
 ```
