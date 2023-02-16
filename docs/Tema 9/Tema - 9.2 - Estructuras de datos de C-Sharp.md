@@ -13,11 +13,11 @@ Los arrays en C# son idénticos a los de Java.
 Al igual que en Java se declaran indicando:
 
 ```c#
-// tipo segido de [ y ] y el nombre de la variable.
+// tipo seguido de [ y ] y el nombre de la variable.
 int[] arrayDeEnteros;
 
 // Opcionalmente se puede crear el array don un tamaño.
-int[] arrayDe5Enetros = new int[5];
+int[] arrayDe5Enteros = new int[5];
 
 // O también se pueden asignar directamente valores.
 int[] arrayConValores = {1, 2, 3};
@@ -25,7 +25,7 @@ int[] arrayConValores = {1, 2, 3};
 
 ### Acceso a sus elementos
 
-Para acceder a un elemento concreto del array indicaremos al lado de la varaible, entre corchetes, la posición o índice del elemento. Recordemos que el primer elemento tendrá índice 0:
+Para acceder a un elemento concreto del array indicaremos al lado de la variable, entre corchetes, la posición o índice del elemento. Recordemos que el primer elemento tendrá índice 0:
 
 ```c#
 int[] intArr = {1, 2, 3};
@@ -45,7 +45,7 @@ foreach (int i in intArr) {
 
 Para ver la longitud de un array hemos de acceder a la propiedad `Length` o `LongLength`.
 
-### Funciones de arrays (y coleciones en general)
+### Funciones de arrays (y colecciones en general)
 
 Hay tres funciones que se suele aplicar sobre las estructura tipo colección como son los arrays o las listas. Estas funciones son generalmente conocidas como _map_, _reduce_ y _filter_:
 
@@ -70,7 +70,8 @@ intArr = intArr.Select(elem => elem * elem).ToArray<int>();
 
 #### _Reduce_ / `Aggregate`
 
-```j
+```c#
+```
 
 ### _Map_, _reduce_ y _filter
 

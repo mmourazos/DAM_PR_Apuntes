@@ -26,7 +26,7 @@ BufferedWriter writer = new BufferedWriter(file);
 writer.write("Hola mundo cruel");
 ```
 
-Pero si intentas escribir este código en un IDE se mostratará un error: `Unhandled exception type IOException`. Esto se debe a que la creación de un `FileWriter` puede lanzar una excepción.
+Pero si intentas escribir este código en un IDE se mostrará un error: `Unhandled exception type IOException`. Esto se debe a que la creación de un `FileWriter` puede lanzar una excepción.
 
 Para solventar este error podremos o bien indicar que el método donde nos encontramos puede lanzar esta excepción:
 
@@ -119,7 +119,7 @@ public String leeFichero(String nombreFichero) {
 
 ## Sentencia _Try-con-recursos_
 
-Para evitar tener que cerrar explícitamente los recursos que abrimos podemos usar una variante de _try-cacth_ pero de la siguiente forma:
+Para evitar tener que cerrar explícitamente los recursos que abrimos podemos usar una variante de _try-catch_ pero de la siguiente forma:
 
 ```java
 try (FileReader fr = new FileReader(fileName); BufferedWriter writer = new BufferedWriter(fr)) {
@@ -133,7 +133,7 @@ Esta sentencia **asegura** que tanto el
 
 ## Añadir texto a un fichero
 
-Si ejecutamos el codigo de las secciones anteriores se **sobreescribe** el contenido del fichero que indiquemos con el texto que indiquemos. Si queremos añadir texto sin sobreescribir hemos de usar un constructor distinto de `FileWriter`:
+Si ejecutamos el código de las secciones anteriores se **sobrescribe** el contenido del fichero que indiquemos con el texto que indiquemos. Si queremos añadir texto sin sobrescribir hemos de usar un constructor distinto de `FileWriter`:
 
 ```java
 try (FileWriter fr = new FileWriter(fileName, true); BufferedWriter writer = new BufferedWriter(fr)) {
@@ -148,11 +148,11 @@ El constructor `FileWriter(String fileName, boolean append)` abrirá el fichero 
 
 ## Escritura de datos / _bits_
 
-Lo que hemos visto hasta ahora fueron formas de escribir texto a ficheros. Es posible que en lugar de texto lo que necesitemos es escribir datos en binario (como sería el caso de un fichero de imágen, vídeo o audio). Para escribir binario a un fichero hemos de utilizar objetos `FileOutputStream` (y `FileInputStream` para leer).
+Lo que hemos visto hasta ahora fueron formas de escribir texto a ficheros. Es posible que en lugar de texto lo que necesitemos es escribir datos en binario (como sería el caso de un fichero de imagen, vídeo o audio). Para escribir binario a un fichero hemos de utilizar objetos `FileOutputStream` (y `FileInputStream` para leer).
 
 ### Escritura binaria a un fichero
 
-Para crear un `FileOutputStream` hemos de indicar el nombre del fichero (la ruta en realidad) y añádir `true` si queremos indicar que deseamos añadir datos al fichero en lugar de sobreescribirlo.
+Para crear un `FileOutputStream` hemos de indicar el nombre del fichero (la ruta en realidad) y añadir `true` si queremos indicar que deseamos añadir datos al fichero en lugar de sobrescribirlo.
 
 ```java
 OutputStream out = new FileOutputStream(fileName);

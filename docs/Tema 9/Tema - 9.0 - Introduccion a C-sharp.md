@@ -9,7 +9,7 @@ Como opción de instalación realizaremos una _offline_ ya que así evitaremos t
 Los pasos a seguir para realizar esta instalación (Visual Studio Community + Herramientas de desarrollo en C# para consola) son los [siguientes](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022#use-the-command-line-to-create-a-local-layout):
 
 1. Descargar el _bootstrapper_ para Visual Studio Community [vs_community.exe](https://aka.ms/vs/17/release/vs_community.exe)
-2. Apuntar los identificador de los componentes que desemos instalar (listados en [esta página](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?source=recommendations&view=vs-2022)). En nuestro caso será suficiente con: **.Net desktop development** con ID `Microsoft.VisualStudio.Workload.ManagedDesktop`.
+2. Apuntar los identificador de los componentes que deseemos instalar (listados en [esta página](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?source=recommendations&view=vs-2022)). En nuestro caso será suficiente con: **.Net desktop development** con ID `Microsoft.VisualStudio.Workload.ManagedDesktop`.
 3. Seleccionar el directorio donde descargaremos los archivos de Visual Studio Community y sus componentes mediante la opción `--layout c:\mi_dir_VSC`.
 4. Hemos de indicar también el lenguaje que deseemos `--lang es-ES` por ejemplo (lenguajes válidos [aquí](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022#list-of-language-locales)).
 5. Finalmente es importante indicar que instale los componentes opcionales con `--includeOptional`
@@ -30,7 +30,7 @@ vs_community.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --
 
 Este lenguaje de programación fue diseñado en el año 2000 por Anders Hejlsberg (Microsoft). Se trata de un lenguaje de **alto nivel** y **propósito general** con soporte para múltiples paradigmas de programación como: tipado estático, tipado fuerte, ámbito léxico, **imperativo**, **declarativo**, **funcional**, genérico, **orientado a objetos** (basado en clases) y orientado a componentes.
 
-El estándar Ecma lista como objetivos de diseño para C# los siguientes:
+El estándar ECMA lista como objetivos de diseño para C# los siguientes:
 _(copiado de la Wikipedia)_
 
 * Su intención es ser un lenguaje de programación simple, moderno, de propósito general y **orientado a objetos**.
