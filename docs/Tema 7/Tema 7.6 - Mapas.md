@@ -1,4 +1,4 @@
-# Tema 7.6: Mapas
+# Tema 7.4: Mapas
 
 Los mapas son estructuras de datos de Java que almacenan dos valores por cada entrada. Un de los valores funcionará como una clave a partir de la cual se podrá obtener el valor con el que está emparejado. Así, diremos que un mapa se compone de pares **clave - valor**.
 
@@ -13,7 +13,7 @@ La sintaxis para definir un mapa es la siguiente:
 Map<String, Alumno> mapaAlumnos = new HashMap<>();
 ```
 
-Para instar elementos en el mapa deberemos de usar el método `put` pasándole el par _clave - valor_:
+Para instar elementos en el mapa deberemos de usar el método `put` pasándo le el par _clave - valor_:
 
 ```java
 mapaAlumnos.put("primero", new Alumno("Ángel", "32124F", "16-07-2005"));
@@ -37,11 +37,7 @@ Las diferencias existentes entre ellos son respecto a cómo almacenan los datos 
 
 ### `HashMap`
 
-Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia de este método de almacenamiento **no se puede saber a priori con qué orden se iteraría sobre los datos**.
-
-En cuanto a rendimiento las operaciones básicas se realizan en tiempo constante.
-
-Tiene penalización si varía mucho de tamaño o en caso de colecciones muy grandes (cuando un `HashMap` alcanza un cierto tamaño se _transformará_ en un tipo de `TreeMap`).
+Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia del método de almacenamiento no se puede saber a priori con qué orden se iteraría sobre los datos.
 
 ### `TreeMap`
 

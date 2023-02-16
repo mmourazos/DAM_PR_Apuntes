@@ -1,4 +1,5 @@
 package herencia;
+
 /**
  * ClasePadre
  */
@@ -22,8 +23,8 @@ public class ClasePadre {
         System.out.println("Metodo de la clase padre.");
     }
 
-    public void metodoParaSobreescribir() {
-        System.out.println("Metodo para sobreescribir (ClasePadre).");
+    public void metodoParaSobrescribir() {
+        System.out.println("Metodo para sobrescribir (ClasePadre).");
     }
 
     public void saludo() {

@@ -9,8 +9,8 @@ public class ClaseHijaB extends ClaseHijaA {
     }
 
     @Override
-    public void metodoParaSobreescribir() {
-        System.out.println("Metodo para sobreescribir (ClaseHijaB).");
+    public void metodoParaSobrescribir() {
+        System.out.println("Metodo para sobrescribir (ClaseHijaB).");
     }
 
     public void accesoASuperclases() {
@@ -18,17 +18,17 @@ public class ClaseHijaB extends ClaseHijaA {
         ClaseHijaB chb = new ClaseHijaB(10, 20);
 
         System.out.println("Metodo de la clase padre:");
-        ((ClasePadre) chb).metodoParaSobreescribir();
+        ((ClasePadre) chb).metodoParaSobrescribir();
 
         System.out.println("Metodo de la clase hija A:");
-        ((ClaseHijaA) chb).metodoParaSobreescribir();
+        ((ClaseHijaA) chb).metodoParaSobrescribir();
 
         // También usando super:
         System.out.println("Metodo de la clase hija A (super):");
-        super.metodoParaSobreescribir();
+        super.metodoParaSobrescribir();
 
         System.out.println("Metodo de la clase hija B:");
-        chb.metodoParaSobreescribir();
+        chb.metodoParaSobrescribir();
     }
 
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class ClaseHijaB extends ClaseHijaA {
 
         chb.show();
 
-        chb.metodoParaSobreescribir();
+        chb.metodoParaSobrescribir();
 
         chb.metodoTest();
 

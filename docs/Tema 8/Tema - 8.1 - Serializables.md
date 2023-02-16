@@ -30,7 +30,7 @@ Un objeto _JavaBean_ debe cumplir las siguientes condiciones:
 
 **Veamos un ejemplo:**
 
-Convitamos la clase `Gato` a un _JavaBean_:
+Convirtamos la clase `Gato` a un _JavaBean_:
 
 ```java
 public class Gato implements Serializable {
@@ -57,9 +57,9 @@ public class Gato implements Serializable {
 
 ## Serializable
 
-Que una clase sea serializabe quiere decir que dicha clase se puede _escribir_ y _leer_ de una base de datos o un fichero.
+Que una clase sea serializable quiere decir que dicha clase se puede _escribir_ y _leer_ de una base de datos o un fichero.
 
-Para que una clase sera serializabe ha de implementar el interfaz `Serializable`.
+Para que una clase sera serializable ha de implementar el interfaz `Serializable`.
 
 ```java
 public class Alumno implements Serializable {
@@ -69,7 +69,7 @@ public class Alumno implements Serializable {
 
 ## Guardar objetos en ficheros
 
-Los objetos serializables pueden ser escritos en ficheros y, obviamente, recuperdos leyéndolos del fichero.
+Los objetos serializables pueden ser escritos en ficheros y, obviamente, recuperados leyéndolos del fichero.
 
 ### Escritura de objeto a fichero
 
@@ -82,5 +82,4 @@ Veámoslo con un ejemplo:
 Gato gatito = new Gato();
 gatito.setNombre("Michi");
 gatito.setFechaNacimiento(new LocalDate())
-
 ```

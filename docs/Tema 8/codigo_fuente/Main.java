@@ -65,19 +65,18 @@ public class Main {
      * Lee hasta 4KiB de un fichero y los devuelve en un array de bytes.
      * 
      * @param fileName Nombre del fichero del que se ha de leer.
-     * @return Array de bytes con longitud iugal a los bytes leíds y null si no se
-     *         pudo leer.
+     * @return Array de bytes con longitud iugal a los bytes leíds y null si no se pudo leer.
      */
     public static byte[] readBinaryFromFile(String fileName) {
         byte[] inputBytes = new byte[BYTES_TO_WRITE];
 
         try (InputStream input = new FileInputStream(fileName)) {
-            int bytesReaded = input.read(inputBytes, BYTES_TO_SKIP, BYTES_TO_WRITE);
+            int bytesRead = input.read(inputBytes, BYTES_TO_SKIP, BYTES_TO_WRITE);
             // Si read devuelve -1 es que no pudo leer nada.
-            if (bytesReaded == -1)
+            if (bytesRead == -1)
                 return null;
-            if (bytesReaded < BYTES_TO_WRITE) {
-                inputBytes = Arrays.copyOf(inputBytes, bytesReaded);
+            if (bytesRead < BYTES_TO_WRITE) {
+                inputBytes = Arrays.copyOf(inputBytes, bytesRead);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -120,7 +119,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Console con = System.console();
         String fileName = "miFichero.txt";
-        String outTxt = "La razón de la sinrazón que a mi razón se hace\nde tal manera mi razón enflaquece que\nCon razón me quejo de la vuestra fermosura.";
+        String outTxt =
+                "La razón de la sinrazón que a mi razón se hace\nde tal manera mi razón enflaquece que\nCon razón me quejo de la vuestra fermosura.";
         String nombreFichEntrada, nombreFichSalida;
 
         // appendTextToFile(fileName, outTxt);

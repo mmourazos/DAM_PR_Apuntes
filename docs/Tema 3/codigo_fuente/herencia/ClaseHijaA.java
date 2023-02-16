@@ -1,4 +1,5 @@
 package herencia;
+
 public class ClaseHijaA extends ClasePadre {
     public int x = 100;
     private int y = 200;
@@ -24,8 +25,8 @@ public class ClaseHijaA extends ClasePadre {
     }
 
     @Override
-    public void metodoParaSobreescribir() {
-        System.out.println("Metodo para sobreescribir (ClaseHijaA).");
+    public void metodoParaSobrescribir() {
+        System.out.println("Metodo para sobrescribir (ClaseHijaA).");
     }
 
     public void metodoTest() {
