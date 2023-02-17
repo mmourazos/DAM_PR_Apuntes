@@ -29,9 +29,9 @@ public class AlmacenadorEntero {
 Esta clase sólo puede almacenar e imprimir valores `Integer`, pero si queremos una clase que tenga la misma funcionalidad que pueda almacenar valores `Double` o `Float`, tendremos que crear una nueva clase (virtualmente idéntica) para cada tipo de dato nuevo que queramos tratar:
 
 ```java
-public class AmacenadorDoble {
-    private Doble valor;
-    public Almacenador(Doble valor) {
+public class AlmacenDoble {
+    private Double valor;
+    public Almacen(Double valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -45,9 +45,9 @@ Para evitar tener que repetir una y otra vez _el mismo código_ en cada clase po
 En el siguiente ejemplo de código usamos `T` para indicar _un tipo cualquiera_ que especificaremos en otro momento. No es necesario usar la letra **T** pero una vez la indiquemos hemos de mantener la consistencia y emplear la misma letra para indicar el tipo genérico:
 
 ```java
-public class Almacenador<T> {
+public class Almacen<T> {
     private T valor;
-    public Almacenador(T valor) {
+    public Almacena(T valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -61,8 +61,8 @@ A la hora de utilizarlo debemos indicar el tipo de dato concreto que queremos al
 ```java
 public class Main {
     public static void main(String[] args) {
-        Almacenador<Integer> almacenador = new Almacenador<>(5);
-        almacenador.imprimir();
+        Almacen<Integer> almacen = new Almacen<>(5);
+        almacen.imprimir();
     }
 }
 ```

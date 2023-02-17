@@ -91,4 +91,3 @@ Los mapas, así como todas las clases que implementan `Collection`, disponen de 
 ```java
 mapa.forEach((k, v) -> System.out.println(k + " -> " + v));
 ```
-

@@ -1,4 +1,4 @@
-# Tema 7.5 - Extra: Lambdas en Java
+# Tema 7.8 - Extra: Lambdas en Java
 
 Las lambda (equivalentes a métodos en Java) son funciones que se pueden pasar directamente como parámetro a un método.
 
@@ -14,7 +14,7 @@ Veámoslo con un ejemplo:
 
 Imaginemos que tenemos una clase `Alumno` y deseamos ordenar objetos de dicha clase. Existe una interfaz en Java que nos permite definir formas de comparar objetos `Compartor`. Esta interfaz sólo define como obligatorio el método `compare` que admite dos argumentos.
 
-Si creamos un par de métodos para obtener el _primero_ y _último_ alumno de una lista según algun criterio podríamos hacer lo siguiente:
+Si creamos un par de métodos para obtener el _primero_ y _último_ alumno de una lista según algún criterio podríamos hacer lo siguiente:
 
 ```java
 public static Alumno primero(List<Alumno> l, Comparator<Alumno> c) {
@@ -73,10 +73,10 @@ int z = suma.apply(x, y);
 System.out.printf("z = %d.%n", z); // Mostrará el valor 30 por consola.
 ```
 
-Para funciones que sólo admiten un parámetros podremos usar el interfaz `Funcion` que es genérico y requiere que indiquemos el tipo de la entrada y la salida:
+Para funciones que sólo admiten un parámetros podremos usar el interfaz `Function` que es genérico y requiere que indiquemos el tipo de la entrada y la salida:
 
 ```java
-Funcion<String, Integer> intToStr = i -> Integer.parseInt(i);
+Function<String, Integer> intToStr = i -> Integer.parseInt(i);
 ```
 
 ### Múltiples variables

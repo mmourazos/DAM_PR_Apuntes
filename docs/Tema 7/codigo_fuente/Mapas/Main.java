@@ -28,12 +28,10 @@ public class Main {
         alStr.add("Hola");
         alStr.add("Adios");
 
-
         alStr.stream().map(s -> {
             System.out.println(s);
             return s;
         });
-
 
         ArrayList<String> invertido = new ArrayList<>(alStr.size());
 
@@ -42,13 +40,9 @@ public class Main {
             return a;
         }, (a, b) -> a.addAll(b) ? a : a);
 
-
-
         System.out.println(invertido);
 
     }
-
-
 
     public static void main(String[] args) {
         // Creamos tres alumnos:
@@ -77,6 +71,10 @@ public class Main {
         // // Para eliminar un valor hemos de usar el dni como clave:
 
         recorrerMapa(null);
+
+        Method m = String::length;
+
+        Method m = String::length;
 
     }
 }
