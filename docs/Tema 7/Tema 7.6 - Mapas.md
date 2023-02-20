@@ -63,6 +63,10 @@ mapaAlumnos.put(a2.getDni(), a2);
 
 ### Inserción de elementos
 
+Para insertar un elemento o entrada en un mapa hay que hacerlo en forma de par _clave_-_valor_. El método para inserción de elementos en un mapa es `put(K clave, V valor)`:
+```java
+```
+
 ### Acceder a un elemento
 
 ### Eliminar un elemento
