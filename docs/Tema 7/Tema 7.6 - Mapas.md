@@ -49,7 +49,7 @@ Sólo utiliza la memoria necesaria para almacenar los datos.
 
 ### `LinkedHasMap`
 
-Este útimo tiene las ventajas del `HashMap` pero garantiza que el orden de iteración sobre los elementos coincide con el orden de inserción de los mismos en el mapa.
+Este útimo tiene las ventajas del `HashMap` pero garantiza que el orden de iteración sobre sus elementos coincide con el orden de inserción de los mismos en el mapa.
 
 ## Uso de un mapa
 
@@ -60,3 +60,25 @@ Map<String, Alumno> mapaAlumnos = new HashMap<>();
 mapaAlumnos.put(a1.getDni(), a1);
 mapaAlumnos.put(a2.getDni(), a2);
 ```
+
+### Inserción de elementos
+
+Para insertar un elemento o entrada en un mapa hay que hacerlo en forma de par _clave_-_valor_. El método para inserción de elementos en un mapa es `put(K clave, V valor)`:
+```java
+```
+
+### Acceder a un elemento
+
+### Eliminar un elemento
+
+## Iterar un mapa 
+
+### Iterar por su contenido `Entry`
+
+### Iterar por claves o valores
+
+#### `keySet()`
+
+#### `values`
+
+### Función `forEach()`
