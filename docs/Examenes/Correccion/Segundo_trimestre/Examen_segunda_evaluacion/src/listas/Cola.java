@@ -12,6 +12,7 @@ public class Cola<E> extends LinkedList<E> {
     }
 
     public E desencolar() {
+        // return removeFirst(); o simplemente:
         return remove();
     }
 

@@ -13,8 +13,11 @@ public class Main {
         }
 
         // TODO: Ordenar la lista de mayor a menor.
+
+        // Con una lambda:
         lista.sort((a, b) -> -b.compareTo(a));
 
+        // Con una clase anónima:
         lista.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer a, Integer b) {
