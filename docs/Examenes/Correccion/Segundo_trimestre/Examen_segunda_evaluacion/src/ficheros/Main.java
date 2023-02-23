@@ -13,7 +13,7 @@ public class Main {
 
     public static void insertaPrimeraLinea(String nombreFichero, String texto) {
         // Leer el contenido del fichero y añadirlo a textoNuevo.
-        StringBuilder textoNuevo = new StringBuilder("texto" + "\n");
+        StringBuilder textoNuevo = new StringBuilder(texto + "\n");
         try (BufferedReader br =
                 new BufferedReader(new FileReader(nombreFichero, StandardCharsets.UTF_8))) {
             String linea;
