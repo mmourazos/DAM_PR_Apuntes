@@ -1,4 +1,4 @@
-## Colas, interfaz `Queue`
+# Colas, interfaz `Queue`
 
 Las colas de Java funcionan como las colas _en el mundo real_. Los elementos se añaden al final de la cola y se extraen del principio: primero en entrar, primero en salir (FIFO: _First In, First Out_).
 
@@ -17,13 +17,13 @@ Como podemos ver hay dos métodos para cada operación, uno de ellos lanza una e
 * Leer el elemento cabeza de la cola sin sacarlo: `element` lanza una excepción (`NoSuchElementoException`) si la cola está vacía y `peek` devuelve `null` si la cola está vacía.
 * Extraer el elemento cabeza de la cola: `remove` lanza una excepción (`NoSuchElementException`) si la cola está vacía y `poll` devuelve `null` si la cola está vacía.
 
-### `PriorityQueue`
+## `PriorityQueue`
 
 La clase `PriorityQueue` implementa el interfaz `Queue`. Además los elementos de la cola se _ordenan_ según su _prioridad_, que se define mediante un objeto `Comparator` que se pasa al constructor de la cola. Si no se pasa ningún `Comparator` se usará el orden natural de los elementos.
 
 Esto **no significa** que los elementos se ordenen automáticamente cuando se añaden a la cola. Los elementos se obtendrán ordenados cuando se extraigan de la cola.
 
-#### Comparadores
+### Comparadores
 
 Un comparador será un objeto que implemente la interfaz `Comparator`. Ésta exige que se implemente el método `compare` que recibe dos objetos y devuelve un entero que indica si el primer objeto es menor (menor que 0), igual (0) o mayor que el segundo (mayor que 0).
 
@@ -57,7 +57,7 @@ public class Main {
 }
 ```
 
-#### Interfaz `Comparator`
+### Interfaz `Comparator`
 
 Este interfaz le concede a un objeto la capacidad de establecer un orden sobre un tipo de objetos. Para ello, el objeto debe implementar el método `compare` que recibe dos objetos del tipo que se quiere ordenar y devuelve un entero que indica si el primer objeto es menor (menor que 0), igual (0) o mayor que el segundo (mayor que 0).
 
