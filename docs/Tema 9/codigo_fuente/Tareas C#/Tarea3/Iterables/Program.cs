@@ -8,8 +8,7 @@ namespace Estructuras
         {
             int[] intArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            System.Console.WriteLine()");
-            intArr.Length
+            System.Console.WriteLine($"Probando el array de enteros de {intArr.Length} elementos:");
 
             Console.WriteLine("Probando la lista genérica:");
 
