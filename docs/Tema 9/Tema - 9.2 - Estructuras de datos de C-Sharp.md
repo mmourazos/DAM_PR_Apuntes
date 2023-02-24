@@ -238,6 +238,52 @@ class ContenedorGenerico<T>
 
 ## Listas
 
+De nuevo las listas de C# son muy similares a las listas de Java, aunque en C# sólo hay un tipo de lista `List` en lugar de `ArrayList` y `LinkedList` de Java.
+
+### Declarar una lista
+
+Para declarar una lista en C# hemos de indicar el tipo de dato que va a contener la lista como con cualquier otra clase genérica:
+
+```c#
+List<string> listaCadenas = new List<String>();
+```
+
+#### Declarar e inicializar
+
+También es posible declarar una lista y al mismo tiempo darle unos valores iniciales:
+
+```c#
+List<int> listaEnteros = new List<int>() {1, 2, 3, 4, 5};
+```
+
+### Añadir elementos
+
+Para añadir elementos (al final de la lista) usaremos el método `Add`:
+
+```c#
+List<int> listaEnteros = new List<int>() {1, 2, 3, 4, 5};
+
+listaEnteros.Add(6);
+
+listaEnteros.ForEach(e => Console.Write(e + ", "));
+
+// 1, 2, 3, 4, 5, 6, 
+```
+
+Y en caso de que deseemos insertar el valor en una posición determinada usaremos el método `Insert`:
+
+```c#
+List<int> listaEnteros = new List<int>() {1, 2, 3, 4, 5};
+
+listaEnteros.Insert(2, 3);
+
+for (int e in listaEnteros)
+{
+    Console.Write(e + ", ");
+}
+
+// 1, 2, 3, 3, 4, 5
+
 ## Pilas
 
 ## Colas
