@@ -10,7 +10,9 @@
         "println",
         "struct",
         "superclase",
-        "superclases"
+        "superclases",
+        "tupla",
+        "tuplas"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }

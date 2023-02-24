@@ -2,6 +2,71 @@
 
 namespace Estructuras
 {
+    internal class ContenedorGenerico<T>
+    {
+        private T[] array;
+        private int count;
+
+        public ContenedorGenerico(int size)
+        {
+            array = new T[size];
+            count = 0;
+        }
+
+        public void Add(T element)
+        {
+            if (count < array.Length)
+            {
+                array[count] = element;
+                count++;
+            }
+        }
+
+        public T Get(int index)
+        {
+            if (index < count)
+            {
+                return array[index];
+            }
+            else
+            {
+                throw new IndexOutOfRangeException();
+            }
+        }
+
+        public void Set(int index, T element)
+        {
+            if (index < count)
+            {
+                array[index] = element;
+            }
+            else
+            {
+                throw new IndexOutOfRangeException();
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+
+        public T this[int index]
+        {
+            get
+            {
+                return Get(index);
+            }
+            set
+            {
+                Set(index, value);
+            }
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -10,9 +75,20 @@ namespace Estructuras
 
             System.Console.WriteLine($"Probando el array de enteros de {intArr.Length} elementos:");
 
+            System.Console.WriteLine($"Total del array {intArr} es {intArr.Aggregate((acc, e) => acc + e)}");
+
+            intArr.Where(e => e % 2 == 0).ToList().ForEach(e => System.Console.WriteLine(e));
+
+            (int, string, string) miTupla = (1, "Hola", "Mundo");
+
+            miTupla.CompareTo
+
+
             Console.WriteLine("Probando la lista genérica:");
 
             List<string> lista = new List<string>();
+
+
 
 
             bool fin = false;
