@@ -1,4 +1,4 @@
-# Tema 7.7: El tiempo, _The_Times_, en Java: `Date`, `Calendar` y `java.time`
+# Tema 7.7: EXTRA El tiempo, _The_Times_, en Java: `Date`, `Calendar` y `java.time`
 
 En todos los lenguajes de programación existe la necesidad de almacenar valores que representen el tiempo. Es necesario saber, por ejemplo, cuando fue la última vez que se accedió o modificó un fichero, en qué fecha se realizó la última actualización o en qué momento se estableció una conexión con un servidor.
 
@@ -30,12 +30,12 @@ Pero para obtener el día, mes y año lo tenemos complicado...
 
 ## `Calendar` al rescate
 
-Trabajar con `Date` para obtener los valores del año, día del mes, de la semana, etc. es bastante complicado. Para facilitar el trabajo se creó la clase `Calendar`. `Calendar` es una actualización `Date` pero que **no lo substituye**. Funciona en *tandem* con `Date`.
+Trabajar con `Date` para obtener los valores del año, día del mes, de la semana, etc. es bastante complicado. Para facilitar el trabajo se creó la clase `Calendar`. `Calendar` es una actualización `Date` pero que **no lo substituye**. Funciona en _tandem_ con `Date`.
 
 Por ejemplo, para crear un `Calendar` que represente la fecha y hora actual escribiremos:
 
 ```java
-Calenda c = Calendar.getInstance();
+Calendar c = Calendar.getInstance();
 ```
 
 Si queremos obtener año, mes y día de un objeto `Date`:
@@ -45,7 +45,7 @@ Date d = new Date();
 Calendar c = Calendar.getInstance();
 c.setTime(d);
 int year = c.get(Calendar.YEAR);
-int mont = c.get(Calendar.MONTH);
+int month = c.get(Calendar.MONTH);
 /...
 ```
 
@@ -64,7 +64,7 @@ LocalDate hoy = LocalDate.now();
 Y para obtener año, mes y día:
 
 ```java
-int anho = hoy.getYear();
+int año = hoy.getYear();
 int mes = hoy.getMonth();
 int diaMes = hoy.getDayOfMonth();
 int diaSemana = hoy.getDayOfWeek();

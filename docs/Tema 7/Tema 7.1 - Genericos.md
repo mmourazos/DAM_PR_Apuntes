@@ -2,7 +2,7 @@
 
 ## Introducción
 
-¿Para qué sirven los genéricos?
+**¿Para qué sirven los genéricos?**
 
 Los genéricos nos permiten crear clases y métodos que pueden trabajar con **cualquier tipo de dato**, sin necesidad de especificar el tipo de dato concreto en el momento de definir las clases. Debido a que no se especifica el tipo exacto en la fase de diseño de la clase podemos decir que usa un tipo _genérico_ y de ahí su nombre.
 
@@ -15,9 +15,9 @@ Veámoslo con un ejemplo:
 Imaginemos que queremos que una clase almacenen un valor `Integer` y pueda imprimirlo:
 
 ```java
-public class AlmacenadorEntero {
+public class AlmacenEntero {
     private Integer valor;
-    public Almacenador(Integer valor) {
+    public AlmacenEntero(Integer valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -31,7 +31,7 @@ Esta clase sólo puede almacenar e imprimir valores `Integer`, pero si queremos 
 ```java
 public class AlmacenDoble {
     private Double valor;
-    public Almacen(Double valor) {
+    public AlmacenDoble(Double valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -40,7 +40,7 @@ public class AlmacenDoble {
 }
 ```
 
-Para evitar tener que repetir una y otra vez _el mismo código_ en cada clase podemos utilizar los **genéricos**. Esto permitirá crear una clase que pueda almacenar cualquier tipo de dato y que pueda imprimirlo. Indicaremos el tipo concreto en el momento de usar la clase (de crear un objeto). El código de la clase sería de esta forma *genérico*. Valdría para cualquier tipo de dato.
+Para evitar tener que repetir una y otra vez _el mismo código_ en cada clase podemos utilizar los **genéricos**. Esto permitirá crear una clase que pueda almacenar cualquier tipo de dato y que pueda imprimirlo. Indicaremos el tipo concreto en el momento de usar la clase (de crear un objeto). El código de la clase sería de esta forma _genérico_. Valdría para cualquier tipo de dato.
 
 En el siguiente ejemplo de código usamos `T` para indicar _un tipo cualquiera_ que especificaremos en otro momento. No es necesario usar la letra **T** pero una vez la indiquemos hemos de mantener la consistencia y emplear la misma letra para indicar el tipo genérico:
 
@@ -125,7 +125,7 @@ Puesto que es redundante repetir el tipo de dato Java permite omitirlo para mayo
 MiClase<String> mc = new MiClase<>();
 ```
 
-Esto hará que Java _transforme_ el código del la clase generica en el siguiente antes de crear la instancia:
+Esto hará que Java _transforme_ el código del la clase genérica en el siguiente antes de crear la instancia:
 _(Es una forma de verlo, no digo que haga esto **literalmente**)._
 
 ```java
@@ -149,9 +149,9 @@ MiClase<int> mc = new MiClase<>();
 MiClase<Integer> mc = new MiClase<>();
 ```
 
-Nótese también que, si trabajamos con tipos primitivos (`int`, `float`, `boolean`, etc.) no es necesario convertir expícitamente éste a su tipo envoltorio (`Integer`, `Float`, `Boolean`, etc.) ya que Java lo hace automáticamente.
+Nótese también que, si trabajamos con tipos primitivos (`int`, `float`, `boolean`, etc.) no es necesario convertir explícitamente éste a su tipo envoltorio (`Integer`, `Float`, `Boolean`, etc.) ya que Java lo hace automáticamente.
 
-```java	
+```java
 ArrayList<Integer> listaInt = new ArrayList<>();
 
 listaInt.add(5); // Esto es válido
@@ -168,9 +168,9 @@ También es posible **limitar o restringir** las características del tipo de da
 Por ejemplo, si queremos usar un tipo genérico pero que sea de un tipo dado (por ejemplo `Persona`) lo podemos indicar como:
 
 ```java
-public class Almacenador<T extends Persona> {
+public class Almacen<T extends Persona> {
     private T valor;
-    public Almacenador(T valor) {
+    public Almacen(T valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -179,16 +179,16 @@ public class Almacenador<T extends Persona> {
 }
 ```
 
-Una vez hecho esto una variable de tipo `T` tendrá acceso a todos los métodos de `Persona` y, cuando se cree una instancia de `Almacenador` se tendrá que indicar un tipo que herede de `Persona`.
+Una vez hecho esto una variable de tipo `T` tendrá acceso a todos los métodos de `Persona` y, cuando se cree una instancia de `Almacen` se tendrá que indicar un tipo que herede de `Persona`.
 
 ### Limitar interfaz
 
 Del mismo modo que podemos limitar cual ha de ser la superclase del tipo de nuestro genérico también podemos hacer lo mismo con respecto a un interfaz:
 
 ```java
-public class Almacenador<T extends Comparable> {
+public class Almacen<T extends Comparable> {
     private T valor;
-    public Almacenador(T valor) {
+    public Almacen(T valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -204,9 +204,9 @@ Nótese que hemos de utilizar **extends** tanto para indicar la superclase como 
 Podemos combinar la limitación de superclase con la indicación de que ha de implementar uno o más interfaces. Para ello **hemos de indicar primero siempre la superclase** y a continuación todos los interfaces que deseemos **separados por &**:
 
 ```java
-public class Almacenador<T extends Persona & Comparable & Serializable> {
+public class Almacen<T extends Persona & Comparable & Serializable> {
     private T valor;
-    public Almacenador(T valor) {
+    public Almacen(T valor) {
         this.valor = valor;
     }
     public void imprimir() {
@@ -274,7 +274,7 @@ public class MiClase {
 
         imprime(list); // No daría problemas.
 
-        LinkcedList<String> llist = new LinkedList<>();
+        LinkedList<String> llist = new LinkedList<>();
         ll.add("1");
         ll.add("2");
         ll.add("3");

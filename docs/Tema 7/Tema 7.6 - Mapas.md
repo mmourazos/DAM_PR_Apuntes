@@ -1,6 +1,8 @@
-# Tema 7.4: Mapas
+# Tema 7.5: Mapas
 
 Los mapas son estructuras de datos de Java que almacenan dos valores por cada entrada. Un de los valores funcionará como una clave a partir de la cual se podrá obtener el valor con el que está emparejado. Así, diremos que un mapa se compone de pares **clave - valor**.
+
+En un mapa **nunca podrán existir dos claves iguales**.
 
 Los mapas, al igual que todas las demás estructuras de datos (salvo los arrays) son genéricos, por lo que habrá que indicar el tipo tanto de la clave como del valor.
 
@@ -8,12 +10,11 @@ Los mapas, al igual que todas las demás estructuras de datos (salvo los arrays)
 
 La sintaxis para definir un mapa es la siguiente:
 
-
 ```java
 Map<String, Alumno> mapaAlumnos = new HashMap<>();
 ```
 
-Para instar elementos en el mapa deberemos de usar el método `put` pasándo le el par _clave - valor_:
+Para instar elementos en el mapa deberemos de usar el método `put` pasándole el par _clave - valor_:
 
 ```java
 mapaAlumnos.put("primero", new Alumno("Ángel", "32124F", "16-07-2005"));
@@ -37,48 +38,56 @@ Las diferencias existentes entre ellos son respecto a cómo almacenan los datos 
 
 ### `HashMap`
 
-Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia del método de almacenamiento no se puede saber a priori con qué orden se iteraría sobre los datos.
+Almacena los elementos en una tabla [_hash_](https://en.wikipedia.org/wiki/Hash_table) y es el más rápido. Como consecuencia de su método de almacenamiento no se puede saber a priori con qué orden se iteraría sobre los datos. Es decir, un `HashMap` **no garantiza ningún orden en sus elementos cuando es recorrido**.
 
 ### `TreeMap`
 
-Este mapa almacena sus elementos en un árbol binario equilibrado. El orden con que se almacenan los elementos será siguiente el **orden natural de sus claves**.
+Un `TreeMap` emplea una estructura de [árbol binario](https://es.wikipedia.org/wiki/Árbol_binario). Esto permite que el `TreeMap` ofrezca una [complejidad logarítmica (log(n))](https://es.wikipedia.org/wiki/Complejidad_temporal#Tiempo_logar%C3%ADtmico) bastante eficiente para las operaciones `containsKey`, `get`, `put` and `remove`.
 
-El rendimiento es logarítmico respecto al tamaño del mapa.
+Los elementos se encontrarán _ordenados_ con respecto a la clave. Se le puede pasar un `Comparator` para establecer un orden respecto a la clave.
 
-Sólo utiliza la memoria necesaria para almacenar los datos.
+### `LinkedHashMap`
 
-### `LinkedHasMap`
+Un `LinkedHashMap` almacena los datos de la misma forma que un `HashMap` pero guarda además información sobre el orden en que fueron insertados. De este modo, al iterar sobre un `LinkedHashMap` éste se recorrerá en el orden en que fueron introducidas sus entradas. Es decir, un `LinkedHashMap` **garantiza que sus elementos se recorrerán en el orden en que fueron insertados**.
 
-Este útimo tiene las ventajas del `HashMap` pero garantiza que el orden de iteración sobre sus elementos coincide con el orden de inserción de los mismos en el mapa.
+### Como recorrer un mapa
 
-## Uso de un mapa
+Existen varias formas de recorrer un mapa dependiendo de la función que usemos para obtener su contenido en forma de `Iterable`:
 
-Para crear un `Map` hemos de indicar los tipos de datos de la clave y el valor:
+* `entrySet()`: Nos devolverá el contenido de un mapa en forma de un conjunto de las entradas (pares clave - valor) del mapa.
+* `keySet()`: Nos devolverá a su vez un conjunto con las claves del mapa.
+* `values()`: De manera similar a las anteriores, nos devolverá un conjunto con los valores del mapa.
+
+#### Bucle `for` mejorado
+
+Este bucle podremos utilizarlo tanto con `entrySet()`:
 
 ```java
-Map<String, Alumno> mapaAlumnos = new HashMap<>();
-mapaAlumnos.put(a1.getDni(), a1);
-mapaAlumnos.put(a2.getDni(), a2);
+for (Entry<String, Alumno> entrada : mapa.entrySet()) {
+    System.out.println(entrada.getKey() + " -> " + entrada.getValue());
+}
 ```
 
-### Inserción de elementos
+como con `keySet()`:
 
-Para insertar un elemento o entrada en un mapa hay que hacerlo en forma de par _clave_-_valor_. El método para inserción de elementos en un mapa es `put(K clave, V valor)`:
 ```java
+for (String clave : mapa.keySet()) {
+    System.out.println(clave + " -> " + mapa.get(clave));
+}
 ```
 
-### Acceder a un elemento
+o directamente con `values()`:
 
-### Eliminar un elemento
+```java
+for (Alumno valor : mapa.values()) {
+    System.out.println(valor);
+}
+```
 
-## Iterar un mapa 
+#### Método `forEach()`
 
-### Iterar por su contenido `Entry`
+Los mapas, así como todas las clases que implementan `Collection`, disponen de un método denominado `forEach()`. Este método acepta una función **lambda** con dos parámetros como entrada. El primer parámetro de la lambda será la clave y el segundo su valor asociado. Esta función lambda se aplicará a cada **entrada** del mapa.
 
-### Iterar por claves o valores
-
-#### `keySet()`
-
-#### `values`
-
-### Función `forEach()`
+```java
+mapa.forEach((k, v) -> System.out.println(k + " -> " + v));
+```

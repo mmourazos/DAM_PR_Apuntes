@@ -1,4 +1,4 @@
-# Colas, interfaz `Queue`
+# Tema 7.4: Colas, interfaz `Queue`
 
 Las colas de Java funcionan como las colas _en el mundo real_. Los elementos se añaden al final de la cola y se extraen del principio: primero en entrar, primero en salir (FIFO: _First In, First Out_).
 

@@ -38,14 +38,14 @@ Como acabamos de ver el interfaz `Iterable` exige que se implemente un método (
 
 Al igual que el interfaz `Iterable`, el interfaz `Iterator` utiliza **genéricos** de modo que el iterador podrá aplicarse sobre cualquier tipo de dato que deseemos. El tipo de dato que se utilice en el interfaz `Iterator` ha de ser el mismo que se utilice en el interfaz `Iterable`.
 
-Por último `Iterator` exigue que se implementen los siguientes métodos:
+Por último `Iterator` exige que se implementen los siguientes métodos:
 
 * `hasNext()`: Devuelve `true` si quedan elementos por recorrer y `false` en caso contrario.
 * `next()`: Devuelve el siguiente elemento de la _lista_ y avanza el iterador al siguiente elemento.
 
 De este modo podemos recorrer una _lista_ usando un bucle while:
 
-```java	
+```java
 // Creemos primero un iterable como por ejemplo una lista de cadenas:
 Lista<String> lista = new ArrayList<String>();
 lista.add("Hola");
@@ -93,31 +93,3 @@ Además del método anterior, `Collection`, también exige que se implementen lo
 * `toArray(T[] a)`:  Devolverá un array conteniendo todos los elementos de la colección; el tipo del array devuelto ha de ser el mismo del del array indicado `T`.
 
 En una colección **no hay posiciones**. Sólo podremos añadir o eliminar elementos pero no podremos ni insertar un valor en una posición ni obtener el contenido de una posición. Podríamos decir que una `Collection` es ignorante respecto a **índice** de sus elementos.
-
-
-
-
-
-
-
-
-
-## `HashMap`
-
-Añadimos por su utilidad este objeto aunque no sea un miembro de esta jerarquía ya que proviene del interfaz `Map`.
-
-Un mapa será una estructura de datos que almacena los mismos en pares **clave** - **valor**. Tanto clave como valor serán objetos cuyos tipos decidimos en el momento de crear nuestro mapa.
-
-Así, si queremos crear un mapa usando como clave valores enteros para almacenar cadenas de textos crearíamos un `HashMap` como:
-
-```java
-HashMap<Integer, String> palabras = new HashMap<>();
-```
-
-Para añadir elementos a nuestro mapa hemos de usar el método `put(K clave, V valor)`. En nuestro ejemplo:
-
-```java
-palabras.put(1, "Uno");
-palabras.put(2, "Dos");
-// etc.
-```

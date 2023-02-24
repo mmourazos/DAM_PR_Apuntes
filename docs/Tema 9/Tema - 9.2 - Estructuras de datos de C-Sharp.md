@@ -75,9 +75,6 @@ intArr = intArr.Select(elem => elem * elem).ToArray<int>();
 
 ### _Map_, _reduce_ y _filter
 
-Para 
-
-
 ## Tuplas
 
 ## Genéricos

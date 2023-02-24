@@ -7,12 +7,12 @@ Para poder utilizar una lambda (o **expresión lambda**) como parámetro hemos d
 Así, podríamos decir que el mecanismo de uso de las lambda consta de tres partes:
 
 * El interfaz que define **cómo ha de ser la lambda**.
-* El **método** que acepta como p**arámetro una _variable_ del tipo del interfaz**.
+* El **método** que acepta como **parámetro una _variable_ del tipo del interfaz**.
 * Y la **expresión lambda** propiamente dicha.
 
 Veámoslo con un ejemplo:
 
-Imaginemos que tenemos una clase `Alumno` y deseamos ordenar objetos de dicha clase. Existe una interfaz en Java que nos permite definir formas de comparar objetos `Compartor`. Esta interfaz sólo define como obligatorio el método `compare` que admite dos argumentos.
+Imaginemos que tenemos una clase `Alumno` y deseamos ordenar objetos de dicha clase. Existe una interfaz en Java que nos permite definir formas de comparar objetos `Comparator`. Esta interfaz sólo define como obligatorio el método `compare` que admite dos argumentos.
 
 Si creamos un par de métodos para obtener el _primero_ y _último_ alumno de una lista según algún criterio podríamos hacer lo siguiente:
 
@@ -78,8 +78,3 @@ Para funciones que sólo admiten un parámetros podremos usar el interfaz `Funct
 ```java
 Function<String, Integer> intToStr = i -> Integer.parseInt(i);
 ```
-
-### Múltiples variables
-
-Para guardar una función con múltiples (más de dos) parámetros en una variable **sí hemos de crear nuestro propia interfaz	**:
-
