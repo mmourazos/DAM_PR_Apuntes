@@ -1,0 +1,8 @@
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\bin\Debug\Cosas.exe.config
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\bin\Debug\Cosas.exe
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\bin\Debug\Cosas.pdb
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\obj\Debug\Cosas.csproj.AssemblyReference.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\obj\Debug\Cosas.csproj.SuggestedBindingRedirects.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\obj\Debug\Cosas.csproj.CoreCompileInputs.cache
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\obj\Debug\Cosas.exe
+C:\Users\asinc\Documents\Trabajo\IES Armando Cotarelo Valledor\DAM - Prog\DAM_PR_Apuntes\docs\Tema 9\codigo_fuente\Conceptos\Cosas\Cosas\obj\Debug\Cosas.pdb

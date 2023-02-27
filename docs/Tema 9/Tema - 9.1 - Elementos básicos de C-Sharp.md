@@ -229,8 +229,32 @@ Las diferencias en el bucle `for-each` son también (al menos externamente) muy 
 
 ```c#
 List<int> listInt = new List<int>();
+int i = 0;
+foreach(int e in listInit)
+{
+    Console.WriteLn($"elemento {++i}: {e}.");
+}
 ```
 
 ### `while`
 
+De nuevo, el bucle `while` es similar al de java:
+
+```c#
+while(i < 100)
+{
+    // Instrucciones a repetir.
+    ++i;
+}
+```
+
 ### `do-while`
+
+```c#
+do 
+{
+    // Instrucciones a repetir.
+    ++i;
+
+} while(i < 100)
+```

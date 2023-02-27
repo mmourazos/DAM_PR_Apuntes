@@ -286,6 +286,10 @@ for (int e in listaEnteros)
 
 ## Pilas
 
+
+
 ## Colas
+
+
 
 ## Mapas
