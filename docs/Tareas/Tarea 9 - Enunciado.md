@@ -14,7 +14,7 @@ Crea una clase `Persona` que cumpla las siguientes condiciones:
       3. Segundo apellido.
       4. Hombre (podrá ser verdadero o falso).
       5. Mujer (podrá ser verdadero o falso).
-      6. Fecha de nacimiento (se usará un objeto de la clase `DateTime`).
+      6. Fecha de nacimiento (se usará un objeto de la clase [`DateTime`](https://learn.microsoft.com/es-es/dotnet/api/system.datetime?view=net-7.0)).
       7. Dni.
       8. Sueldo.
 4. La **clase dispondrá de un método para validad el DNI**.
@@ -29,7 +29,7 @@ Crea una clase `Persona` que cumpla las siguientes condiciones:
 
 ## Segunda parte (listas)
 
-Crearemos una lista de personas sobre la que aplicaremos las funciones `Select`, `Where` y `Aggregate` para obtener la información siguiente:
+Crearemos una lista de personas sobre la que aplicaremos las funciones [`Select`](https://learn.microsoft.com/es-es/dotnet/api/system.linq.queryable.select?view=net-7.0), [`Where`](https://learn.microsoft.com/es-es/dotnet/api/system.linq.queryable.where?view=net-7.0) y [`Aggregate`](https://learn.microsoft.com/es-es/dotnet/api/system.linq.enumerable.aggregate?view=net-7.0) para obtener la información siguiente:
 
 1. Las personas con mayor y menor edad de la lista.
 2. La edad media de las personas de la lista.
@@ -52,4 +52,3 @@ personas.Add(new Persona("Cármen", "Abrente", "Montiel", "1992, 3, 17", "mujer"
 personas.Add(new Persona("Cristiano Ronaldo", "dos Santos", "Aveiro", "1985, 2, 5", "hombre", 999999.999f));
 personas.Add(new Persona("Bat", "Man", "Wayne", "1915, 3, 7", "hombre", 000.0f));
 ```
-
