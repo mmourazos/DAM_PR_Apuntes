@@ -9,22 +9,22 @@ Crea una clase `Persona` que cumpla las siguientes condiciones:
 1. Todas la variables tanto de clase como de instancia han de declararse como privadas.
 2. Ha de tener una **variable de clase** que lleve cuenta del número de personas creadas.
 3. Cada persona tendrá:
-   1. Nombre.
-   2. Primer apellido.
-   3. Segundo apellido.
-   4. Hombre (podrá ser verdadero o falso).
-   5. Mujer (podrá ser verdadero o falso).
-   6. Fecha de nacimiento (se usará un objeto de la clase `DateTime`).
-   7. Dni.
-   8. Sueldo.
+      1. Nombre.
+      2. Primer apellido.
+      3. Segundo apellido.
+      4. Hombre (podrá ser verdadero o falso).
+      5. Mujer (podrá ser verdadero o falso).
+      6. Fecha de nacimiento (se usará un objeto de la clase `DateTime`).
+      7. Dni.
+      8. Sueldo.
 4. La **clase dispondrá de un método para validad el DNI**.
 5. Todo elemento de la clase `Persona` dispondrá de las siguiente **propiedades**:
-   1. `Nombre`, `PrimerApellido`, `SegundoApellido`: `string` y de **lectura y escritura**.
-   2. `Sueldo`: `float` de **lectura y escritura**.
-   3. `Sexo`: `string` de **lectura y escritura** (admitirá dos posibles valores: hombre o mujer).
-   4. `NombreCompleto`: `string` **de sólo lectura** que devolverá el nombre de la forma: "[nombre] [primerApellido] [segundoApellido]".
-   5. `Edad`: `int` **de sólo lectura** que devolverá la edad de la persona.
-   6. `FechaDeNacimiento`: `string` de lectura y escritura.
+      1. `Nombre`, `PrimerApellido`, `SegundoApellido`: `string` y de **lectura y escritura**.
+      2. `Sueldo`: `float` de **lectura y escritura**.
+      3. `Sexo`: `string` de **lectura y escritura** (admitirá dos posibles valores: hombre o mujer).
+      4. `NombreCompleto`: `string` **de sólo lectura** que devolverá el nombre de la forma: "[nombre] [primerApellido] [segundoApellido]".
+      5. `Edad`: `int` **de sólo lectura** que devolverá la edad de la persona.
+      6. `FechaDeNacimiento`: `string` de lectura y escritura.
 6. Dispondremos también de un método de clase `CuantasPersonas` que nos devolverá el número de personas creadas.
 
 ## Segunda parte (listas)
