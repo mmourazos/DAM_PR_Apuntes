@@ -1,6 +1,6 @@
 namespace Estructuras
 {
-
+0 ->
 
 
 }
