@@ -7,20 +7,49 @@ namespace Cosas
     {
         // Variable de clase.
         private static int num_personas = 0;
+        private static readonly char[] LETRAS_DNI = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
+        // Métodos de clase.
+        public static bool EsDniValido(string dni)
+        {
+            int numero = int.Parse(dni.Substring(0, dni.Length - 1));
+
+            char letra = char.Parse(dni.Substring(dni.Length - 1));
+            int pos_letra = numero % LETRAS_DNI.Length;
+
+            return letra == LETRAS_DNI[pos_letra];
+        }
+
+        private static int Cifras(int num_cifras)
+        {
+            Random r = new Random();
+
+            int valor = 0;
+            for (int i = 0; i < num_cifras; ++i)
+            {
+                valor += (int)Math.Pow(10, i) * r.Next(10);
+            }
+
+            return valor;
+        }
+        public static string GeneraDniValido()
+        {
+            int numero = Cifras(7);
+            char letra = LETRAS_DNI[numero % LETRAS_DNI.Length];
+
+            return $"{numero}{letra}";
+        }
         // Variables de instancia.
-        private string nombre;
-        private string primerApellido;
-        private string segundoApellido;
-        private bool hombre;
-        private bool mujer;
-        private float sueldo;
-        private string dni;
-        private DateTime fecha_nacimiento;
+
+        private bool _hombre;
+        private bool _mujer;
+        private float _sueldo;
+        private string _dni;
+        private DateTime _fecha_nacimiento;
 
         public string Nombre { get; set; }
 
-        public string PrimeApellido { get; set; }
+        public string PrimerApellido { get; set; }
 
         public string SegundoApellido { get; set; }
 
@@ -28,7 +57,7 @@ namespace Cosas
         {
             get
             {
-                return $"{nombre} {primerApellido} {segundoApellido}";
+                return $"{Nombre} {PrimerApellido} {SegundoApellido}";
             }
         }
 
@@ -38,14 +67,15 @@ namespace Cosas
             {
                 if (value == "hombre")
                 {
-                    hombre = true;
-                    mujer = false;
+                    _hombre = true;
+                    _mujer = false;
                 }
                 else if (value == "mujer")
                 {
-                    hombre = false;
-                    mujer = true;
-                } else
+                    _hombre = false;
+                    _mujer = true;
+                }
+                else
                 {
                     throw new Exception("Sexo no válido.");
                 }
@@ -53,21 +83,40 @@ namespace Cosas
 
             get
             {
-                if (hombre) { return "hombre"; }
+                if (_hombre) { return "hombre"; }
                 else { return "mujer"; }
             }
         }
 
-        public string Dni { get; set; }
-
-        public Persona(string nombre, string primerApellido, string segundoApellido, string fechaDeNacimiento, string sexo, float sueldo)
+        public string Dni
         {
-            this.nombre = nombre;
-            this.primerApellido = primerApellido;
-            this.segundoApellido = segundoApellido;
-            this.FechaNacimiento = fechaDeNacimiento;
-            this.Sexo = sexo;
-            this.Sueldo = sueldo;
+            get
+            {
+                return _dni;
+            }
+
+            set
+            {
+                if (EsDniValido(value))
+                {
+                    this._dni = value;
+                }
+                else
+                {
+                    throw new ArgumentException($"El DNI \"{value}\" no es válido.");
+                }
+            }
+        }
+
+        public Persona(string nombre, string primerApellido, string segundoApellido, string dni, string fechaDeNacimiento, string sexo, float sueldo)
+        {
+            Nombre = nombre;
+            PrimerApellido = primerApellido;
+            SegundoApellido = segundoApellido;
+            Dni = dni;
+            FechaNacimiento = fechaDeNacimiento;
+            Sexo = sexo;
+            Sueldo = sueldo;
 
             num_personas += 1;
         }
@@ -78,12 +127,12 @@ namespace Cosas
         {
             get
             {
-                return fecha_nacimiento.ToString();
+                return _fecha_nacimiento.ToString();
             }
 
             set
             {
-                this.fecha_nacimiento = DateTime.Parse(value);
+                _fecha_nacimiento = DateTime.Parse(value);
             }
         }
 
@@ -92,9 +141,9 @@ namespace Cosas
             get
             {
                 var now = DateTime.Now;
-                var edad = now.Year - fecha_nacimiento.Year;
+                var edad = now.Year - _fecha_nacimiento.Year;
 
-                if ((now.Month > fecha_nacimiento.Month) || (now.Month == fecha_nacimiento.Month && now.Day > fecha_nacimiento.Day))
+                if ((now.Month > _fecha_nacimiento.Month) || (now.Month == _fecha_nacimiento.Month && now.Day > _fecha_nacimiento.Day))
                 {
                     edad++;
                 }
@@ -105,7 +154,13 @@ namespace Cosas
 
         public void Metodo()
         {
-            // ...
+            LETRAS_DNI[0] = 'a';
+            Console.Write(LETRAS_DNI);
+        }
+
+        public override string ToString()
+        {
+            return $"{Nombre} {PrimerApellido}";
         }
     }
 
@@ -114,15 +169,21 @@ namespace Cosas
         static void Main(string[] args)
         {
             List<Persona> personas = new List<Persona>(10);
-            personas.Add(new Persona("Manuel", "Piñeiro", "Mourazos", "1977, 5, 15", "hombre", 1500));
-            personas.Add(new Persona("Cristina", "Fernadez", "Garrido", "2001, 8, 25", "mujer", 2500));
-            personas.Add(new Persona("Álvaro", "Pose", "Castro", "1997, 10, 7", "hombre", 1800.5f));
-            personas.Add(new Persona("Tristan", "Gómez", "Pérez", "2010, 1, 30", "hombre", 300.9f));
-            personas.Add(new Persona("Sara", "Salamanca", "Torres", "1999, 12, 31", "mujer", 3750.66f));
-            personas.Add(new Persona("Fernando", "Fernandez", "Fernandez", "2000, 1, 11", "hombre", 2220.20f));
-            personas.Add(new Persona("Cármen", "Abrente", "Montiel", "1992, 3, 17", "mujer", 1770.5f));
-            personas.Add(new Persona("Cristiano Ronaldo", "dos Santos", "Aveiro", "1985, 2, 5", "hombre", 999999.999f));
-            personas.Add(new Persona("Bat", "Man", "Wayne", "1915, 3, 7", "hombre", 000.0f));
+            personas.Add(new Persona("Manuel", "Piñeiro", "Mourazos", Persona.GeneraDniValido(), "1977, 5, 15", "hombre", 1500));
+            personas.Add(new Persona("Cristina", "Fernadez", "Garrido", Persona.GeneraDniValido(), "2001, 8, 25", "mujer", 2500));
+            personas.Add(new Persona("Álvaro", "Pose", "Castro", Persona.GeneraDniValido(), "1997, 10, 7", "hombre", 1800.5f));
+            personas.Add(new Persona("Tristan", "Gómez", "Pérez", Persona.GeneraDniValido(), "2010, 1, 30", "hombre", 300.9f));
+            personas.Add(new Persona("Sara", "Salamanca", "Torres", Persona.GeneraDniValido(), "1999, 12, 31", "mujer", 3750.66f));
+            personas.Add(new Persona("Fernando", "Fernandez", "Fernandez", Persona.GeneraDniValido(), "2000, 1, 11", "hombre", 2220.20f));
+            personas.Add(new Persona("Cármen", "Abrente", "Montiel", Persona.GeneraDniValido(), "1992, 3, 17", "mujer", 1770.5f));
+            personas.Add(new Persona("Cristiano Ronaldo", "dos Santos", "Aveiro", Persona.GeneraDniValido(), "1985, 2, 5", "hombre", 999999.999f));
+            personas.Add(new Persona("Bat", "Man", "Wayne", Persona.GeneraDniValido(), "1915, 3, 7", "hombre", 000.0f));
+
+            Console.WriteLine(personas[0]);
+
+            personas[0].Metodo();
+
+
         }
 
     }

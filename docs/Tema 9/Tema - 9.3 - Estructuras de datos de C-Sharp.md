@@ -214,6 +214,7 @@ class ContenedorGenerico<T>
         }
     }
 
+    // Esta sería una propiedad de solo lectura.
     public int Count
     {
         get
