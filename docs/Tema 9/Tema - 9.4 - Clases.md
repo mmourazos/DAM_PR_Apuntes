@@ -178,3 +178,69 @@ Pueden especificarse los siguientes siete niveles de accesibilidad con los modif
 * `private`: el acceso está limitado al tipo contenedor.
 * `private protected`: El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.
 * `file`: el tipo declarado solo es visible en el archivo de origen actual. Los tipos con ámbito de archivo se usan generalmente para los generadores de origen.
+
+### Modificadores de acceso en un poco más de detalle
+
+#### Modificador `private`
+
+Éste es el modificador de acceso **más restrictivo**. Los miembros de una clase (variables, atributos, métodos, etc.) declarados como `private` sólo son accesibles desde **dentro de la clase donde fueron declarados**.
+
+Cuando **marcamos una clase como `private`** ninguna clase podrá **heredar de la misma**.
+
+**Nota:** Las variables declaradas como `private` se nombran por convenio empezando por `_`.
+
+```C#
+public class BankAccount
+{
+    private int _balance;
+    public int GetBalance()
+    {
+        return _balance;
+    }
+    public void Deposit(int amount)
+    {
+        _balance += amount;
+    }
+    public void Withdraw(int amount)
+    {
+        if (_balance - amount >= 0)
+        {
+            _balance -= amount;
+        }
+    }
+}
+```
+
+El modificador de acceso `private` se usa cuando un miembro de la clase está diseñado únicamente para uso interno y no debe ser accesible desde otras partes del programa. De este modo se nos permite ocultar los detalles de implementación de una clase y proteger a sus miembros de accesos o modificaciones involuntarias.
+
+#### Modificador `public`
+
+Éste modificador es el **más permisivo**. Los miembros declarados con este modificador podrán ser accedidos desde **cualquier otra parte del código**.
+
+Si declaramos una clase como `public` cualquier otra clase podrá heredar de ella.
+
+#### Modificador `protected`
+
+El modificador `protected` implica que el objeto será accesible dentro de la clase donde se declaró y en **todas las clases derivada de ella**.
+
+#### Modificador `internal`
+
+Con `internal` especificamos que un objeto sólo será accesible dentro de su mismo [_ensamblado_](https://learn.microsoft.com/es-es/dotnet/standard/assembly/).
+
+Los miembros declarados como `internal` no serán accesibles desde fuera del _ensamblado_ (proyecto).
+
+Este es el **modificador que se aplica por defecto** cuando no se indica ningún otro para la clase o sus miembros.
+
+##### ¿Que es un _ensamblado_?
+
+Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados adoptan la forma de un archivo ejecutable (`.exe`) o de biblioteca de vínculos dinámicos ( `.dll`), y son los bloques de creación de las aplicaciones.
+
+Comúnmente podemos identificar los ensamblados con los proyecto que creamos en Visual Studio.
+
+#### Modificador `protected internal`
+
+Esta combinación hace que el miembro sea accesible dentro de su propio ensamblado (proyecto) **y además** en las clases derivadas de su clase (aunque estén en otros ensamblados).
+
+#### Modificador `private protected`
+
+Al igual que en el caso anterior se combinan (suman) los niveles de acceso del modificador `private` y del modificador `protected`. Esto hace que el elemento al que se aplique la combinación sólo podrá ser accesible **desde la propia clase** (`private`) **y también desde las clases derivadas** (subclases) pero solo **dentro del mismo ensamblado**.
