@@ -110,6 +110,7 @@ namespace Cosas
 
         public Persona(string nombre, string primerApellido, string segundoApellido, string dni, string fechaDeNacimiento, string sexo, float sueldo)
         {
+            ++num_personas;
             Nombre = nombre;
             PrimerApellido = primerApellido;
             SegundoApellido = segundoApellido;
@@ -117,8 +118,6 @@ namespace Cosas
             FechaNacimiento = fechaDeNacimiento;
             Sexo = sexo;
             Sueldo = sueldo;
-
-            num_personas += 1;
         }
 
         public float Sueldo { get; set; }
@@ -162,13 +161,28 @@ namespace Cosas
         {
             return $"{Nombre} {PrimerApellido}";
         }
+
     }
 
     class Program
     {
+        public static int Total(int x, params int[] valores)
+        {
+            int total = 0;
+
+            foreach (int v in valores)
+            {
+                total += v;
+            }
+
+            return total;
+        }
+
         static void Main(string[] args)
         {
             List<Persona> personas = new List<Persona>(10);
+
+
             personas.Add(new Persona("Manuel", "Piñeiro", "Mourazos", Persona.GeneraDniValido(), "1977, 5, 15", "hombre", 1500));
             personas.Add(new Persona("Cristina", "Fernadez", "Garrido", Persona.GeneraDniValido(), "2001, 8, 25", "mujer", 2500));
             personas.Add(new Persona("Álvaro", "Pose", "Castro", Persona.GeneraDniValido(), "1997, 10, 7", "hombre", 1800.5f));
@@ -183,13 +197,16 @@ namespace Cosas
 
             personas[0].Metodo();
 
-
             out int intFromString;
 
             int.TryParse("127", out intFromString);
 
-        }
+            int[] miArray = { 1, 2, 3 };
 
+            Console.WriteLine($"La suma de {miArray} es {Total(1, 2, 3)}");
+        }
     }
+
+}
 
 }
