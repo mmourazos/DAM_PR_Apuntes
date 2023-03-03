@@ -1,4 +1,4 @@
-# Tema 9.2: Clases
+# Tema 9.4: Clases
 
 Las clases en C# cumplen la misma función que en Java.
 
