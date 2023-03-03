@@ -184,6 +184,10 @@ namespace Cosas
             personas[0].Metodo();
 
 
+            out int intFromString;
+
+            int.TryParse("127", out intFromString);
+
         }
 
     }
