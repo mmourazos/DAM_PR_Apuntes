@@ -1,4 +1,4 @@
-# Tema 9.2: Estructuras de datos
+# Tema 9.5: Estructuras de datos
 
 En este tema veremos de manera resumida las estructuras más comunes que se utilizan en C#.
 

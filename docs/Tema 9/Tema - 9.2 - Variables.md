@@ -1,4 +1,4 @@
-# Variables
+# Tema 9.2: Variables
 
 Las principales diferencias entre las variables de C# y Java es que en el primero las variables _primitivas_ podrán pasarse **por valor** o **por referencia**. La segunda diferencia es que en lugar de disponer de **tipos envoltorio**, como Java, para trabajar con variables _sencillas_ (los tipos primitivos de Java) se utiliza un nuevo tipo de datos `struct` para realizar una función similar. Los _tipos primitivos_ de C# serán todos `struct`s, una especie de clases limitadas con valores y métodos.
 
