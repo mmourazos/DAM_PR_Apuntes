@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Cosas
@@ -166,6 +167,16 @@ namespace Cosas
 
     class Program
     {
+        public static void SumaRef(int x, ref int y)
+        {
+            y += x;
+        }
+
+        public static void SumaOut(int x, int y, out int z)
+        {
+            z = x + y;
+        }
+
         public static int Total(int x, params int[] valores)
         {
             int total = 0;
@@ -178,10 +189,32 @@ namespace Cosas
             return total;
         }
 
+        public static void PruebaHashtable()
+        {
+            Hashtable ht = new Hashtable();
+
+            ht.Add(1, "uno");
+            ht.Add(2, "dos");
+            ht.Add(3, "tres");
+            ht.Add(4, "cuatro");
+            ht.Add(5, "cinco");
+            ht.Add(6, "seis");
+            ht.Add(7, "siete");
+            ht.Add(8, "ocho");
+            ht.Add(9, "nueve");
+            ht.Add(10, "diez");
+
+            foreach (DictionaryEntry entry in ht)
+            {
+                Console.WriteLine($"clave: {entry.Key} -> value: {entry.Value}.");
+            }
+
+
+        }
+
         static void Main(string[] args)
         {
-            List<Persona> personas = new List<Persona>(10);
-
+            ArrayList personas = new ArrayList(10);
 
             personas.Add(new Persona("Manuel", "Piñeiro", "Mourazos", Persona.GeneraDniValido(), "1977, 5, 15", "hombre", 1500));
             personas.Add(new Persona("Cristina", "Fernadez", "Garrido", Persona.GeneraDniValido(), "2001, 8, 25", "mujer", 2500));
@@ -193,20 +226,8 @@ namespace Cosas
             personas.Add(new Persona("Cristiano Ronaldo", "dos Santos", "Aveiro", Persona.GeneraDniValido(), "1985, 2, 5", "hombre", 999999.999f));
             personas.Add(new Persona("Bat", "Man", "Wayne", Persona.GeneraDniValido(), "1915, 3, 7", "hombre", 000.0f));
 
-            Console.WriteLine(personas[0]);
-
-            personas[0].Metodo();
-
-            out int intFromString;
-
-            int.TryParse("127", out intFromString);
-
-            int[] miArray = { 1, 2, 3 };
-
-            Console.WriteLine($"La suma de {miArray} es {Total(1, 2, 3)}");
+            PruebaHashtable();
         }
+
     }
-
-}
-
 }

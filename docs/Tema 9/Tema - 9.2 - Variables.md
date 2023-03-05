@@ -144,8 +144,7 @@ static void metodoReferencia(int x, int y, out int z) {
 
 int x = 5;
 int y = 10;
-int z; // No hace falta inicializar z cuando es "out".
 
-metodoReferencia(x, y, out z);
+metodoReferencia(x, y, out int z);
 System.Console.WriteLine($"Fuera del método: x = {x}, y = {y} y z = {z}");
 ```
