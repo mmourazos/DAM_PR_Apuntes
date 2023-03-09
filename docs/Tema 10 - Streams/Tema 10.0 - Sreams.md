@@ -29,7 +29,7 @@ Los flujos representan recursos y, por tanto, hay que cerrarlos cuando ya no se 
 
 Para cerrar un flujo usaremos el método `Close()`.
 
-## Sentencia [[using]] para trabajar con recursos
+## Sentencia `using` para trabajar con recursos
 
 Para evitar tener que cerrar explícitamente los recursos que se usan en un bloque de código, podemos usar la sentencia `using` que nos permite trabajar con recursos de forma segura.
 
@@ -63,4 +63,4 @@ Se puede llamar con tres argumentos:
 
 - Array a escribir (`byte[]` o `char[]`).
 - Un valor de *offset* que indica a partir de que posición del array deseamos escribir.
-- Un último valor que indica cuantos bytes del array (a partir del *offset*) vamos a escribir.
+- Un último valor *longitud* que indica cuantos bytes del array (a partir del *offset*) vamos a escribir.

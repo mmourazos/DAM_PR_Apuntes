@@ -8,6 +8,54 @@ Los primeros son tipos que admiten **cualquier tipo de dato como contenido**. Es
 
 ## Tipos no-genéricos
 
+Los tipos de datos no genéricos admiten datos de tipo `Object`. Para cada estructura de datos no genérica hay una equivalente genérica.
+
+### ArrayList
+
+El tipo `ArrayList` es una lista de tamaño dinámico que admite cualquier tipo de dato. Es decir, podemos añadir elementos de cualquier tipo a la lista. Para acceder a los elementos de la lista debemos hacer un casting explícito al tipo de dato que queremos recuperar.
+
+#### Declaración de un ArrayList
+
+```c#
+ArrayList lista = new ArrayList();
+```
+
+Aunque no es necesario, podemos indicar el tamaño inicial de la lista:
+
+```c#
+ArrayList lista = new ArrayList(10);
+```
+
+### Añadir elementos
+
+```c#
+ArrayList lista = new ArrayList();
+
+// Añadimos elementos a la lista.
+// Se añaden como objetos de tipo Object.
+lista.Add(1);
+lista.Add("Hola");
+lista.Add(3.14);
+
+```
+
+### Acceder a sus elementos
+
+Para acceder a un elemento del `ArrayList` hemos de indicar el índice del elemento que queremos recuperar. El primer elemento tiene el índice 0.
+Para poder utilizar el elemento, ya que se almacenó como `Object` debemos hacer un casting explícito al tipo de dato que queremos recuperar.
+
+Para recuperar un elemento usaremos el método `Get()` pasándole como argumento el índice del elemento que queremos recuperar. También podemos acceder a los elementos del `ArrayList` como si fuera un array:
+
+```c#
+// 
+// Usando el método Get().
+int entero = (int)lista.Get(0);
+
+
+// Usando el operador [].
+int entero = (int)lista[0];
+```
+
 ## Tipos genéricos
 
 La forma de trabajar con genéricos en C# es básicamente idéntica a Java.
@@ -102,7 +150,7 @@ También es posible declarar una lista y al mismo tiempo darle unos valores inic
 List<int> listaEnteros = new List<int>() {1, 2, 3, 4, 5};
 ```
 
-### Añadir elementos
+### Añadir elementos a la lista
 
 Para añadir elementos (al final de la lista) usaremos el método `Add`:
 
@@ -132,8 +180,6 @@ for (int e in listaEnteros)
 
 ## Pilas
 
-
 ## Colas
 
-
-## Mapas
+## Diccionarios
