@@ -14,14 +14,14 @@ El constructor de un `FileStream` acepta dos argumentos:
 
 - *Path* al fichero sobre el que vamos a actuar.
 - La enumeración `FileMode` que Especifica cómo el sistema operativo debe abrir un archivo y ofrece las siguientes opciones:
-  - `CreateNew`: Especifica que el sistema operativo debe crear un archivo nuevo. Si el archivo ya existe, se produce una excepción `System.IO.IOException`.
-  - `Create`: Especifica que el sistema operativo debe crear un archivo nuevo. Si el archivo ya existe, se sobrescribirá.
-    - Si el archivo no existe es equivalente a `CreateNew`.
-    - Si el archivo existe será equivalente al `Truncate`.
-  - `Open`: Especifica que el sistema operativo debe abrir un archivo existente. Se desencadena una excepción `FileNotFoundException` si el archivo no existe
-  - `OpenOrCreate`: Especifica que el sistema operativo debe abrir un archivo si ya existe; en caso contrario, debe crearse uno nuevo.
-  - `Truncate`:Especifica que el sistema operativo debe abrir un archivo existente. Cuando se abre el archivo, debe truncarse el archivo para que su tamaño sea de cero bytes. Al intentar leer un archivo abierto con `Truncate`, se produce una excepción `ArgumentException`.
-  - `Append`:   Abre el archivo si existe y realiza una búsqueda hasta el final del mismo, o crea un archivo nuevo. Se produce un error de cualquier intento de lectura y una excepción `NotSupportedException`.
+    - `CreateNew`: Especifica que el sistema operativo debe crear un archivo nuevo. Si el archivo ya existe, se produce una excepción `System.IO.IOException`.
+    - `Create`: Especifica que el sistema operativo debe crear un archivo nuevo. Si el archivo ya existe, se sobrescribirá.
+      - Si el archivo no existe es equivalente a `CreateNew`.
+      - Si el archivo existe será equivalente al `Truncate`.
+    - `Open`: Especifica que el sistema operativo debe abrir un archivo existente. Se desencadena una excepción `FileNotFoundException` si el archivo no existe
+    - `OpenOrCreate`: Especifica que el sistema operativo debe abrir un archivo si ya existe; en caso contrario, debe crearse uno nuevo.
+    - `Truncate`:Especifica que el sistema operativo debe abrir un archivo existente. Cuando se abre el archivo, debe truncarse el archivo para que su tamaño sea de cero bytes. Al intentar leer un archivo abierto con `Truncate`, se produce una excepción `ArgumentException`.
+    - `Append`:   Abre el archivo si existe y realiza una búsqueda hasta el final del mismo, o crea un archivo nuevo. Se produce un error de cualquier intento de lectura y una excepción `NotSupportedException`.
 
 Veamos un ejemplo:
 

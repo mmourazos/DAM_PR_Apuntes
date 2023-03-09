@@ -4,7 +4,7 @@
 
 WPF son las siglas de Windows Presentation Foundation. Consiste en un **framework de interfaz de usuario** que permite crear aplicaciones de escritorio.
 
-WPF es parte del _framwork_ .NET.
+WPF es parte del _framework_ .NET.
 
 WPF utiliza el lenguaje de marcas XAML [^1] para definir la interfaz de usuario de manera **declarativa**.
 
