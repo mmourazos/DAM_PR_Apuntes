@@ -46,7 +46,7 @@ byte[] buffer = new byte[100];
 int nBytes = fs.Read(buffer, 0, 100);
 ```
 
-#### Escritura de bytes a un `FileStream`
+### Escritura de bytes a un `FileStream`
 
 Para escribir bytes directamente a un `FileStream` usaremos el método `Write` que acepta tres argumentos:
 
@@ -79,23 +79,13 @@ Puesto que nos podemos olvidar de invocar a `Close()` o podría producirse una e
 
 Para evitar tener que cerrar explícitamente los recursos que se usan en un bloque de código, podemos usar la sentencia `using` que nos permite trabajar con recursos de forma segura.
 
-Podemos agrupar varios recursos en un mismo bloque `using` separándolos por punto y coma:
-
-``` C#
-using (FileStream fs = new FileStream("fichero.txt", FileMode.Open); StreamWriter sw = new StreamWriter(fs))
-{
-    // Trabajamos con el flujo sw
-}
-// Aquí el flujo sw ya está cerrado.
-```
-
-O bien, podemos usar varios bloques `using` consecutivos.
+Si necesitamos trabajar con varios recursos (`Streams`) en un mismo segmento de código podemos usar varios bloques `using` consecutivos.
 
 ``` C#
 using (FileStream fs = new FileStream("fichero.txt", FileMode.Open))
 using (StreamWriter sw = new StreamWriter(fs))
 {
-    // Trabajamos con el flujo sw
+    // Trabajamos con el flujo sw.
 }
 // Aquí el flujo sw ya está cerrado.
 ```
@@ -113,7 +103,7 @@ El constructor de `StreamWriter` acepta dos argumentos (el segundo opcional):
   - Podrá ser `ASCII`, `Unicode`, `Default`, etc.
   
 Para escribir usaremos el método `WriteLine` del objeto `StreamWriter` que hayamos creado.
-El método `WriteLine` tiene el comportamiento del `Console.WriteLine()` pues se trata del mismo método ya que `Console` es un `StreamWriter`.
+El método `WriteLine` tiene el comportamiento del `Console.WriteLine()` pues se trata del mismo método ya que `Console` se comporta como un `StreamWriter`.
 
 Veamos un ejemplo:
   
@@ -125,7 +115,10 @@ using (StreamWriter sw = new StreamWriter(fs))
 }
 ```
 
-### Escribir bytes (o texto) a un fichero
+## Lectura de texto de un fichero
+
+## Escritura de
+ bytes (o texto) a un fichero
 
 Para escribir bytes (o texto) a un fichero es recomendable usar un objeto `BinaryWriter`.
 `BinaryWriter` permite escribir un array de bytes o un texto (también números y caracteres). Este objeto facilita la escritura a un archivo de datos de tipos primitivos así como de cadenas de caracteres.
@@ -141,7 +134,7 @@ using (BinaryWriter bw = new BinaryWriter(fs, Encoding.UTF8))
 
 Para escribir mediante el `BinaryWriter` podemos usar el método `Write` que acepta uno o tres argumentos:
 
-#### `Write` con un argumento
+### `Write` con un argumento
 
 Se usa para escribir tipos primitivos al stream (que hace referencia a un fichero en nuestros ejemplos).
 
@@ -158,7 +151,9 @@ bw.Write("Hola mundo");
 bw.Write(new char[] { 'a', 'b', 'c' });
 ```
 
-#### `Write` con tres argumentos
+Cuando escribimos una cadena usando el método `Write` de `BinaryWriter` hemos de tener en cuenta que la conversión a bytes la realizará en función de la codificación que hayamos indicado al crear el objeto `BinaryWriter`.
+
+### `Write` con tres argumentos
 
 Los argumentos son:
 
@@ -169,7 +164,7 @@ Los argumentos son:
 Veámoslo con un ejemplo:
 
 ``` C#
-using(FileStream fs = new FileStream("fichero.txt", FileMode.Create); BinaryWriter bw = new BinaryWriter(fs))
+using(FileStream fs = new FileStream("fichero.txt", FileMode.Create) using(BinaryWriter bw = new BinaryWriter(fs))
 {
     byte[] buffer = new byte[100];
     for (int i = 0; i < 100; i++)
@@ -181,3 +176,7 @@ using(FileStream fs = new FileStream("fichero.txt", FileMode.Create); BinaryWrit
     bw.Write(buffer, 10, 10);
 }
 ```
+
+## Lectura de bytes (o texto) de un fichero
+
+Para leer bytes (o texto) de un fichero es recomendable usar un objeto `BinaryReader`.
