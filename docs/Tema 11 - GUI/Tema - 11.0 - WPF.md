@@ -141,45 +141,25 @@ En cualquier caso el resultado sería el mismo:
 
 ![Ejemplo de botón con texto de diferentes colores](./Imagenes/ventana_boton_00.png)
 
-### Añadir comportamiento a un botón
+## Árbol de elementos
 
-Para que un botón tenga comportamiento debemos añadirle un evento.
+Se puede decir que un elemento o un conjunto de elementos tiene dos árboles:
 
-``` xml
-<Grid>
-    <Button Width="150" Height="100" Content="Click me!" FontSize="24" Click="Button_Click"/>
-</Grid>
-```
+- **Árbol lógico:** Es el árbol de elementos que se representa en el código de la aplicación (XAML o C#).
+- **Árbol visual:** Es el árbol de elementos que se representa en la interfaz de usuario.
 
-Se a continuación vamos al código fuente generado en el archivo **MainWindow.xaml.cs** podremos ver el siguiente código:
+El árbol visual, además de los elementos que se ven en el árbol lógico tiene otros muchos elementos ya que cada elemento como una lista o un botón está compuesto por otros elementos. Así un botón está compuesto por un borde que contiene un `ContentPresenter` y este a su vez contiene un `TextBlock`.
 
-``` C#
-/// <summary>
-/// Lógica de interacción para MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
-{
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+Para acceder al árbol visual de una aplicación podemos hacerlo estableciendo un _breackpoint_ en algún método de nuestra aplicación (por ejemplo el método handler del botón), lanzar la aplicación y luego el cuadro de elementos de la ventana seleccionar la lupa y hacer click en el botón `Visualizador WPF`.
 
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
+Al pausar la ejecución de la aplicación después de lanzar un evento podremos ver esta ventana:
 
-    }
-}
-```
+![Visualizador WPF](./Imagenes/visual_tree_00.png)
 
-Es dentro del método `Button_Click()` donde debemos añadir el código que queremos que se ejecute cuando se pulse el botón.
+Si pulsamos sobre la lupa aparecerá la opción `Visualizador WPF` y si pulsamos sobre ella se abrirá una ventana con el árbol visual de la aplicación:
 
-En primer lugar podemos ver que el método recibe dos parámetros:
+![Visualizador WPF](./Imagenes/visual_tree_01.png)
 
-- `sender`: es el objeto que ha generado el evento (nuestro botón).
-- `e`: es el objeto que contiene información sobre el evento.
+Como podremos ver al ir desplegando el árbol hay muchos elementos que están compuestos por otros:
 
-Si queremos que se ejecute algún código cuando pulsemos el botón hemos de introducir código dentro del método `Button_Click()`. Por ejemplo podremos incluir el siguiente:
-
-``` C#
- MessageBox.Show("Button was clicked!");
- ```
+![Botón](./Imagenes/Visual_tree_02.png)

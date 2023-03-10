@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="modelo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.7445746"
+     inkscape:cx="420.44635"
+     inkscape:cy="442.80137"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="3"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#5ecf96;fill-opacity:0.521964;stroke:#00ff00;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect234"
+       width="191.35074"
+       height="96.044792"
+       x="15.514923"
+       y="69.078362"
+       rx="2.6163883"
+       ry="1.4553748" />
+    <g
+       id="g1037"
+       transform="translate(45.990671,-1.2929042)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:0.751938;stroke:#00aad4;stroke-width:0.499999;stroke-linejoin:round"
+         id="rect236"
+         width="49.130596"
+         height="31.768656"
+         x="40.634323"
+         y="79.791039"
+         rx="2.207262"
+         ry="1.8304137" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.104538"
+         y="94.133347"
+         id="text400"><tspan
+           sodipodi:role="line"
+           id="tspan398"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="65.104538"
+           y="94.133347">Libro de</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="65.104538"
+           y="101.1889"
+           id="tspan470">reservas</tspan></text>
+    </g>
+    <g
+       id="g1031"
+       transform="translate(6.09515,59.65859)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:0.751938;stroke:#00aad4;stroke-width:0.499999;stroke-linejoin:round"
+         id="rect402"
+         width="49.130596"
+         height="31.768656"
+         x="16.992535"
+         y="18.839544"
+         rx="2.207262"
+         ry="1.8304137" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+         x="35.038338"
+         y="36.709625"
+         id="text406"><tspan
+           sodipodi:role="line"
+           id="tspan404"
+           style="stroke-width:0.264583"
+           x="35.038338"
+           y="36.709625">Hotel</tspan></text>
+    </g>
+    <g
+       id="g1048"
+       transform="translate(-43.774266,11.266803)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:0.751938;stroke:#00aad4;stroke-width:0.499999;stroke-linejoin:round"
+         id="rect408"
+         width="49.130596"
+         height="31.768656"
+         x="193.93657"
+         y="113.77612"
+         rx="2.207262"
+         ry="1.8304137" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="218.49635"
+         y="128.11842"
+         id="text412"><tspan
+           sodipodi:role="line"
+           id="tspan410"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="218.49635"
+           y="128.11842">ID de la</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="218.49635"
+           y="135.17398"
+           id="tspan472">habitación</tspan></text>
+    </g>
+    <g
+       id="g1042"
+       transform="translate(-16.807835,27.52053)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:0.751938;stroke:#00aad4;stroke-width:0.499999;stroke-linejoin:round"
+         id="rect414"
+         width="49.130596"
+         height="31.768656"
+         x="166.97014"
+         y="50.977604"
+         rx="2.207262"
+         ry="1.8304137" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Arial Nova';-inkscape-font-specification:'Arial Nova, Normal';stroke-width:0.264583"
+         x="181.25252"
+         y="68.847687"
+         id="text418"><tspan
+           sodipodi:role="line"
+           id="tspan416"
+           style="stroke-width:0.264583"
+           x="181.25252"
+           y="68.847687">Reserva</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleStart)"
+       d="m 72.218281,94.382462 14.406713,0"
+       id="path5360"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g1031"
+       inkscape:connection-end="#g1037" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleStart)"
+       d="m 135.75559,94.382462 14.40671,0"
+       id="path5362"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g1037"
+       inkscape:connection-end="#g1042" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleStart)"
+       d="m 174.7276,110.26679 0,14.77614"
+       id="path5366"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g1042"
+       inkscape:connection-end="#g1048" />
+  </g>
+</svg>
