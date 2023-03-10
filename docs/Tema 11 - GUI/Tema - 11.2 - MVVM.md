@@ -38,4 +38,3 @@ El modelo representa el sistema de reservas de un hotel. Constará de cuatro cla
 - `IDHabitacion`: Representa el identificador de una habitación.
 
 ![Diagrama de clases del modelo](./Imagenes/modelo.svg)
-
