@@ -10,6 +10,8 @@ namespace ReservasMVVM.Modelo
     {
         public IDHabitacion IDHabitacion { get; }
 
+        public string IDCliente { get; }
+
         public DateTime FechaEntrada { get; }
 
         public DateTime FechaSalida { get; }
@@ -24,9 +26,21 @@ namespace ReservasMVVM.Modelo
         //    }
         //}
 
-        public Reserva(IDHabitacion idHabitacion, DateTime fechaEntrada, DateTime fechaSalida)
+        public bool Conflicto(Reserva reserva)
+        {
+            if (IDHabitacion != reserva.IDHabitacion) return false;
+            if ((reserva.FechaEntrada >= FechaEntrada && reserva.FechaEntrada <= FechaSalida) ||
+                   (reserva.FechaSalida >= FechaEntrada && reserva.FechaSalida <= FechaSalida ))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public Reserva(IDHabitacion idHabitacion, string idCliente, DateTime fechaEntrada, DateTime fechaSalida)
         {
             IDHabitacion = idHabitacion;
+            IDCliente = idCliente;
             FechaEntrada = fechaEntrada;
             FechaSalida = fechaSalida;
         }

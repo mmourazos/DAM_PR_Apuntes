@@ -38,3 +38,33 @@ El modelo representa el sistema de reservas de un hotel. Constará de cuatro cla
 - `IDHabitacion`: Representa el identificador de una habitación.
 
 ![Diagrama de clases del modelo](./Imagenes/modelo.svg)
+
+#### Clase `Hotel`
+
+``` csharp
+```
+
+#### Clase `LibroDeReservas`
+
+``` csharp
+```
+
+#### Clase `Reserva`
+
+``` csharp
+```
+
+#### Clase `IDHabitacion`
+
+``` csharp
+```
+
+### Analizar el caso de uso
+
+Hay dos casos de uso que vamos a implementar en la aplicación:
+
+- Ver las reservas de un día. Este es el más sencillo pues es únicamente de consulta. El usuario introduce una fecha y la aplicación muestra las reservas de ese día.
+
+- Crear una reserva. El usuario introduce los datos de la reserva y la aplicación la crea. Éste es más complicado pues además de introducir los datos de la reserva hay que comprobar que la habitación está libre.
+
+![Diagrama de secuencia del caso de uso](./Imagenes/caso_de_uso.svg)

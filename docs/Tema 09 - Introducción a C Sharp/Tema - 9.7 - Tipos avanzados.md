@@ -1,4 +1,4 @@
-# Tema 9.6: Tipos avanzados de datos
+# Tema 9.7: Tipos avanzados de datos
 
 Con tipos avanzados de datos me refiero a los tipos de datos que son más complejos que los arrays y las tuplas. Se tratará de tipos de datos que no tiene un tamaño predeterminado si no que pueden crecer a medida que se les añaden elementos (`ArrayList`, `List`, ...). También hay tipos que guardan sus elementos asociados a un valor o clave (`Hastable`, `Dictionary`, ...).
 
