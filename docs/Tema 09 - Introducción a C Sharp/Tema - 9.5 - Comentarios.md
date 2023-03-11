@@ -7,7 +7,7 @@ Para comentar código en C# se emplean dos tipos de comentarios:
 
 ## Comentarios de documentación
 
-Los comentarios de documentación son comentarios que se emplean para documentar el código. Estos comentarios utilizarán ciertas etiquetas en formato XML para informar sobre, por ejemplo, el funcionamiento de los métodos. Finalmente se podrá generar la documentación automáticamente a partir de los comentario de documentación utilizando alguna de las herramientas desarrolladas para ese fin como `DocFX`.
+Los comentarios de documentación son comentarios que se emplean para documentar el código. Estos comentarios utilizarán ciertas etiquetas en formato XML para informar sobre, por ejemplo, el funcionamiento de los métodos. Finalmente se podrá generar la documentación automáticamente a partir de los comentario de documentación utilizando alguna de las herramientas desarrolladas para ese fin como [_DocFX_](https://dotnet.github.io/docfx/index.html).
 
 ### Comentarios de documentación de una línea
 
