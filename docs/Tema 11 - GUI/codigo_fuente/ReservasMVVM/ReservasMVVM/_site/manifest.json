@@ -1,0 +1,198 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/asinc/Documents/Trabajo/IES Armando Cotarelo Valledor/DAM - Prog/DAM_PR_Apuntes/docs/Tema 11 - GUI/codigo_fuente/ReservasMVVM/ReservasMVVM",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "uZpIt7xjjIjLzaooTAstBDHpOm3wZejaLDPFex5uyFI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "J3D8qhmbX/znewnx4vaJRsefO143itEOsVaVvbL6ZQw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "bjsiHni2ip9e09WlFpzChN6v0NewDf0cn8a2KOyV/NU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.App.html",
+          "hash": "Xip8t8fCGV7FASonqaNEGU4VgV8mtoRrKSvgWeiv9FA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.MainWindow.html",
+          "hash": "XmqfmfiheH/zVGhsDuVR4wULuFuDUsqmn52+Cq04WtE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.Vistas.VistaHacerReserva.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.Vistas.VistaHacerReserva.html",
+          "hash": "gV6r2lMy4Xa5jdmbqeqci8TJ2eQ6Ea8S+bhURhs03Ik="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.Vistas.VistaListarReservas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.Vistas.VistaListarReservas.html",
+          "hash": "b8Kq6wlsXhyaLngg9crVD3h3ZcSuq3ElDdtSRuO8KyE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.Vistas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.Vistas.html",
+          "hash": "BTdUgRjNhNTLlnC7PWqfJw8yGj5rLnWFmw6c3EJOllA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ReservasMVVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReservasMVVM.html",
+          "hash": "DkcLfs7a/SFc5txh9ZsZWRq6fuHqFsCHUA7B6x76yzc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "3tyQP6er1rVnzo1goQqj/hWnC236bF3Dko5zHNFpslU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 6
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
