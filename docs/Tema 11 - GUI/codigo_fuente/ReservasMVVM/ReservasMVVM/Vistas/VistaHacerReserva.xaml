@@ -7,7 +7,53 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBox>Hola</TextBox>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Hacer reservas" FontSize="24"/>
+        <Grid Grid.Row="1" Margin="0, 25, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="5, 0, 0, 0" Text="Nombre"/>
+            <TextBox Grid.Row="1" Margin="0, 5, 0, 0" Text=""/>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0, 25, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Nº de planta"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Margin="0, 5, 0, 0" Text=""/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Margin="10, 0, 0, 0" Text="Nº de habitación"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="10, 5, 0, 0" Text=""/>
+        </Grid>
+        <Grid Grid.Row="3" Margin="0, 15, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Fecha de entrada"/>
+            <DatePicker Grid.Row="1" Grid.Column="0" Margin="0, 5, 0, 0" SelectedDate=""/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Margin="10, 0, 0, 0" Text="Fecha de salida"/>
+            <DatePicker Grid.Row="1" Grid.Column="2" Margin="10, 5, 0, 0" SelectedDate=""/>
+        </Grid>
+        <StackPanel Grid.Row="4" Margin="0, 25, 0, 0" Orientation="Horizontal">
+            <Button Content="Guardar"/>
+            <Button Content="Cancelar" Margin="10, 0, 0, 0"/>
+        </StackPanel>
     </Grid>
 </UserControl>

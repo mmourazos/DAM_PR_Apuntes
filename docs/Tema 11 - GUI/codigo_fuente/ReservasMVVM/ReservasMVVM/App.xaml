@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:ReservasMVVM"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10 5"/>
+        </Style>
     </Application.Resources>
 </Application>
