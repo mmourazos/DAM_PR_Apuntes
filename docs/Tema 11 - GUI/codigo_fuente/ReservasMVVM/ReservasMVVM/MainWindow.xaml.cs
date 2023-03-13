@@ -24,5 +24,10 @@ namespace ReservasMVVM
         {
             InitializeComponent();
         }
+
+        private void VistaListarReservas_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

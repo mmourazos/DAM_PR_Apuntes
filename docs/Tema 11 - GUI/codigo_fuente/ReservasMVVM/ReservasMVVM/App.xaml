@@ -7,5 +7,14 @@
         <Style TargetType="Button">
             <Setter Property="Padding" Value="10 5"/>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Foreground" Value="BlueViolet" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+        </Style>
     </Application.Resources>
 </Application>

@@ -28,6 +28,11 @@ namespace ReservasMVVM.Modelo
             return _libroDeReservas.ReservasCliente(idUsuario);
         }
 
+        public IEnumerable<Reserva> Reservas()
+        {
+            return _libroDeReservas.Reservas();
+        }
+
         /// <summary>
         /// Añade una reserva a la lista de reservas.
         /// </summary>
