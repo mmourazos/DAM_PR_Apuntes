@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE66D02C-AC4F-492D-B5FC-331A4F44B668}</ProjectGuid>
+    <ProjectGuid>{A7A092E4-F17C-4FFA-BDCF-D1097A5BBE41}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ReservasMVVM</RootNamespace>
-    <AssemblyName>ReservasMVVM</AssemblyName>
+    <RootNamespace>AdivinaElNumero</RootNamespace>
+    <AssemblyName>AdivinaElNumero</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,8 +37,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,15 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="VistasModelos\MainViewModel.cs" />
-    <Compile Include="VistasModelos\VistaModeloBase.cs" />
-    <Compile Include="VistasModelos\VistaModeloHacerReserva.cs" />
-    <Compile Include="VistasModelos\VistaModeloListarReservas.cs" />
-    <Compile Include="Vistas\VistaHacerReserva.xaml.cs">
-      <DependentUpon>VistaHacerReserva.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\VistaListarReservas.xaml.cs">
-      <DependentUpon>VistaListarReservas.xaml</DependentUpon>
+    <Compile Include="VistasModelo\ViewModelBase.cs" />
+    <Compile Include="VistasModelo\VistaModeloPartida.cs" />
+    <Compile Include="VistasModelo\VistaModeloPrincipal.cs" />
+    <Compile Include="Vistas\VistaPartida.xaml.cs">
+      <DependentUpon>VistaPartida.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -77,25 +69,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Exceptions\ExcepcionConflictoReserva.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Vistas\VistaHacerReserva.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Vistas\VistaListarReservas.xaml">
+    <Page Include="Vistas\VistaPartida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelo\Hotel.cs" />
-    <Compile Include="Modelo\IDHabitacion.cs" />
-    <Compile Include="Modelo\LibroDeReservas.cs" />
-    <Compile Include="Modelo\Reserva.cs" />
+    <Compile Include="Modelo\Partida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,28 +97,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="api\index.md" />
-    <None Include="articles\intro.md" />
-    <None Include="articles\toc.md" />
-    <None Include="docfx.json" />
-    <None Include="index.md" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="toc.yml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\docfx.console.2.59.4\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.59.4\build\docfx.console.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\docfx.console.2.59.4\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.59.4\build\docfx.console.targets'))" />
-  </Target>
 </Project>
