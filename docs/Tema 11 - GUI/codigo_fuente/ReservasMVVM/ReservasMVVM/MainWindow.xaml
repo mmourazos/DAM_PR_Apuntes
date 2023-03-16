@@ -9,6 +9,6 @@
         Title="MainWindow" Height="450" Width="800"
         FontSize="14">
     <Grid Margin="25, 10" MaxWidth="600">
-        <vistas:VistaListarReservas Loaded="VistaListarReservas_Loaded"/>
+        <vistas:VistaHacerReserva Loaded="VistaListarReservas_Loaded"/>
     </Grid>
 </Window>
