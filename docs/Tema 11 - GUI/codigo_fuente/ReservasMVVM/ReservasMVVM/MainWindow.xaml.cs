@@ -23,7 +23,9 @@ namespace ReservasMVVM
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+
 
         private void VistaListarReservas_Loaded(object sender, RoutedEventArgs e)
         {

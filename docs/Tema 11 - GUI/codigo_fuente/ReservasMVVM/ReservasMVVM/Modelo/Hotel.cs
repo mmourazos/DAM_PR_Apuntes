@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ReservasMVVM.Modelo
 {
     internal class Hotel
-    {
+    {        
         /// <summary>
         /// Nombre del hotel.
         /// </summary>
