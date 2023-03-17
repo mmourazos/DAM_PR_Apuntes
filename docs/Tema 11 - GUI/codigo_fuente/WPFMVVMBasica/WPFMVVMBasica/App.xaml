@@ -1,7 +1,7 @@
-﻿<Application x:Class="AdivinaElNumero.App"
+﻿<Application x:Class="WPFMVVMBasica.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AdivinaElNumero">
+             xmlns:local="clr-namespace:WPFMVVMBasica">
     <Application.Resources>
          
     </Application.Resources>

@@ -117,7 +117,7 @@ En nuestro ejemplo podremos poner `Text="{Binding Intentos}"` en el `TextBlock` 
     ```csharp
     public class ViewModelBase : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;  
 
         protected void OnPropertyChanged(string propertyName) {
             if (PropertyChanged != null) {

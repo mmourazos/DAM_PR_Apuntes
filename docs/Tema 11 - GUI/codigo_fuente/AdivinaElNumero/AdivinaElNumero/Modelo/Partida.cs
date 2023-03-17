@@ -4,17 +4,27 @@ namespace AdivinaElNumero.Modelo
 {
     internal class Partida
     {
-        private readonly int _numero;
+        private int _numero;
         private int _intentos;
 
-        private readonly int _min;
-        private readonly int _max;
+        private int _min;
+        private int _max;
 
+        public bool Activa { get; set; }
         public int Intentos { get { return _intentos; } }
 
         public int Min { get { return _min; } }
 
         public int Max { get { return _max; } }
+
+        public void NuevaPartida(int min, int max)
+        {
+            _intentos = 0;
+            _min = min;
+            _max = max;
+            _numero = Math.Min(_min, _max);
+            Activa = true;
+        }
 
         /// <summary>
         /// Devuelve cero si hemos acertado el número y la _distancia_ al número si no.
@@ -27,15 +37,9 @@ namespace AdivinaElNumero.Modelo
             return Math.Abs(_numero - numero);
         }
 
-        public Partida(int min, int max) 
-        { 
-            _intentos = 0;
-            _min = min;
-            _max = max;
-
-            Random random = new Random();
-
-            _numero = random.Next(_min, _max + 1);
+        public Partida()
+        {
+            Activa = false;
         }
-    }   
+    }
 }
