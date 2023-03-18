@@ -12,7 +12,7 @@
           "hash": "uZpIt7xjjIjLzaooTAstBDHpOm3wZejaLDPFex5uyFI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/ReservasMVVM.App.html",
-          "hash": "Xip8t8fCGV7FASonqaNEGU4VgV8mtoRrKSvgWeiv9FA="
+          "hash": "KIFO8zQUOxEZR9NgA4ygYAyP742DujRjGcAF0lem9Bs="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "XmqfmfiheH/zVGhsDuVR4wULuFuDUsqmn52+Cq04WtE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "gV6r2lMy4Xa5jdmbqeqci8TJ2eQ6Ea8S+bhURhs03Ik="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "b8Kq6wlsXhyaLngg9crVD3h3ZcSuq3ElDdtSRuO8KyE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "BTdUgRjNhNTLlnC7PWqfJw8yGj5rLnWFmw6c3EJOllA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "DkcLfs7a/SFc5txh9ZsZWRq6fuHqFsCHUA7B6x76yzc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -167,7 +167,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 3
+          "skipped_file_count": 6
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

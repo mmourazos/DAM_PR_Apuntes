@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:ReservasMVVM"
         xmlns:vistas="clr-namespace:ReservasMVVM.Vistas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <vistas:VistaHacerReserva/>
+        Title="MainWindow" Height="450" Width="800"
+        FontSize="14">
+    <Grid Margin="25, 10" MaxWidth="600">
+        <vistas:VistaHacerReserva DataContext="{Binding VistaModeloActual}"/>
     </Grid>
 </Window>

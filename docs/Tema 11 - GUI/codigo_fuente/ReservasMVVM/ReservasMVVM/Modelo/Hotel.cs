@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ReservasMVVM.Modelo
 {
     internal class Hotel
-    {
+    {        
         /// <summary>
         /// Nombre del hotel.
         /// </summary>
@@ -26,6 +26,11 @@ namespace ReservasMVVM.Modelo
         public IEnumerable<Reserva> ReservasCliente(string idUsuario)
         {
             return _libroDeReservas.ReservasCliente(idUsuario);
+        }
+
+        public IEnumerable<Reserva> Reservas()
+        {
+            return _libroDeReservas.Reservas();
         }
 
         /// <summary>

@@ -7,6 +7,52 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource Header}">Vista de reservas</TextBlock>
+            <Button Grid.Column="1" Margin="10, 0, 0, 0">Hacer reserva</Button>
+        </Grid>
+        <ListView Grid.Row="1" Margin="0, 25, 0, 0" ItemsSource="{Binding Reservas}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Habitación">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextAlignment="Center" Text="0114"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                <GridViewColumn Header="Cliente">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="20, 0, 0, 0" Width="Auto" Text="{Binding IDCliente}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                <GridViewColumn Header="Fecha de entrada">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="20, 0, 0, 0" Text="{Binding FechaDeEntrada}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                <GridViewColumn Header="Fecha de salida">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="20, 0, 0, 0" Text="{Binding FechaDeSalida}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

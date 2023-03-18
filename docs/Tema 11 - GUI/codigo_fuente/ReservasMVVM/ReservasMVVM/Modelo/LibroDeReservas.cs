@@ -20,6 +20,11 @@ namespace ReservasMVVM.Modelo
             return _reservas.Where<Reserva>(reserva => reserva.IDCliente == idCliente);
         }
 
+        public IEnumerable<Reserva> Reservas() 
+        { 
+            return _reservas;
+        }
+
         public IEnumerable<Reserva> ReservasFecha(DateTime fecha)
         {
             return _reservas.Where(reserva => fecha >= reserva.FechaEntrada && fecha <= reserva.FechaSalida);

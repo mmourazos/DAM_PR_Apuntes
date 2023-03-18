@@ -273,7 +273,7 @@ También dispondremos de un método **que ha de ser único** y no admite argumen
 
 Su sintaxis será la siguiente:
 
-```c#
+```C#
 clase MiClase
 {
     // ... 
@@ -371,6 +371,7 @@ class MiClase
 
     return multiplicador * total;
 }
+```
 
 ### Sobrescritura (`override`) de métodos
 
