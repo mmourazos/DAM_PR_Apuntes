@@ -12,7 +12,7 @@
         </Grid.RowDefinitions>
         <TextBox TextWrapping="Wrap" Grid.Row="0" Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}" />
         <DockPanel Grid.Row="1" Margin="5">
-            <Button Content="Pasar a mayúsculas" />
+            <Button Command="{Binding ComandoPasaAMayusculas}" Content="Pasar a mayúsculas" />
         </DockPanel>
         
     </Grid>

@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ComandoPasaAMayusculas.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Model\Libro.cs" />
     <Compile Include="ViewModels\LibroViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -105,8 +107,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commans\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

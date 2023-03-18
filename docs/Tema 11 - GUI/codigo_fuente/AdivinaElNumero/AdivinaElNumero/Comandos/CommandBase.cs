@@ -18,7 +18,7 @@ namespace AdivinaElNumero.Comandos
 
         public abstract void Execute( object parameter);
 
-        protected void OnCanExectueChanged() 
+        protected void OnCanExecuteChanged() 
         {
             CanExecuteChanged?.Invoke(this, EventArgs.Empty); 
         }

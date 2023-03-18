@@ -1,4 +1,7 @@
-﻿using WPFMVVMBasica.Model;
+﻿using System.ComponentModel;
+using System.Windows.Input;
+using WPFMVVMBasica.Commands;
+using WPFMVVMBasica.Model;
 
 namespace WPFMVVMBasica.ViewModels
 {
@@ -6,22 +9,30 @@ namespace WPFMVVMBasica.ViewModels
     {
         private readonly Libro _libro;
 
-        private string _texto;
-
         public string Texto
         {
-            get { return _texto; }
+            get { return _libro.Texto; }
 
             set
             {
-                _texto = value;
+                _libro.Texto = value;
                 OnPropertyChanged(nameof(Texto));
             }
         }
 
+        private void ModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(e.PropertyName);
+        }
+
+        public ICommand ComandoPasaAMayusculas { get; }
         public LibroViewModel(Libro libro)
         {
             _libro = libro;
+
+            _libro.PropertyChanged += ModelPropertyChanged;
+
+            ComandoPasaAMayusculas = new ComandoPasaAMayusculas(_libro);
         }
     }
 }

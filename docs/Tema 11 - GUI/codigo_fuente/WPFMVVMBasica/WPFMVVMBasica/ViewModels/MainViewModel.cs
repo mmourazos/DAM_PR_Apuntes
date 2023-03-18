@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WPFMVVMBasica.Model;
 
 namespace WPFMVVMBasica.ViewModels
 {
@@ -12,7 +8,7 @@ namespace WPFMVVMBasica.ViewModels
 
         public MainViewModel()
         {
-            CurrentViewModel = new LibroViewModel(null);
+            CurrentViewModel = new LibroViewModel(new Libro("La razón de la sinrazón."));
         }
     }
 }

@@ -1,20 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace WPFMVVMBasica.Model
-{ 
-    internal class Libro
+{
+    internal class Libro : INotifyPropertyChanged
     {
-        public string Texto { get; set; }
+        private string _texto;
 
-        public void PasaAMayusculas() 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+         {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public string Texto
+        {
+            get
+            {
+                return _texto;
+            }
+            set
+            {
+                _texto = value;
+                OnPropertyChanged(nameof(Texto));
+            }
+        }
+
+        public void PasaAMayusculas()
         {
             Texto = Texto.ToUpper();
         }
-       
+
         public Libro(string texto)
         {
             Texto = texto;

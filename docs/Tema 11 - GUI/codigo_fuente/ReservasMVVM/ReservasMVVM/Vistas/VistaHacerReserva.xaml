@@ -21,7 +21,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Margin="5, 0, 0, 0" Text="Nombre"/>
-            <TextBox x:Name="tbNombrecliente" Grid.Row="1" Margin="0, 5, 0, 0" Text=""/>
+            <TextBox x:Name="tbNombrecliente" Grid.Row="1" Margin="0, 5, 0, 0" Text="{Binding IDCliente}"/>
         </Grid>
         <Grid Grid.Row="2" Margin="0, 25, 0, 0">
             <Grid.RowDefinitions>
