@@ -1,6 +1,5 @@
 ﻿using AdivinaElNumero.Modelo;
 using AdivinaElNumero.VistasModelo;
-using System;
 
 namespace AdivinaElNumero.Comandos
 {
@@ -17,9 +16,13 @@ namespace AdivinaElNumero.Comandos
 
         public override void Execute(object parameter)
         {
-            throw new NotImplementedException();
-            //_partida.NuevaPartida(_vMPartida.Min, _vMPartida.Max);
-            //_vMPartida.Intentos = 0;
+            _partida.NuevaPartida(int.Parse(_vMPartida.Min), int.Parse(_vMPartida.Max));
+        }
+
+        public ComandoNuevaPartida(Partida partida, VistaModeloPartida vMPartida)
+        {
+            _partida = partida;
+            _vMPartida = vMPartida;
         }
     }
 }

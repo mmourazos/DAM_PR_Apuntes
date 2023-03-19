@@ -1,29 +1,77 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace AdivinaElNumero.Modelo
 {
-    internal class Partida
+    internal class Partida : INotifyPropertyChanged
     {
         private int _numero;
         private int _intentos;
 
         private int _min;
         private int _max;
+        private int _distancia;
 
-        public bool Activa { get; set; }
-        public int Intentos { get { return _intentos; } }
+        // Para poder avisar al _ViewModel_ de los cambios de propiedades (Intentos, Min y Max)
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        public int Min { get { return _min; } }
+        protected void OnPropertyChange(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
 
-        public int Max { get { return _max; } }
+        }
+
+        public int Intentos
+        {
+            get { return _intentos; }
+
+            set
+            {
+                _intentos = value;
+                OnPropertyChange(nameof(Intentos));
+            }
+        }
+
+        public int Distancia
+        {
+            get { return _distancia; }
+            set
+            {
+                _distancia = value;
+                OnPropertyChange(nameof(Distancia));
+            }
+        }
+        public int Min
+        {
+            get { return _min; }
+
+            set
+            {
+                _min = value;
+                OnPropertyChange(nameof(Min));
+            }
+        }
+
+        public int Max
+        {
+            get { return _max; }
+
+            set
+            {
+                _max = value;
+                OnPropertyChange(nameof(Max));
+            }
+        }
 
         public void NuevaPartida(int min, int max)
         {
-            _intentos = 0;
-            _min = min;
-            _max = max;
+            Intentos = 0;
+            Min = min;
+            Max = max;
             _numero = Math.Min(_min, _max);
-            Activa = true;
         }
 
         /// <summary>
@@ -31,15 +79,10 @@ namespace AdivinaElNumero.Modelo
         /// </summary>
         /// <param name="numero"> El número que queremos comprobar.</param>
         /// <returns>La distancia al número buscado.</returns>
-        public int Intento(int numero)
+        public void Intento(int numero)
         {
-            ++_intentos;
-            return Math.Abs(_numero - numero);
-        }
-
-        public Partida()
-        {
-            Activa = false;
+            ++Intentos;
+            Distancia = Math.Abs(_numero - numero);
         }
     }
 }
