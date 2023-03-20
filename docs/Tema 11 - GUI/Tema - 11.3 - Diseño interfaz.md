@@ -70,4 +70,3 @@ Por último podremos indicar el valor `*`. `*` indica que la fila (o columna) oc
 También podremos acompañar `*` de un número. Por ejemplo, si tenemos dos filas y en la primera indicamos `Height="1*` y en la segunda `Height="2*"` la segunda fila ocupará el doble de espacio que la primera fila.
 
 ## Estilos
-

@@ -1,8 +1,7 @@
 ﻿<Application x:Class="AdivinaElNumero.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AdivinaElNumero"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:AdivinaElNumero">
     <Application.Resources>
          
     </Application.Resources>

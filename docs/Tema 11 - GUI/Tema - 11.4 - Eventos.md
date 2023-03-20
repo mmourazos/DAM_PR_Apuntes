@@ -1,4 +1,4 @@
-# Tema 11.1: Eventos
+# Tema 11.4: Eventos
 
 Los eventos son acciones que se producen en la interfaz de usuario y que pueden ser detectadas por el código de la aplicación.
 
@@ -8,7 +8,7 @@ El mecanismo que utiliza WPF para manejar los eventos se denomina `Routed events
 
 ## Routed events
 
-Un evento entrutado es un tipo de evento que puede activar _handlers_ (manejadores) en múltiples _listeners_ del árbol de elementos y no solo en el elemento que lo genera. Un _event listener_ (escuchador de eventos) es aquel elemento donde tenemos un manejador de eventos y sobre el cual es invocado. Una fuente de eventos es el elemento u objeto que originalmente lazó el evento.
+Un evento enrutado es un tipo de evento que puede activar _handlers_ (manejadores) en múltiples _listeners_ del árbol de elementos y no solo en el elemento que lo genera. Un _event listener_ (escuchador de eventos) es aquel elemento donde tenemos un manejador de eventos y sobre el cual es invocado. Una fuente de eventos es el elemento u objeto que originalmente lazó el evento.
 
 Las aplicaciones WPF normalmente contienen muchos elementos, que se declaran en XAML o se instancian en código. Los elementos de una aplicación existen dentro de su árbol de elementos. Dependiendo de cómo se defina un evento enrutado, cuando se genera un evento en un elemento fuente:
 

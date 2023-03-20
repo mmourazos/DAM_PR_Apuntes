@@ -55,9 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Comandos\ComandoCerrarAplcacion.cs" />
+    <Compile Include="Comandos\ComandoNuevaPartida.cs" />
+    <Compile Include="Comandos\ComandoPruebaNumero.cs" />
+    <Compile Include="Comandos\CommandBase.cs" />
     <Compile Include="VistasModelo\ViewModelBase.cs" />
     <Compile Include="VistasModelo\VistaModeloPartida.cs" />
-    <Compile Include="VistasModelo\VistaModeloPrincipal.cs" />
     <Compile Include="Vistas\VistaPartida.xaml.cs">
       <DependentUpon>VistaPartida.xaml</DependentUpon>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using AdivinaElNumero.VistasModelo;
+using System.Windows;
 
 namespace AdivinaElNumero
 {
@@ -9,7 +10,7 @@ namespace AdivinaElNumero
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }

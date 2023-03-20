@@ -59,10 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="VistasModelos\MainViewModel.cs" />
     <Compile Include="VistasModelos\VistaModeloBase.cs" />
     <Compile Include="VistasModelos\VistaModeloHacerReserva.cs" />
     <Compile Include="VistasModelos\VistaModeloListarReservas.cs" />
+    <Compile Include="VistasModelos\VistaModeloPrincipal.cs" />
+    <Compile Include="VistasModelos\VistaModeloReserva.cs" />
     <Compile Include="Vistas\VistaHacerReserva.xaml.cs">
       <DependentUpon>VistaHacerReserva.xaml</DependentUpon>
     </Compile>

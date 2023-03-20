@@ -20,37 +20,36 @@
             <TextBlock Grid.Column="0" Style="{StaticResource Header}">Vista de reservas</TextBlock>
             <Button Grid.Column="1" Margin="10, 0, 0, 0">Hacer reserva</Button>
         </Grid>
-        <ListView Grid.Row="1" Margin="0, 25, 0, 0">
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
+        <!-- Reservas es una colección de VistaModeloReserva y cada columna de las lista 
+        podrá acceder a dicho elemento: VistaModeloReserva -->
+        <ListView Grid.Row="1" Margin="0, 25, 0, 0" ItemsSource="{Binding Reservas}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID Habitación">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Algo de texto1" />
+                                <TextBlock TextAlignment="Center" Text="{Binding IDHabitacion}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Cliente">
+                <GridViewColumn Header="Cliente">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Algo de texto1" />
+                                <TextBlock Padding="20, 0, 0, 0" Width="Auto" Text="{Binding IDCliente}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Fecha entrada">
+                <GridViewColumn Header="Fecha de entrada">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Algo de texto2" />
+                                <TextBlock Padding="20, 0, 0, 0" Text="{Binding FechaDeEntrada}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Fecha salida">
+                <GridViewColumn Header="Fecha de salida">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Algo de texto3" />
+                                <TextBlock Padding="20, 0, 0, 0" Text="{Binding FechaDeSalida}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
