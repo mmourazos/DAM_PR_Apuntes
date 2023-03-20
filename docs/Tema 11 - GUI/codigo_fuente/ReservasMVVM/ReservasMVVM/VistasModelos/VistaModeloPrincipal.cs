@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ReservasMVVM.VistasModelos
+﻿namespace ReservasMVVM.VistasModelos
 {
+    /// <summary>
+    /// Este _View-Model_ establecerá cual es _View-Model_ que estará en uso en
+    /// cada momento.
+    /// </summary>
     internal class VistaModeloPrincipal : VistaModeloBase
     {
         public VistaModeloBase VistaModeloActual { get; }
 
         public VistaModeloPrincipal()
         {
-            VistaModeloActual = new VistaModeloHacerReserva();
+            VistaModeloActual = new VistaModeloListarReservas();
         }
     }
 }

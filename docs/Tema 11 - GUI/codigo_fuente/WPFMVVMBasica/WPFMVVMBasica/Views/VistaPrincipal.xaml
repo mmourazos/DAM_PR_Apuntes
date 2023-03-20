@@ -10,7 +10,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBox TextWrapping="Wrap" Grid.Row="0" Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" Grid.Row="0" Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}" />
         <DockPanel Grid.Row="1" Margin="5">
             <Button Command="{Binding ComandoPasaAMayusculas}" Content="Pasar a mayúsculas" />
         </DockPanel>

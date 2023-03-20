@@ -1,6 +1,110 @@
-# Tema 11.5: Enlazar datos
+# Tema 11.6: Enlazar datos
 
-Cuando creamos nuestras vistas lo más habitual es que queramos mostrar datos que provienen de una fuente de datos (el modelo). En este tema veremos cómo enlazar datos a nuestras vistas.
+Cuando creamos nuestras vistas lo más habitual es que queramos mostrar datos que provienen de una fuente de datos (el modelo). En este tema veremos cómo enlazar datos a nuestras vistas de manera que cuando el valor de los datos cambie, la vista se actualice automáticamente. Del mismo modo, cuando el usuario modifique los datos de la vista, estos se actualicen en la fuente de datos.
+
+## Conceptos previos
+
+Para poder entender cómo funciona el enlazado de datos es necesario conocer algunos conceptos previos: delegados y eventos. Estos dos elementos son utilizados para _informar_ a los componentes de la vista de los cambios en el modelo y viceversa.
+
+### Delegados
+
+Un delegado es un elemento de C# que permite encapsular una o más referencias a métodos y funciones. El delegado también ofrece un mecanismo para invocar a los métodos encapsulados.
+
+#### Declaración de un tipo delegado
+
+Para declarar un **tipo** delegado (acción análoga a la definición de una clase) hemos de usar la palabra reservada `delegate`, seguida de la firma (tipo de retorno y parámetros) de los métodos que podrá encapsular
+
+```csharp
+delegate int MiDelegado(string mensaje);
+```
+
+#### Declaración de un delegado
+
+Para declarar una variable de tipo delegado simplemente antepondremos al nombre de la variable el tipo delegado que previamente hemos definido.
+
+```csharp
+MiDelegado delegado;
+```
+
+**Nótese que no hay que instanciar nada.**
+
+#### Encapsular funciones en un delegado
+
+Para encapsular una función en un delegado debemos asignarle la referencia a la función. Para ello usaremos el operador `=`.
+
+```csharp
+// Supongamos que tenemos un método estático que acepta un string y devuelve un int.
+// No es necesario que sea estático, pero para simplificar el ejemplo lo haremos así.
+
+private static int MiFuncion(string mensaje)
+{
+    Console.WriteLine(mensaje);
+    return 0;
+}
+
+private static int MiOtraFuncion(string cadena) {
+    return cadena.Length;
+}
+
+// Si queremos encapsular la función en el delegado lo haremos de la siguiente forma:
+delegado = MiFuncion;
+
+// O de forma equivalente:
+delegado = new MiDelegado(MiFuncion);
+```
+
+De esta forma tendremos encapsulada la función `MiFuncion` en el delegado `delegado`.
+
+Si queremos **añadir** más funciones o métodos al delegado usaremos el operador `+=` para ir _sumándolas_ al mismo.
+
+```csharp
+delegado = MiFuncion;
+delegado += MiOtraFuncion;
+delegado += x => x.Length;
+```
+
+#### Invocar a un delegado
+
+Invocar a un delegado supone llamar a todas las funciones o métodos que contiene. Para ello usaremos el operador `()` o el método `Invoke()` (son equivalentes).
+
+```csharp
+delegado("Hola"); // Equivalente a delegado.Invoke("Hola");
+```
+
+Hay que tener en cuenta que si **no se ha asignado** ninguna función al delegado, al invocarlo se producirá un error `System.NullReferenceException`.
+
+Para evitar esto se ha de hacer una comprobación antes de invocar al delegado.
+
+```csharp
+if (delegado != null)
+{
+    delegado("Hola");
+}
+```
+
+Desde C# 6.0 se ha introducido la posibilidad de hacer esta comprobación de forma más sencilla mediante el operador `?.`[^1]:
+
+```csharp
+delegado?.Invoke("Hola");
+```
+
+[^1]: El _null conditional operator_ accederá al elemento (método, propiedad, etc.) si el objeto no es `null`. Si el objeto es `null` no se producirá ningún error y **devolverá** `null`.
+
+### Eventos (cuando usar delegados o eventos)
+
+Un evento comparte muchas propiedades con una variable de tipo delegado. La principal consideración que hemos de tener en cuenta a la hora de elegir entre uno u otro es si es **necesario** que deba existir un suscriptor conectado o no. Si es necesario que exista un suscriptor conectado, debemos usar un diseño basado en delegados. Si no es necesario, debemos usar un diseño basado en eventos.
+
+Consideremos, por ejemplo, el caso de `List.Sort()`. A este método debemos pasarle una función o método que nos permita comparar dos elementos de la lista. Por lo tanto, por detrás, habrá delegados que puedan determinar qué elementos ha de devolver.
+
+Por otro lado tenemos el caso de una evento que indique el estado de progreso de una tarea. Si se _subscribe_ una barra de progreso a este evento podremos ver cómo va avanzando la tarea. Si no se _subscribe_ ninguna barra de progreso, la tarea seguirá avanzando igualmente (y el evento seguirá lanzándose).
+
+#### Valores de retorno requieren usar delegados
+
+Otra consideración a tener en cuenta es si el método que se va a invocar debe devolver un valor. Si el método debe devolver un valor, debemos usar delegados. Si no es necesario que devuelva un valor, podemos usar eventos.
+
+#### Los eventos se invocan de manera _privada_
+
+Las clases externas a aquella que contiene el evento sólo podrán subscribirse o de-subscribirse a dicho evento. La clase que contiene el evento es la única que puede invocarlo. Esto es así porque los eventos son _privados_. Los eventos generalmente son miembros privados de una clase. En contraste, los delegados se pasan como parámetros y se almacenan como miembros privados, si se almacenan en absoluto.
 
 ## Enlazar datos
 

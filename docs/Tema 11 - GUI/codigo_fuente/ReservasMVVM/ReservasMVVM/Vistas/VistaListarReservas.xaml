@@ -20,13 +20,15 @@
             <TextBlock Grid.Column="0" Style="{StaticResource Header}">Vista de reservas</TextBlock>
             <Button Grid.Column="1" Margin="10, 0, 0, 0">Hacer reserva</Button>
         </Grid>
+        <!-- Reservas es una colección de VistaModeloReserva y cada columna de las lista 
+        podrá acceder a dicho elemento: VistaModeloReserva -->
         <ListView Grid.Row="1" Margin="0, 25, 0, 0" ItemsSource="{Binding Reservas}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID Habitación">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock TextAlignment="Center" Text="0114"/>
+                                <TextBlock TextAlignment="Center" Text="{Binding IDHabitacion}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

@@ -9,7 +9,7 @@ namespace ReservasMVVM.VistasModelos
 {
     internal class VistaModeloReserva : VistaModeloBase
     {
-        private readonly Reserva _reserva;
+        private readonly Reserva _reserva; 
 
         public string IDHabitacion => _reserva.IDHabitacion?.ToString();
 

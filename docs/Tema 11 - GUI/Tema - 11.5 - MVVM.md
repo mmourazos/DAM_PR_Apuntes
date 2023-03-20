@@ -1,8 +1,8 @@
-# Tema 11.2: MVVM[^1]
+# Tema 11.2: MVVM
 
 ## ¿Qué es MVVM?
 
-MVVM es patrón de diseño de software que se utiliza para separar la interfaz de usuario de la lógica de negocio. MVVM tambén es conocido como _model-view-binder_ que se traduciría como modelo-y-vista-enlazados y fue creado por los ingenieros de Microsoft Ken Cooper y John Gossman sobre el año 2004.
+MVVM[^1] es patrón de diseño de software que se utiliza para separar la interfaz de usuario de la lógica de negocio. MVVM tambén es conocido como _model-view-binder_ que se traduciría como modelo-y-vista-enlazados y fue creado por los ingenieros de Microsoft Ken Cooper y John Gossman sobre el año 2004.
 
 La idea principal de MVVM es que la interfaz de usuario (la vista) no tiene que conocer la lógica de negocio (el modelo) y que la lógica de negocio no tiene que conocer la interfaz de usuario.
 

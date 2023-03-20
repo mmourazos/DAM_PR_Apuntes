@@ -1,5 +1,6 @@
 ﻿using ReservasMVVM.Modelo;
 using System;
+using System.Windows.Input;
 
 namespace ReservasMVVM.VistasModelos
 {
@@ -7,23 +8,12 @@ namespace ReservasMVVM.VistasModelos
     {
         private Reserva _reserva;
 
+        private int _numPlanta;
+        private int _numHabitacion;
         private string _idHabiacion;
         private string _idCliente;
         private DateTime _fechaDeSalida;
         private DateTime _fechaDeEntrada;
-
-        public string IDHabitacion
-        {
-            get
-            {
-                return _idHabiacion;
-            }
-            set
-            {
-                _idHabiacion = value;
-                OnPropertyChanged(nameof(IDHabitacion));
-            }
-        }
 
         public string IDCliente
         {
@@ -38,6 +28,41 @@ namespace ReservasMVVM.VistasModelos
                 OnPropertyChanged(nameof(IDCliente));
             }
         }
+
+        public int NumPlanta
+        {
+            get { return _numPlanta; }
+
+            set
+            {
+                _numPlanta = value;
+                OnPropertyChanged(nameof(NumPlanta));
+            }
+        }
+
+        public int NumHabitacion
+        {
+            get { return _numHabitacion; }
+
+            set
+            {
+                _numHabitacion = value;
+                OnPropertyChanged(nameof(NumHabitacion));
+            }
+        }
+        public string IDHabitacion
+        {
+            get
+            {
+                return _idHabiacion;
+            }
+            set
+            {
+                _idHabiacion = value;
+                OnPropertyChanged(nameof(IDHabitacion));
+            }
+        }
+
 
         public DateTime FechaDeEntrada
         {
@@ -66,6 +91,12 @@ namespace ReservasMVVM.VistasModelos
                 OnPropertyChanged(nameof(FechaDeSalida));
             }
         }
+
+        // Comandos
+
+        public ICommand ComandoHacerReserva { get; }
+
+        public ICommand ComandoCancelar { get; }
 
         public DateTime FechaEntrada { get; set; }
 
