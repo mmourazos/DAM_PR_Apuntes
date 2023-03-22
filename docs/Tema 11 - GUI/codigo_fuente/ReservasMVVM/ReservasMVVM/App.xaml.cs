@@ -1,4 +1,5 @@
 ﻿using ReservasMVVM.Modelo;
+using ReservasMVVM.Stores;
 using ReservasMVVM.VistasModelos;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,14 @@ namespace ReservasMVVM
     /// </summary>
     public partial class App : Application
     {
+        private readonly Hotel _hotel;
+        private readonly NavigationStore _navigationStore;
+
+        public App()
+        {
+            _hotel = new Hotel("Nuestro hotel");
+            _navigationStore = new NavigationStore();
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
 
