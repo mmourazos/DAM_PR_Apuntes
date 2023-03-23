@@ -16,13 +16,19 @@ namespace WPFMVVMBasica.ViewModels
             set
             {
                 _libro.Texto = value;
+                // Avisamos a la vista (bueno, a nuestros subscriptores) de que Texto
+                // ha cambiado.
                 OnPropertyChanged(nameof(Texto));
             }
         }
 
+        // Cuando nos avise (el modelo) de que ha cambiado el valor de alguna
+        // de sus propiedades (el caso de Texto) avisamos a la vista (que habrá hecho
+        // "bindings" a nuestras propiedades) de que ha cambiado el valor de alguna propiedad.
+        // En nuestro caso la única propiedad de la que nos interesa avisar es Texto
         private void ModelPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            OnPropertyChanged(e.PropertyName);
+            OnPropertyChanged(nameof(Texto));
         }
 
         public ICommand ComandoPasaAMayusculas { get; }
@@ -30,8 +36,12 @@ namespace WPFMVVMBasica.ViewModels
         {
             _libro = libro;
 
+            // Nos subscribimos al evento "PropertyChanged" del Modelo (_libro) para que nos
+            // avise si cambia el texto y así podamos avisar a su vez a la vista.
             _libro.PropertyChanged += ModelPropertyChanged;
 
+            // Asignamos un comando a la propiedad ComandoPasaAMayusculas al que se habrá
+            // conectado (vía "Binding") el botón.
             ComandoPasaAMayusculas = new ComandoPasaAMayusculas(_libro);
         }
     }

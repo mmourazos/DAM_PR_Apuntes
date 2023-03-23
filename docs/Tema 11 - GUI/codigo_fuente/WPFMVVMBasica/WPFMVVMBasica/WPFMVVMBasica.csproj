@@ -59,7 +59,6 @@
     <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Model\Libro.cs" />
     <Compile Include="ViewModels\LibroViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\VistaPrincipal.xaml.cs">
       <DependentUpon>VistaPrincipal.xaml</DependentUpon>
