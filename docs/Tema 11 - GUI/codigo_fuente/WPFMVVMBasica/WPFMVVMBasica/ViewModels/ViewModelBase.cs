@@ -11,9 +11,9 @@ namespace WPFMVVMBasica.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged (string propertyName)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke (this, new PropertyChangedEventArgs (propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
