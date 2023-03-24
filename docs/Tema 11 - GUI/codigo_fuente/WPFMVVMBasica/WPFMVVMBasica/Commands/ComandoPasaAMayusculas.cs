@@ -4,7 +4,7 @@ namespace WPFMVVMBasica.Commands
 {
     internal class ComandoPasaAMayusculas : CommandBase
     {
-        private Libro _libro;
+        private readonly Libro _libro;
         public ComandoPasaAMayusculas(Model.Libro libro)
         {
             _libro = libro;

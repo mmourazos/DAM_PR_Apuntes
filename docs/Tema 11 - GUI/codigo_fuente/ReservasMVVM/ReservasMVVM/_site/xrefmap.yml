@@ -13,6 +13,19 @@ references:
   commentId: T:ReservasMVVM.App
   fullName: ReservasMVVM.App
   nameWithType: App
+- uid: ReservasMVVM.App.#ctor
+  name: App()
+  href: api/ReservasMVVM.App.html#ReservasMVVM_App__ctor
+  commentId: M:ReservasMVVM.App.#ctor
+  fullName: ReservasMVVM.App.App()
+  nameWithType: App.App()
+- uid: ReservasMVVM.App.#ctor*
+  name: App
+  href: api/ReservasMVVM.App.html#ReservasMVVM_App__ctor_
+  commentId: Overload:ReservasMVVM.App.#ctor
+  isSpec: "True"
+  fullName: ReservasMVVM.App.App
+  nameWithType: App.App
 - uid: ReservasMVVM.App.OnStartup(System.Windows.StartupEventArgs)
   name: OnStartup(StartupEventArgs)
   href: api/ReservasMVVM.App.html#ReservasMVVM_App_OnStartup_System_Windows_StartupEventArgs_

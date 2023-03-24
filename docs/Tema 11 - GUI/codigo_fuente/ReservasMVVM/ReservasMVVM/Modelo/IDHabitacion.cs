@@ -38,8 +38,14 @@ namespace ReservasMVVM.Modelo
         public static bool operator ==(IDHabitacion id1, IDHabitacion id2)
         {
             if (id1 is null && id2 is null) return true;
-      
-            return !(id1 is null && id1.Equals(id2));
+            // El "null-coalescing operator" ?? son operators introducidos en C# 8.0 que "facilita" el trabajo con valores nulos.
+            // ?? devuelve el valor del operando a su izquierda si es distinto de null y el resultado de evaluar la expresión a su derecha 
+            // en caso de que fuese nulo.
+            
+            return id1?.Equals(id2) ?? false;
+
+            // Sería equivalente a:
+            // return if id1 is not null && id1.Equals(id2);
         }
 
         public static bool operator !=(IDHabitacion id1, IDHabitacion id2)

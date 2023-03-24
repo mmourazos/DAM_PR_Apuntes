@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/ReservasMVVM.App.html",
-          "hash": "KIFO8zQUOxEZR9NgA4ygYAyP742DujRjGcAF0lem9Bs="
+          "hash": "rc0v2t+5AX86H9yQikCR6xJwj68cGDrNf6sQ6Lk5Mg0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/ReservasMVVM.MainWindow.html",
-          "hash": "XmqfmfiheH/zVGhsDuVR4wULuFuDUsqmn52+Cq04WtE="
+          "hash": "ud+qCDjRrM/BXfpR98l9fClZdLKdDxga/qwHC04G3JA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "DkcLfs7a/SFc5txh9ZsZWRq6fuHqFsCHUA7B6x76yzc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -167,7 +167,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 6
+          "skipped_file_count": 4
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
