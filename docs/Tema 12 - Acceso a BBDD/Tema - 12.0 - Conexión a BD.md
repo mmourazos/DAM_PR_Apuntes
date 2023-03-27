@@ -1,5 +1,11 @@
 # Bases de datos con C#
 
+## Conexión a BBDD MySQL
+
+Para realizar este tema necesitaremos tener instalado el servidor de bases de datos [MySQL](https://dev.mysql.com/downloads/mysql/) y el cliente [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
+
+## Conexión a BBDD MS SQL Server
+
 Para realizar este tema necesitaremos tener instalado el servidor de bases de datos [MS SQL Serever](https://www.microsoft.com/es-es/sql-server/sql-server-downloads) y el cliente [SSMS](https://docs.microsoft.com/es-es/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 
 Utilizaremos al versión gratuita de SQL Server: Developer Edition. Pues en la documentación se indica que tiene las mismas características que la versión Enterprise Edition (aunque su licencia lo limita su uso a entornos de desarrollo y no de producción).
