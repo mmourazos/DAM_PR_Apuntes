@@ -55,13 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Comandos\ComandoCerrarAplcacion.cs" />
-    <Compile Include="Comandos\ComandoNuevaPartida.cs" />
-    <Compile Include="Comandos\ComandoPruebaNumero.cs" />
-    <Compile Include="Comandos\CommandBase.cs" />
-    <Compile Include="VistasModelo\ViewModelBase.cs" />
-    <Compile Include="VistasModelo\VistaModeloPartida.cs" />
-    <Compile Include="Vistas\VistaPartida.xaml.cs">
+    <Compile Include="Commands\ComandoCerrarAplcacion.cs" />
+    <Compile Include="Model\Partida.cs" />
+    <Compile Include="ViewModels\PartidaViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\VistaPartida.xaml.cs">
       <DependentUpon>VistaPartida.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -76,13 +74,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Vistas\VistaPartida.xaml">
+    <Page Include="Views\VistaPartida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelo\Partida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

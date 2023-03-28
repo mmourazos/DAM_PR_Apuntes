@@ -1,5 +1,6 @@
-﻿using AdivinaElNumero.Modelo;
-using AdivinaElNumero.VistasModelo;
+﻿using AdivinaElNumero.Model;
+using AdivinaElNumero.ViewModels;
+using System;
 using System.Windows;
 
 namespace AdivinaElNumero
@@ -9,18 +10,12 @@ namespace AdivinaElNumero
     /// </summary>
     public partial class App : Application
     {
-        private Partida _partida;
-
-        public App()
-        {
-            _partida = new Partida();
-        }
-
+      
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new VistaModeloPartida(_partida)
+                DataContext = new PartidaViewModel(new Partida())
             };
 
             MainWindow.Show();

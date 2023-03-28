@@ -15,7 +15,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <TextBlock Style="{StaticResource Header}" Grid.Row="0" Text="Hacer reservas" />
+        <TextBlock Style="{StaticResource Header}" zGrid.Row="0" Text="Hacer reservas" />
         <Grid Grid.Row="1" Margin="0, 25, 0, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>

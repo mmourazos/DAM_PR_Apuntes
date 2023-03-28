@@ -10,7 +10,6 @@ namespace WPFMVVMBasica.ViewModels
 
         public void OnPropertyChanged(string propertyName)
         {
-            // Así avisamos a los subscriptores.
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

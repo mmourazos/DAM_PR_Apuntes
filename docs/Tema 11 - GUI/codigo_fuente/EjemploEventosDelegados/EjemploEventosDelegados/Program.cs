@@ -1,16 +1,32 @@
-﻿namespace EjemploEventosDelegados
+﻿using EjemploEventosDelegados.Publisher;
+using EjemploEventosDelegados.Subscribers;
+
+namespace EjemploEventosDelegados
 {
-    delegate void TestDlg(int x);
+
 
     internal class Program
     {
-        static event TestDlg miEvento;
+        // Declaramos un **tipo** delegado `TextDlg`.
+        internal delegate void TestDlg(int x);
+
+
+
+        static void MetodoADelegar1(int x)
+        {
+            System.Console.WriteLine($"MetodoADelegar1: {x}.");
+        }
+        static void MetodoADelegar2(int x)
+        {
+            System.Console.WriteLine($"MetodoADelegar2: {x}.");
+        }
+
         static void Main(string[] args)
         {
 
             // Creamos el _publisher_ y el _subscriber_:
             EventSender eventSender = new EventSender();
-            BasicEventReceiver eventReceiver = new BasicEventReceiver();
+            EventReceiver eventReceiver = new EventReceiver();
 
             // Nos subscribimos al sender:
             eventSender.Event += eventReceiver.OnEventReceived;
