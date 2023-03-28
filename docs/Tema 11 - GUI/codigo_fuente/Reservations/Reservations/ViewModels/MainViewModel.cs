@@ -1,13 +1,18 @@
-﻿namespace Reservations.ViewModels
+﻿using Reservations.Modelo;
+using Reservations.Stores;
+
+namespace Reservations.ViewModels
 {
     class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; set; }
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
-        public MainViewModel()
+        public MainViewModel(NavigationStore navigationStore)
         {
-            // Código temporal:
-            CurrentViewModel = new HacerReservaViewModel();
+            _navigationStore = navigationStore;
+
         }
+
     }
 }
