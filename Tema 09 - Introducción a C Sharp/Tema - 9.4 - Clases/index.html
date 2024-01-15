@@ -1,0 +1,6607 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Tema%20-%209.3%20-%20Estructuras%20de%20control/">
+      
+      
+        <link rel="next" href="../Tema%20-%209.5%20-%20Comentarios/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+    
+    
+      
+        <title>Tema 9.4: Clases - Apuntes 1º Programación DAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-94-clases" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes 1º Programación DAM" class="md-header__button md-logo" aria-label="Apuntes 1º Programación DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes 1º Programación DAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 9.4: Clases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mmourazos/DAM_PR_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes 1º Programación DAM" class="md-nav__button md-logo" aria-label="Apuntes 1º Programación DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Apuntes 1º Programación DAM
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mmourazos/DAM_PR_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programación 1º de DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A cerca de
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examenes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examenes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Correccion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Correccion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Segundo trimestre
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Segundo trimestre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1_1" id="__nav_4_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examen segunda evaluacion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Examen segunda evaluacion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examenes/Correccion/Segundo_trimestre/Examen_segunda_evaluacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examen Java: Estructuras de datos y acceso a ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tareas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tareas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%201%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarea 1: Programación básica, bucles y arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%202%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarea2: Orientación a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%203%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7 - Tarea 1: Iterables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%204%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7 - tarea 4: Calculo tiempos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%205%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7 - Tarea 2: Pilas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%206%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7 - Tarea 3: Lambdas y cosas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%207%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8 - Tarea1: Lectura y escritura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%208%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8 - Tarea 2: Lectura y escritura en binario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tareas/Tarea%209%20-%20Enunciado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9 - Tarea 1: C# Clases, Propiedades, Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 01   Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 01   Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2001%20-%20Introducci%C3%B3n/Introduccion_a_la_programcacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 1: Introducción a la programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 02   Inicio en Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 02   Inicio en Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.0%20-%20Primeros_pasos_java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2: Introducción a Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.1%20-%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.1: Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.2%20-%20Tipos%20de%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.2: Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.3%20-%20Tipos_envoltorio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.3: Tipos envoltorio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.4%20-%20Cadenas_de_caracteres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.4: Cadenas de caracteres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.5%20-%20Arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.5: Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.6%20-%20Estructuras%20de%20control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.6: Estructuras de control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.7%20-%20Documentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.7: Documentación en Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/T2.8%20-%20Entrada%20de%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.8: Entrada de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_10" id="__nav_7_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_10">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/Ejercicios/T2%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios Tema 2: Programación estructurada, arrays y cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11" id="__nav_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codigo fuente
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Codigo fuente
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_1" id="__nav_7_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentacion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentacion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_1_1" id="__nav_7_11_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_11_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_1_1_1" id="__nav_7_11_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_11_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/codigo_fuente/documentacion/docs/legal/jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jquery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/codigo_fuente/documentacion/docs/legal/jqueryUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jqueryUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_1_2" id="__nav_7_11_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentacion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_11_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentacion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_1_2_1" id="__nav_7_11_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_11_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/codigo_fuente/documentacion/documentacion/legal/jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jquery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2002%20-%20Inicio%20en%20Java/codigo_fuente/documentacion/documentacion/legal/jqueryUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jqueryUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 03   POO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 03   POO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/T3.0%20-%20Programaci%C3%B3n%20orientada%20a%20objetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3: Programación orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/T3.1%20-%20Anatom%C3%ADa%20de%20una%20clase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.1: Anatomía de una Clase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/T3.2%20-%20Visibilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.2: Visibilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/T3.3%20-%20Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.3: Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/T3.4%20-%20Paquetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.4: Paquetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/Ejercicios/T3%20-%20Ejercicios%20-%20Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios tema 3: Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2003%20-%20POO/Ejercicios/T3%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios Tema3: Prog. orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 04   Excepciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 04   Excepciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2004%20-%20Excepciones/T4.0%20-%20Excepciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 4: Excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2004%20-%20Excepciones/T4.1%20-%20Debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2004%20-%20Excepciones/T4.2%20-%20Testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 4.2: Texting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2004%20-%20Excepciones/Ejercicios/T4%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios tema 4: Excepciones, debugging y testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 05   POO Extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 05   POO Extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2005%20-%20POO%20Extra/T5.0%20-%20Polimorfismo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5: Conceptos avanzados de POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2005%20-%20POO%20Extra/T5.1%20-%20Interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.1: Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2005%20-%20POO%20Extra/T5.2%20-%20Clases%20abstractas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.2: Clases abstractas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2005%20-%20POO%20Extra/T5.3%20-%20Recursividad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.3: Recursividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2005%20-%20POO%20Extra/Ejercicios/T5%20-%20Ejericicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5: Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 06   Proyectos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 06   Proyectos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2006%20-%20Proyectos/T6.0%20-%20Proyectos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2006%20-%20Proyectos/T6.1%20-%20Maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 6.1: Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 07   Estructuras de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 07   Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.0%20-%20Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7: Introducción a estructuras de datos avanzadas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.1%20-%20Genericos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.1: Genéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.2%20-%20Collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.2: Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.3%20-%20Listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.3: Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.4%20-%20Colas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.4: Colas, interfaz Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.5%20-%20Conjuntos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.5: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.6%20-%20Mapas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.5: Mapas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.7%20-%20EXTRA%20-%20El%20tiempo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.7: EXTRA El tiempo, The_Times, en Java: Date, Calendar y java.time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2007%20-%20Estructuras%20de%20datos/Tema%207.8%20-%20EXTRA%20-%20Lambdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.8 - Extra: Lambdas en Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 08   Ficheros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 08   Ficheros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2008%20-%20Ficheros/Tema%20-%208.0%20-%20Lectura%20y%20escritura%20a%20disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8: Entrada y salida a ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2008%20-%20Ficheros/Tema%20-%208.1%20-%20Serializables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8.1: Serializables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2008%20-%20Ficheros/Tema%20-%208.2%20-%20Acceso%20al%20sistema%20de%20ficheros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8.2: Acceso al sistema de ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 09   Introducción a C Sharp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 09   Introducción a C Sharp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.0%20-%20Introduccion%20a%20C-Sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.0: Introducción a C Sharp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.1%20-%20Elementos%20b%C3%A1sicos%20de%20C-Sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.1: Elementos básicos de C Sharp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.2%20-%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.2: Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.3%20-%20Estructuras%20de%20control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.3: Estructuras de control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tema 9.4: Clases
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.4: Clases
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-de-una-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de una clase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-clase-e-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables de clase e instancia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables de clase e instancia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readonly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readonly
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarga-de-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecarga de métodos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-co-numero-variable-de-argumentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos co número variable de argumentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos co número variable de argumentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución en Java
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-en-c-sharp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución en C Sharp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrescritura-override-de-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrescritura (override) de métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herencia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificadores-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificadores de acceso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificadores de acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificador-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador protected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador internal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificador internal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-ensamblado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Que es un ensamblado?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-protected-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador protected internal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-private-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador private protected
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.5%20-%20Comentarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.5: Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.6%20-%20Estructuras%20de%20datos%20de%20C-Sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.6: Estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.7%20-%20Tipos%20avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.7: Tipos avanzados de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%20-%209.8%20-%20Struct%20y%20Enum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.6 : struct y enum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%201/Introduccion_a_la_programcacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 1: Introducción a la programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 10   Streams
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 10   Streams
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2010%20-%20Streams/Tema%2010.0%20-%20Sreams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 10.0: Flujos o Streams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 11   GUI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 11   GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.0%20-%20WPF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.0: Introducción a WPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.1%20-%20Componentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema   11.1   Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.2%20-%20Contenedores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.2: Contenedores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.3%20-%20Dise%C3%B1o%20interfaz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.3: Diseño interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.4%20-%20Eventos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.4: Eventos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.5%20-%20MVVM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.2: MVVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.6%20-%20Delegados%20Eventos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.6: Delegados y eventos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.7%20-%20Enlazar%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.7: Enlazar datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/Tema%20-%2011.8%20-%20Comandos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11.8: Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10" id="__nav_17_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codigo fuente
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10">
+            <span class="md-nav__icon md-icon"></span>
+            Codigo fuente
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1" id="__nav_17_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ReservasMVVM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_17_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            ReservasMVVM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1" id="__nav_17_10_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ReservasMVVM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_17_10_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            ReservasMVVM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    This is the HOMEPAGE.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1_2" id="__nav_17_10_1_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Api
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_17_10_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLACEHOLDER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1_3" id="__nav_17_10_1_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_17_10_1_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/articles/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add your introductions here!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/articles/toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Toc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1_4" id="__nav_17_10_1_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docfx project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_17_10_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Docfx project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/docfx_project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    This is the HOMEPAGE.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1_4_2" id="__nav_17_10_1_1_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Api
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_17_10_1_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/docfx_project/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLACEHOLDER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_10_1_1_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_10_1_1_4_3" id="__nav_17_10_1_1_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_17_10_1_1_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_10_1_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2011%20-%20GUI/codigo_fuente/ReservasMVVM/ReservasMVVM/docfx_project/articles/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add your introductions here!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 12   Acceso a BBDD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 12   Acceso a BBDD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2012%20-%20Acceso%20a%20BBDD/Tema%20-%2012.0%20-%20Conexi%C3%B3n%20a%20BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de datos con C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%2012%20-%20Acceso%20a%20BBDD/Tema%20-%2012.1%20-%20BBDD%20con%20LINQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema   12.1   BBDD con LINQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.0%20-%20Primeros_pasos_java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2: Introducción a Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.1%20-%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.1: Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.2%20-%20Tipos%20de%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.2: Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.3%20-%20Tipos_envoltorio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.3: Tipos envoltorio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.4%20-%20Cadenas_de_caracteres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.4: Cadenas de caracteres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.5%20-%20Arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.5: Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.6%20-%20Estructuras%20de%20control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.6: Estructuras de control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.7%20-%20Documentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.7: Documentación en Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/T2.8%20-%20Entrada%20de%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 2.8: Entrada de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_10" id="__nav_19_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_10">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/Ejercicios/T2%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios Tema 2: Programación estructurada, arrays y cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11" id="__nav_19_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codigo fuente
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11">
+            <span class="md-nav__icon md-icon"></span>
+            Codigo fuente
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11_1" id="__nav_19_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentacion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_19_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentacion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11_1_1" id="__nav_19_11_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_19_11_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11_1_1_1" id="__nav_19_11_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_19_11_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/codigo_fuente/documentacion/docs/legal/jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jquery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/codigo_fuente/documentacion/docs/legal/jqueryUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jqueryUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11_1_2" id="__nav_19_11_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentacion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_19_11_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentacion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_11_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_11_1_2_1" id="__nav_19_11_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_19_11_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_11_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/codigo_fuente/documentacion/documentacion/legal/jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jquery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%202/codigo_fuente/documentacion/documentacion/legal/jqueryUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jqueryUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.0%20-%20Programaci%C3%B3n%20orientada%20a%20objetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3: Programación orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.1%20-%20Anatom%C3%ADa%20de%20una%20clase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.1: Anatomía de una Clase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.2%20-%20Visibilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.2: Visibilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.3%20-%20Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.3: Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/T3.4%20-%20Paquetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 3.4: Paquetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_20_6" id="__nav_20_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/Ejercicios/T3%20-%20Ejercicios%20-%20Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios tema 3: Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%203/Ejercicios/T3%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios Tema3: Prog. orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.0%20-%20Excepciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 4: Excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.1%20-%20Debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/T4.2%20-%20Testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 4.2: Texting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_4" id="__nav_21_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%204/Ejercicios/T4%20-%20Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios tema 4: Excepciones, debugging y testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.0%20-%20Polimorfismo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5: Conceptos avanzados de POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.1%20-%20Interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.1: Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.2%20-%20Clases%20abstractas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.2: Clases abstractas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/T5.3%20-%20Recursividad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5.3: Recursividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_22_5" id="__nav_22_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_22_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%205/Ejercicios/T5%20-%20Ejericicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 5: Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 6
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%206/T6.0%20-%20Proyectos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%206/T6.1%20-%20Maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 6.1: Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 7
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.0%20-%20Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7: Introducción a estructuras de datos avanzadas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.1%20-%20Genericos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.1: Genéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.2%20-%20Collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.2: Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.3%20-%20Listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.3: Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.4%20-%20Colas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.4: Colas, interfaz Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.5%20-%20Conjuntos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.5: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.6%20-%20Mapas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.5: Mapas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.7%20-%20Extra%20-%20El%20tiempo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.7: EXTRA El tiempo, The_Times, en Java: Date, Calendar y java.time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%207/Tema%207.8%20-%20EXTRA%20-%20Lambdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 7.8 - Extra: Lambdas en Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 8
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 8
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%208/Tema%20-%208.0%20-%20Lectura%20y%20escritura%20a%20disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8: Entrada y salida a ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%208/Tema%20-%208.1%20-%20Serializables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8.1: Serializables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%208/Tema%20-%208.2%20-%20Acceso%20al%20sistema%20de%20ficheros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 8.2: Acceso al sistema de ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema 9
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 9
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/Tema%20-%209.0%20-%20Introduccion%20a%20C-sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.0: Introducción a C Sharp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/Tema%20-%209.1%20-%20Elementos%20b%C3%A1sicos%20de%20C-Sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.1: Elementos básicos de C Sharp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/Tema%20-%209.2%20-%20Estructuras%20de%20datos%20de%20C-Sharp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.2: Estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%209/Tema%20-%209.3%20-%20Clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 9.3: Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tema Extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Tema Extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%2010.0%20-%20Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 10.0   Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%2010.1%20-%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 10.1   Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%2010.2%20-%20Operadores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 10.2   Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%2010.3%20-%20Estructura%20de%20control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 10.3   Estructura de control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%2011.0%20-%20Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema 11: Introducción a las clases en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema%20Extra/Tema%20EXTRA%20-%20Introducci%C3%B3n%20a%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tema EXTRA   Introducción a Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-de-una-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de una clase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-clase-e-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables de clase e instancia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables de clase e instancia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readonly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readonly
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarga-de-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecarga de métodos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-co-numero-variable-de-argumentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos co número variable de argumentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos co número variable de argumentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solucion-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución en Java
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-en-c-sharp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución en C Sharp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrescritura-override-de-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrescritura (override) de métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herencia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificadores-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificadores de acceso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificadores de acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificador-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador private
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador protected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador internal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificador internal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-ensamblado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Que es un ensamblado?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-protected-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador protected internal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificador-private-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificador private protected
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tema-94-clases">Tema 9.4: Clases</h1>
+<p>Las clases en C# cumplen la misma función que en Java.</p>
+<h2 id="declaracion-de-una-clase">Declaración de una clase</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MiClase</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="variables-de-clase-e-instancia">Variables de clase e instancia</h2>
+<p>Las variables de clase e instancia se declaran igual que en Java con dos salvedades: las constantes y las variables de solo lectura.</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Persona</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_personas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable de clase.</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="n">fecha_nacimiento</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable de instancia.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="constantes">Constantes</h3>
+<p>Si en Java declarábamos una constante de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Clase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">VALOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>en C# tendremos que usar la palabra reservada <code>constant</code> que substituiría a <code>public final</code> pues se considera que todas las constantes son automáticamente estáticas.</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Clase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">VALOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">123</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="readonly">Readonly</h3>
+<p>Si no conocemos el valor de nuestra constante antes de ejecutar el código pero no vamos a permitir cambiarla una vez asignada usaremos la palabra reservada <code>readonly</code>.</p>
+<p>Lo que en Java sería:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">VALORES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</code></pre></div>
+<p>En C# será:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">VALORES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">};</span>
+</code></pre></div>
+<p><strong>NOTA:</strong> Aunque no podamos cambiar la asignación de <code>VALORES</code> al array en memoria siempre podremos cambiar su contenido <code>VALORES[0] = 10</code>.</p>
+<h2 id="propiedades">Propiedades</h2>
+<p>Las propiedades son un mecanismo para acceder al estado de un objeto. Las propiedades pueden almacenar un valor (como una variable pública), pueden limitar la modificación o la lectura (incluyendo sólo <code>get</code> o <code>set</code> como veremos más adelante) o pueden no hacer referencia a un valor concreto si no que se obtengan como combinación de varios.</p>
+<p>Supongamos que tenemos una clase caja con largo, alto, ancho y volumen.</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">volumen</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">$&quot;Largo: {largo}\nAlto: {alto}\nAncho: {ancho}\n\tVolumen: {volumen}&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esta implementación presenta cierta inseguridad porque se podrían modificar dichos valores eliminando la consistencia.</p>
+<p>Es posible que deseemos que la longitud de la caja sea fija. O que no se pueda modificar una vez establecida. O simplemente evitar que se establezcan valores negativos.</p>
+<p>Para ello comenzaremos por hacer las variables privadas (no olvidemos añadir <code>_</code> al comienzo de las variables como buena práctica):</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">$&quot;Largo: {_largo}\nAlto: {_alto}\nAncho: {_ancho}\n\tVolumen: {_volumen}&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para poder acceder a las mismas crearemos las propiedades que sean necesarias.</p>
+<p>Para crear una propiedad escribiremos un modificador de acceso (o ninguno si queremos usar el por defecto <code>internal</code>) seguido del tipo de dato de la propiedad (<code>float</code> en nuestro caso) y a continuación el nombre de la propiedad (usando pascal case). A continuación abrimos un bloque de código (<code>{ }</code>) y dentro del mismo tendremos la opción de incluir dos secciones <code>get</code> y <code>set</code> de las que podremos omitir una dependiendo de nuestras necesidades.</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Largo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_largo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Y así para las demás propiedades.</span>
+
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">$&quot;Largo: {Largo}\nAlto: {Alto}\nAncho: {Ancho}\n\tVolumen: {Volumen}&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>El parámetro <code>value</code> que usamos dentro del <code>set</code> se establece por defecto y se le asignará el valor que escribamos después del <code>=</code> cuando queramos asignarle un valor a nuestra propiedad:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Caja</span><span class="w"> </span><span class="n">miCaja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Caja</span><span class="p">();</span>
+
+<span class="n">miCaja</span><span class="p">.</span><span class="n">Largo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10.5f</span><span class="p">;</span>
+
+<span class="c1">// Dentro del bloque set, value valdrá 10.5f.</span>
+</code></pre></div>
+<p>Ahora podremos controlar que sólo se le asignen valores positivos a nuestra propiedad:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Largo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">value</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;La longitud ha de ser mayor que 0.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">_largo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Con respecto a la variable volumen, puesto que su valor se obtiene a partir de las demás, no tiene sentido almacenarla. Podremos crear una propiedad que la calcule a partir de los valores de largo, alto y ancho de la caja:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Volumen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_volume</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">_largo</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">set</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_volumen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Pero el código anterior no tiene mucho sentido ya que:</p>
+<ul>
+<li>No tiene sentido usar la variable <code>_volumen</code> pues habría que recalcularla cada vez que se acceda a ella pues largo, alto o ancho podrían haber variado.</li>
+<li>No tiene sentido que se pueda asignar el volumen directamente pues éste depende de las dimensiones de la caja.</li>
+</ul>
+<p>Así que podríamos eliminar <code>_volumen</code> y el bloque <code>set</code> convirtiendo a <code>Volumen</code> en una propiedad calculada de solo lectura¨:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Volumen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_largo</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Si le queremos añadir la propiedad nombre a nuestra caja pero sin ningún código especial que lo limite no tendremos porque crear una variable privada interna ni código para los bloques <code>get</code> y <code>set</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Caja</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_largo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_ancho</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_volumen</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Se recomienda el uso de propiedades frente a variables públicas por dos motivos.</p>
+<ul>
+<li>El primero es que más adelante se podrá modificar el funcionamiento de su <code>get</code> y <code>set</code> para, por ejemplo, añadir validación.</li>
+<li>En segundo lugar, usando siempre propiedades se aumenta la consistencia y legibilidad del código.</li>
+</ul>
+<h2 id="metodos">Métodos</h2>
+<p>Para declarar un método en una clase lo haremos, de nuevo, de una forma similar a Java:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MiClase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">contenido</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Guarda</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">clave</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">contenido</span><span class="p">.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="constructor">Constructor</h3>
+<p>El constructor es idéntico y funciona de la misma forma que en Java.</p>
+<h3 id="destructor">Destructor</h3>
+<p>También dispondremos de un método <strong>que ha de ser único</strong> y no admite argumentos que se invocará cuando se destruya (por el Recolector de basura o al fin del programa) nuestra clase.</p>
+<p>Su sintaxis será la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">clase</span><span class="w"> </span><span class="n">MiClase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// ... </span>
+
+<span class="w">    </span><span class="o">~</span><span class="n">MiClase</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Código a ejecutar cuando destruyamos la clase.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="sobrecarga-de-metodos">Sobrecarga de métodos</h3>
+<p>Las sobrecarga de métodos es similar a la de Java. Consiste en crear varios métodos con el mismo nombre pero distinto número o tipo de argumentos:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MiClase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MetodoSobrecargado</span><span class="p">()</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MetodoSobrecargado</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MetodoSobrecargado</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="metodos-co-numero-variable-de-argumentos">Métodos co número variable de argumentos</h3>
+<h4 id="solucion-en-java">Solución en Java</h4>
+<p>Para indicar que un método acepta un numero variable de argumentos en Java hemos de indicarlo en la declaración del método poniendo primero el tipo del parámetro (como siempre) <strong>seguido de <code>...</code></strong> y el nombre del parámetro.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">varArgsMethod</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">integers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">integers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="solucion-en-c-sharp">Solución en C Sharp</h4>
+<p>Para declarar un método con un número variable de argumentos en C# hemos de usar la palabra clase <code>params</code> seguido de la declaración del array que contendrá los argumentos que deseemos que admita el método:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MiClase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Total</span><span class="p">(</span><span class="k">params</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Nota:</strong> Antes del parámetro que acepta múltiples argumentos podremos indicar otros parámetros. Pero el que acepte varios <strong>ha de ser siempre el último y solo puede haber uno.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">TotalMultiplicado</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">multiplicador</span><span class="p">,</span><span class="w"> </span><span class="k">params</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span><span class="w"> </span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">multiplicador</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="sobrescritura-override-de-metodos">Sobrescritura (<code>override</code>) de métodos</h3>
+<p>Si queremos cambiar el comportamiento de un método que heredamos de una superclase hemos de usar la palabra clave <code>override</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Mascota</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">Tipo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//...</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">$&quot;Soy un {Tipo} de {Edad} años y me llamo {Nombre}.&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// ...</span>
+<span class="n">Mascota</span><span class="w"> </span><span class="n">mascota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mascota</span><span class="p">(</span><span class="s">&quot;Perro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Churri&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2018&quot;</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">mascota</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="herencia">Herencia</h2>
+<p>En C# así como en Java tendremos que una clase puede heredar de <strong>una única</strong> clase padre o <em>superclase</em>. Convirtiéndose la heredera en <em>subclase</em> de su <em>superclase</em>.</p>
+<h2 id="modificadores-de-acceso">Modificadores de acceso</h2>
+<p>Los modificadores de acceso son palabras clave que se usan para especificar la accesibilidad declarada de un miembro o un tipo (clase). En esta sección se presentan los cinco modificadores de acceso:</p>
+<ul>
+<li>public</li>
+<li>protected</li>
+<li>internal</li>
+<li>private</li>
+<li>file</li>
+</ul>
+<p>Pueden especificarse los siguientes siete niveles de accesibilidad con los modificadores de acceso:</p>
+<ul>
+<li><code>public</code>: el acceso no está restringido.</li>
+<li><code>protected</code>: el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.</li>
+<li><code>internal</code>: el acceso está limitado al ensamblado actual.</li>
+<li><code>protected internal</code>: El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.</li>
+<li><code>private</code>: el acceso está limitado al tipo contenedor.</li>
+<li><code>private protected</code>: El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.</li>
+<li><code>file</code>: el tipo declarado solo es visible en el archivo de origen actual. Los tipos con ámbito de archivo se usan generalmente para los generadores de origen.</li>
+</ul>
+<p><strong>A continuación veremos los modificadores con un poco más de detalle.</strong></p>
+<h3 id="modificador-private">Modificador <code>private</code></h3>
+<p>Éste es el modificador de acceso <strong>más restrictivo</strong>. Los miembros de una clase (variables, atributos, métodos, etc.) declarados como <code>private</code> sólo son accesibles desde <strong>dentro de la clase donde fueron declarados</strong>.</p>
+<p>Cuando <strong>marcamos una clase como <code>private</code></strong> ninguna clase podrá <strong>heredar de la misma</strong>.</p>
+<p><strong>Nota:</strong> Las variables declaradas como <code>private</code> se nombran por convenio empezando por <code>_</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BankAccount</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_balance</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">GetBalance</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Deposit</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Withdraw</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El modificador de acceso <code>private</code> se usa cuando un miembro de la clase está diseñado únicamente para uso interno y no debe ser accesible desde otras partes del programa. De este modo se nos permite ocultar los detalles de implementación de una clase y proteger a sus miembros de accesos o modificaciones involuntarias.</p>
+<h3 id="modificador-public">Modificador <code>public</code></h3>
+<p>Éste modificador es el <strong>más permisivo</strong>. Los miembros declarados con este modificador podrán ser accedidos desde <strong>cualquier otra parte del código</strong>.</p>
+<p>Si declaramos una clase como <code>public</code> cualquier otra clase podrá heredar de ella.</p>
+<h3 id="modificador-protected">Modificador <code>protected</code></h3>
+<p>El modificador <code>protected</code> implica que el objeto será accesible dentro de la clase donde se declaró y en <strong>todas las clases derivada de ella</strong>.</p>
+<h3 id="modificador-internal">Modificador <code>internal</code></h3>
+<p>Con <code>internal</code> especificamos que un objeto sólo será accesible dentro de su mismo <a href="https://learn.microsoft.com/es-es/dotnet/standard/assembly/"><em>ensamblado</em></a>.</p>
+<p>Los miembros declarados como <code>internal</code> no serán accesibles desde fuera del <em>ensamblado</em> (proyecto).</p>
+<p>Este es el <strong>modificador que se aplica por defecto</strong> cuando no se indica ningún otro para la clase o sus miembros.</p>
+<h4 id="que-es-un-ensamblado">¿Que es un <em>ensamblado</em>?</h4>
+<p>Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados adoptan la forma de un archivo ejecutable (<code>.exe</code>) o de biblioteca de vínculos dinámicos ( <code>.dll</code>), y son los bloques de creación de las aplicaciones.</p>
+<p>Comúnmente podemos identificar los ensamblados con los proyecto que creamos en Visual Studio.</p>
+<h3 id="modificador-protected-internal">Modificador <code>protected internal</code></h3>
+<p>Esta combinación hace que el miembro sea accesible dentro de su propio ensamblado (proyecto) <strong>y además</strong> en las clases derivadas de su clase (aunque estén en otros ensamblados).</p>
+<h3 id="modificador-private-protected">Modificador <code>private protected</code></h3>
+<p>Al igual que en el caso anterior se combinan (suman) los niveles de acceso del modificador <code>private</code> y del modificador <code>protected</code>. Esto hace que el elemento al que se aplique la combinación sólo podrá ser accesible <strong>desde la propia clase</strong> (<code>private</code>) <strong>y también desde las clases derivadas</strong> (subclases) pero solo <strong>dentro del mismo ensamblado</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mmourazos/DAM_PR_Apuntes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      
+    
+  </body>
+</html>
