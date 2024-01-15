@@ -36,17 +36,15 @@ namespace TestConBDD.DBConn
             {
                 try
                 {
-
                     conn.ConnectionString = $"server={_server}; port={_port}; user id={_user}; password={_password}; database={_database};";
                     conn.Open();
-                    return conn;
-
                 }
                 catch (MySqlException e)
                 {
 
                     MessageBox.Show(e.ToString());
                 }
+                return conn;
             }
         }
     }
